@@ -1,0 +1,110 @@
+<!--
+----	$Id: faq.html,v 1.11 2000/01/19 09:54:29 root Exp $
+-->
+<HTML><HEAD>
+    <TITLE>FAQ for ALE Clone Version 1.16</TITLE>
+</HEAD>
+<BODY>
+    <H1>FAQ for ALE Clone Version 1.16</H1>
+
+<HR>
+<P ALIGN=CENTER>
+<PRE>
+		   ///////  //         //////   //    //  ////////
+		 //        //        //    //  ////  //  //
+		//        //        //    //  //  ////  //
+	       //        //        //    //  //    //  //////
+	      //        //        //    //  //    //  //
+	     //        //        //    //  //    //  //
+             ///////  ////////   //////   //    //  ////////
+                               Version 1.16
+			      THE WAR BEGINS
+</PRE>
+<P ALIGN=CENTER>
+<B>(C) Copyright 1998-2000 by Lutz Sammer and others. Distributed under the "<A HREF="LICENSE">Artistic License</A>"</B>
+<HR>
+
+Any questions not mentioned here, please contact <A HREF="mailto:aleclone@gmx.net">
+aleclone@gmx.net</A>.<P>
+
+<DL>
+<P>
+<DT>Q: gzseek already defined or undefined!
+
+<DD>A: You have an incompatible libpng version, better you install the latest
+libpng1.0.X. You get it here:
+    <A HREF="ftp://swrinde.nde.swri.edu/pub/png/">SwRI</A>
+<P>
+<DT>Q: The software cursor is too slow
+
+<DD>A: I will improve the speed later, but me was told:<BR>
+Using Accelerated X on a Pentium 75 ALE Clone is now playable.
+<P>
+<DT>Q: Why did Guile 1.3 not work?
+
+<DD>A: Applies only to older versions, since october 1998 supported.<P>
+
+Change the line in 'Rules.make':<P>
+    GUILELIB=       -lguile -ldl<P>
+into<P>
+    GUILELIB=       `guile-config link` -lreadline -lncurses<P>
+With this I got guile 1.3 working.
+<P>
+<DT>Q: Did ALE Clone work with ALSA?
+
+<DD>A: Yes, ALE Clone works with the Advanced Linux Sound Architecture (ALSA) - Driver.
+I have tested it with version 0.3.2.<P>
+More informations <A HREF="http://alsa.jcu.cz">http://alsa.jcu.cz</A><P>
+<P>
+<DT>Q: How did I get big maps?
+
+<DD>A: If you want a map of the size 256 x 256.
+Create and edit 4 maps (128 x 128) in the original editor.
+Save them as bigmap1.pud, bigmap2.pud, bigmap3.pud and bigmap4.pud.
+Now create a file bigmap.cm containing:
+<P><PRE>
+	(define-map 256 256)
+	(load-pud "bigmap1.pud")
+	(load-pud "bigmap2.pud")
+	(load-pud "bigmap3.pud")
+	(load-pud "bigmap4.pud")
+</PRE><P>
+If you now load this file as map (clone bigmap.cm), you see this big map.
+bigmap1.pud is in the upper left corner.
+bigmap2.pud is in the upper right corner.
+bigmap3.pud is in the lower left corner.
+bigmap4.pud is in the lower right corner.
+<P>
+<DT>Q: Can I use the original without expansion?
+
+<DD>A: There are only more graphics and sounds in the expansion CD version.
+Me was told, it works without problems with the german version. Just try it.
+With the new versions this should work without problems.
+
+<DT>Q: I get the error message "gcc: No input files", when I build clone.
+    (Reported with pgcc version 1.1.1.) What should I do?
+
+<DD>A: Try changing the line in the clone toplevel Makefile <BR>
+        $(CC) -Lsrc -lclone $(CLONELIBS) -o clone -I. $(CFLAGS) <BR>
+    to <BR>
+        $(CC) -Lsrc -lclone $(CLONELIBS) -o clone -I. $(CFLAGS) dummy.c <P>
+    and execute the command "<I>touch dummy.c</I>" in the clone toplevel
+    directory. <P>
+    Or install a better gcc version without this bug.
+<DT>Q: I have tried to start a level with
+    './clone data/puds/internal/internal01.pud.gz' and I only get this error
+    message
+    'pud: fopen,gzopen,bzopen(): No such file or directory'.
+<DD>A: We have changed the loading syntax:
+    <UL>
+    <LI>file.pud loads relative from $CLONE_LIB_PATH (in my source "data").
+    <LI>./file.pud loads relative from the current directory.
+    <LI>/file.pud loads absolute from the root directory.
+    </UL>
+    This means you must type './clone ./data/puds/internal/internal01.pud.gz'!
+</DL>
+
+<HR>
+Last changed: $Id: faq.html,v 1.11 2000/01/19 09:54:29 root Exp $<BR>
+<ADDRESS><A HREF="mailto:aleclone@gmx.net">The ALE Clone project</A></ADDRESS>
+</BODY>

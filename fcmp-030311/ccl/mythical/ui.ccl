@@ -1,0 +1,231 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __\ 
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	ui.ccl		-	Define the mythical user interface
+;;
+;;	(c) Copyright 2001,2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; either version 2 of the License,
+;;	or (at your option) any later version.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: ui.ccl,v 1.1 2001/06/19 22:19:26 johns Exp $
+
+;;=============================================================================
+;;	Define a cursor.
+;;
+;;	(define-cursor 'ident 'race 'image "file-path"
+;;		'hotspot ( x y ) 'size ( width height ))
+;;
+(define-cursor	'cursor-point		'mythical
+    'image "ui/mythical/cursors/orcish claw.png"
+    'hot-spot '( 3  2) 'size '(26 32) )
+(define-cursor	'cursor-green-hair	'mythical
+    'image "ui/mythical/cursors/green crosshairs.png"
+    'hot-spot '(15 15) 'size '(32 32) )
+(define-cursor	'cursor-yellow-hair	'mythical
+    'image "ui/mythical/cursors/yellow crosshairs.png"
+    'hot-spot '(15 15) 'size '(32 32) )
+(define-cursor	'cursor-red-hair	'mythical
+    'image "ui/mythical/cursors/red crosshairs.png"
+    'hot-spot '(15 15) 'size '(32 32) )
+
+;;=============================================================================
+;;	Define the user interface
+;;
+;;	(define-ui "race" screen-width screen-height
+;;		(list "filler" x y)
+;;		(list "resource" x y)
+;;		(list "gold-icon" nummer x y width height text-x text-y)
+;;		(list "wood-icon" nummer x y width height text-x text-y)
+;;		(list "oil-icon" nummer x y width height text-x text-y)
+;;		(list "ore-icon" nummer x y width height text-x text-y)
+;;		(list "stone-icon" nummer x y width height text-x text-y)
+;;		(list "coal-icon" nummer x y width height text-x text-y)
+;;		(list "food-icon" nummer x y width height text-x text-y)
+;;		(list "score-icon" nummer x y width height text-x text-y)
+;;		(list "infopanel" x y width height)
+;;		(list complete-bar-color x y text-x text-y)
+;;		(list "buttonpanel" x y)
+;;		(list map-x map-y end-x end-y)
+;;		(list "menubutton" x y)
+;;		(list "minimap" x y)
+;;		(list "statusline" x y)
+;;		    ; Menu-button F10
+;;		(list menu-button-x menu-button-y width height)
+;;		    ; 9 Character portraits
+;;		(list selected-1-x selected-1-y width height)
+;;		(list selected-2-x selected-2-y width height)
+;;		(list selected-3-x selected-3-y width height)
+;;		(list selected-4-x selected-4-y width height)
+;;		(list selected-5-x selected-5-y width height)
+;;		(list selected-6-x selected-6-y width height)
+;;		(list selected-7-x selected-7-y width height)
+;;		(list selected-8-x selected-8-y width height)
+;;		(list selected-9-x selected-9-y width height)
+;;		    ; 9 Buttons interface
+;;		(list button-1-x button-1-y width height)
+;;		(list button-2-x button-2-y width height)
+;;		(list button-3-x button-3-y width height)
+;;		(list button-4-x button-4-y width height)
+;;		(list button-5-x button-5-y width height)
+;;		(list button-6-x button-6-y width height)
+;;		(list button-7-x button-7-y width height)
+;;		(list button-8-x button-8-y width height)
+;;		(list button-9-x button-9-y width height)
+;;		    ;	6 training queue buttons.
+;;		(list train-1-x train-1-y width height)
+;;		(list train-2-x train-2-y width height)
+;;		(list train-3-x train-3-y width height)
+;;		(list train-4-x train-4-y width height)
+;;		(list train-5-x train-5-y width height)
+;;		(list train-6-x train-6-y width height)
+;;		    ;	Cursors used by engine
+;;		(list
+;;		  'cursor-point 'cursor-glass 'cursor-cross
+;;		  'cursor-yellow-hair 'cursor-green-hair 'cursor-red-hair
+;;		  'cursor-scroll 'cursor-arrow-e 'cursor-arrow-ne
+;;		  'cursor-arrow-n 'cursor-arrow-nw 'cursor-arrow-w
+;;		  'cursor-arrow-sw 'cursor-arrow-s 'cursor-arrow-se )
+;;		'(panel1)'(panel2)'(panel3)'(panel4)'(panel5) )
+;;
+;;	This defines the position and sizes of the different user
+;;	interface sections.
+;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;	* Race mythical.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define (mythical_screen screen_width screen_height)
+  (let (
+	;;(screen_height-(16+((screen_height - 192)/32)*32))
+	(map_bottom (+ 16 (* 32 (trunc (/ (- screen_height 192) 32)))))
+	)
+    
+    (define-ui "mythical" screen_width screen_height ; Selector
+					;	Filler 1
+      (list (string-append
+	"graphics/ui/mythical/"
+	(number->string screen_width) "x" (number->string screen_height)
+	"/filler1.png") 528 (+ map_bottom 16))
+
+					;	Resource line
+      (list (string-append
+	"graphics/ui/mythical/"
+	(number->string screen_width) "x" (number->string screen_height)
+	"/resource.png") 0 0)
+
+	; gold resource
+      (list "graphics/ui/gold,wood,oil,mana.png"	0
+	    (+ 176   0) 0 14 14 (+ 176   0 18) 1)
+	; wood resource
+      (list "graphics/ui/gold,wood,oil,mana.png"	1
+	    (+ 176  65) 0 14 14 (+ 176  65 18) 1)
+	;  oil resource
+      (list "graphics/ui/gold,wood,oil,mana.png"	2
+	    (+ 176 120) 0 14 14 (+ 176 120 18) 1)
+	;  oge resource
+      (list "graphics/ui/ore,stone,coal.png"	0
+	    (+ 176 175) 0 14 14 (+ 176 175 18) 1)
+	;  stone resource
+      (list "graphics/ui/ore,stone,coal.png"	1
+	    (+ 176 230) 0 14 14 (+ 176 230 18) 1)
+	;  coal resource
+      (list "graphics/ui/ore,stone,coal.png"	2
+	    (+ 176 285) 0 14 14 (+ 176 285 18) 1)
+
+	; food resource
+      (list "graphics/ui/food.png"			0
+	    (+ 176 330) 0 14 14 (+ 176 330 18) 1)
+	; score
+      (list "graphics/ui/score.png"		0
+	    (+ 176 409) 0 14 14 (+ 176 409 18) 1)
+
+	; Info panel
+      (list "graphics/ui/mythical/infopanel.png" 0 map_bottom 176 176)
+
+	; Completed bar
+      (list color-dark-green  12 (+ map_bottom 153) 50 (+ map_bottom 153))
+
+	; Command button panel
+      (list "graphics/ui/mythical/buttonpanel.png" 352 (+ map_bottom 16))
+
+	; The big map
+      (list 0 16 screen_width map_bottom)
+
+	; Menu button
+      (list "graphics/ui/mythical/menubutton.png" 176 (+ map_bottom 16))
+
+	; Minimap
+      (list "graphics/ui/mythical/minimap.png" 176 (+ map_bottom 40))
+
+					;	Status line
+      (list (string-append
+	"graphics/ui/mythical/"
+	(number->string screen_width) "x" (number->string screen_height)
+	"/statusline.png") 176 map_bottom)
+
+	;	Defines position and size of the different buttons.
+	; Menu button
+      (list 198 (+ map_bottom 18) 128 17 )
+	; 9 Character portraits
+      (list   6 (+ map_bottom 6)  46 38 )
+      (list  62 (+ map_bottom 6)  46 38 )
+      (list 118 (+ map_bottom 6)  46 38 )
+      (list   6 (+ map_bottom 58) 46 38 )
+      (list  62 (+ map_bottom 58) 46 38 )
+      (list 118 (+ map_bottom 58) 46 38 )
+      (list   6 (+ map_bottom 110) 46 38 )
+      (list  62 (+ map_bottom 110) 46 38 )
+      (list 118 (+ map_bottom 110) 46 38 )
+	; 9 Buttons interface
+      (list 358 (+ map_bottom 33)  46 38 )
+      (list 414 (+ map_bottom 33)  46 38 )
+      (list 470 (+ map_bottom 33)  46 38 )
+      (list 358 (+ map_bottom 80)  46 38 )
+      (list 414 (+ map_bottom 80)  46 38 )
+      (list 470 (+ map_bottom 80)  46 38 )
+      (list 358 (+ map_bottom 127) 46 38 )
+      (list 414 (+ map_bottom 127) 46 38 )
+      (list 470 (+ map_bottom 127) 46 38 )
+
+	;	Defines position and size of the training queue buttons.
+      (list   6 (+ map_bottom 56)  46 38 )
+      (list  62 (+ map_bottom 56)  46 38 )
+      (list 118 (+ map_bottom 56)  46 38 )
+      (list   6 (+ map_bottom 103) 46 38 )
+      (list  62 (+ map_bottom 103) 46 38 )
+      (list 118 (+ map_bottom 103) 46 38 )
+      (list 'cursor-point 'cursor-glass 'cursor-cross
+	  'cursor-yellow-hair 'cursor-green-hair 'cursor-red-hair
+	  'cursor-scroll 'cursor-arrow-e 'cursor-arrow-ne 'cursor-arrow-n
+	  'cursor-arrow-nw 'cursor-arrow-w 'cursor-arrow-sw
+	  'cursor-arrow-s 'cursor-arrow-se )
+      '("graphics/ui/mythical/panel 1.png")
+      '("graphics/ui/mythical/panel 2.png")
+      '("graphics/ui/mythical/panel 3.png")
+      '("graphics/ui/mythical/panel 4.png")
+      '("graphics/ui/mythical/panel 5.png")
+      )
+    )
+  )
+
+(mythical_screen 640 480)
+(mythical_screen 800 600)
+(mythical_screen 1024 768)
+(mythical_screen 1280 960)
+(mythical_screen 1600 1200)

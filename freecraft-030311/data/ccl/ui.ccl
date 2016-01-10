@@ -1,0 +1,60 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	ui.ccl		-	Define the user interface
+;;
+;;	(c) Copyright 2000,2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: ui.ccl,v 1.14 2002/12/17 06:40:30 nehalmistry Exp $
+
+(define color-dark-green	149)	; FIXME: move to central position
+
+(load "ccl/human/ui.ccl" #f #t)
+(load "ccl/orc/ui.ccl" #f #t)
+
+;;=============================================================================
+;;	Define a cursor.
+;;
+;;	(define-cursor 'ident 'race 'image "file-path"
+;;		'hotspot ( x y ) 'size ( width height ))
+;;
+(define-cursor	'cursor-glass		'any
+    'image "ui/cursors/magnifying glass.png"
+    'hot-spot '(11 11) 'size '(34 35) )
+(define-cursor	'cursor-cross		'any
+    'image "ui/cursors/small green cross.png"
+    'hot-spot '( 8  8) 'size '(18 18) )
+(define-cursor	'cursor-scroll		'any
+    'image "ui/cursors/cross.png"	'hot-spot '(15 15) 'size '(32 32) )
+(define-cursor	'cursor-arrow-e		'any
+    'image "ui/cursors/arrow E.png"	'hot-spot '(22 10) 'size '(32 24) )
+(define-cursor	'cursor-arrow-ne	'any
+    'image "ui/cursors/arrow NE.png"	'hot-spot '(20  2) 'size '(32 24) )
+(define-cursor	'cursor-arrow-n		'any
+    'image "ui/cursors/arrow N.png"	'hot-spot '(12  2) 'size '(32 24) )
+(define-cursor	'cursor-arrow-nw	'any
+    'image "ui/cursors/arrow NW.png"	'hot-spot '( 2  2) 'size '(32 24) )
+(define-cursor	'cursor-arrow-w		'any
+    'image "ui/cursors/arrow W.png"	'hot-spot '( 4 10) 'size '(32 24) )
+(define-cursor	'cursor-arrow-s		'any
+    'image "ui/cursors/arrow S.png"	'hot-spot '(12 22) 'size '(32 24) )
+(define-cursor	'cursor-arrow-sw	'any
+    'image "ui/cursors/arrow SW.png"	'hot-spot '( 2 18) 'size '(32 24) )
+(define-cursor	'cursor-arrow-se	'any
+    'image "ui/cursors/arrow SE.png"	'hot-spot '(20 18) 'size '(32 24) )

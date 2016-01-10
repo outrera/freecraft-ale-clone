@@ -1,0 +1,98 @@
+<!--
+----	$Id: development.html,v 1.7 1999/09/26 02:16:17 root Exp $
+-->
+<HTML><HEAD>
+    <TITLE>Development for ALE Clone Version 1.16</TITLE>
+</HEAD>
+<BODY>
+    <H1>Development for ALE Clone Version 1.16</H1>
+
+<HR>
+<P ALIGN=CENTER>
+<PRE>
+		   ///////  //         //////   //    //  ////////
+		 //        //        //    //  ////  //  //
+		//        //        //    //  //  ////  //
+	       //        //        //    //  //    //  //////
+	      //        //        //    //  //    //  //
+	     //        //        //    //  //    //  //
+             ///////  ////////   //////   //    //  ////////
+                               Version 1.16
+			      THE WAR BEGINS
+</PRE>
+<P ALIGN=CENTER>
+<B>(C) Copyright 1998 by Lutz Sammer. Distributed under the "Artistic License"</B>
+<HR>
+This gives you some information to help to develop ALE clone.<P>
+
+<H2>Make and makefiles</H2>
+
+Type 'make help' to get an overview what all could be made.<P>
+
+<H2>Source code documentation</H2>
+
+Valery Shchedrin has introduced tagged source documentation. I continued to
+use them.<P>
+
+<H3>This programs are required</H3>
+
+You need one this programs to generate source code documentation.
+<UL>
+<LI><A HREF="http://www.stack.nl/~dimitri/doxygen/download.html">DoxyGen</A>
+You should apply my patch doxgen-0.4.diff.gz to get better results!
+<LI><A HREF="http://www.zib.de/Visual/software/doc++/index.html">DOC++</A>
+</UL>
+
+<H3>Generate documentation from source code</H3>
+
+Please compile and install one of the above programs.
+With this commands you produce the documentations:
+<UL>
+<LI><EM>make doc</EM> If you use DoxyGen.
+<LI><EM>make doc++</EM> If you use DOC++.
+</UL>
+
+<H3>Tags used in source code</H3>
+
+I use the doc++ tags:<P>
+
+/** ... */<P>
+Multi line source code documentation.<P>
+/// ... <P>
+Single line source code documentation.<P>
+//@{ or /*@{*/<P>
+Grouping.<P>
+//@} or /*@}*/<P>
+Grouping.<P>
+
+<UL>
+<LI>@name
+<BR>Name of file or group.
+<LI>@param
+<BR>Describes function/macro parameter
+<LI>@return
+<BR>Describes function return
+<LI>@see
+<BR>Links to other section
+</UL>
+
+Please read the documentation of the programs.
+
+<H2>Coding style</H2>
+
+You can use your own coding style in your own modules.
+If you fix in other modules, please imitate the coding style of the old coder.
+
+<P>I suggest: <A HREF="/usr/src/linux/Documentation/CodingStyle">
+(Linux kernel coding style) </A>
+<UL>
+<LI>Write ANSI C.
+<LI>Use 8 spaces tabulators.
+<LI>Use 4 spaces indention levels.
+<LI>Use C++ comments for to end of line comments.
+<LI>Use { } also for one statement blocks.
+</UL>
+
+<HR>
+<ADDRESS><A HREF="mailto:aleclone@gmx.net">The ALE Clone project</A></ADDRESS>
+</BODY>

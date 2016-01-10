@@ -1,0 +1,20 @@
+Begin3
+Title:          ALE Clone, clone of a fantasy RTS game
+Version:        1.16 (alpha release, little playable)
+Entered-date:   22JAN99
+Description:    A realtime, fantasy strategy war game for UNIX and X or Win32.
+		It comes without graphics, sounds and documentation. You need
+		the original game CD or expansion CD to use this program.
+Keywords:       RTS realtime strategy game X11
+Author:         johns@locknar.cne.de or johns98@gmx.net (Lutz Sammer)
+		(Valery Shchedrin)
+		(Fabrice Rossi)
+Maintained-by:  aleclone@gmx.net (The ALE Clone Project Group)
+Primary-site:   ftp://metalab.unc.edu/pub/Linux/games/strategy
+		432 KB clone-990122.tar.gz	
+Alternate-site: http://user.exit.de/johns/clone-990122.tar.gz
+		432 KB clone-990122.tar.gz	
+Original-site:  
+Platforms:      Needs Linux, X11, libguile, libpng and the original game CD-ROM.
+Copying-policy: Artistic license.
+End

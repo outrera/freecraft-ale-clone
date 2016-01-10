@@ -1,0 +1,80 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	ranks.ccl	-	Ranks for all of the races.
+;;
+;;	(c) Copyright 2002 by Jimmy Salmon.
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: ranks.ccl,v 1.2 2002/12/17 06:40:30 nehalmistry Exp $
+
+;;=============================================================================
+;;	Define ranks for a race.
+;;
+;;	(define-ranks race (score rank [score rank] ...))
+;;
+;;	race	The race to define the ranks for.
+;;	score	If the player's score is greater than or equal to this number then 
+;;		the rank is displayed.  Scores are expected to be sorted in 
+;;		increasing order.
+;;	rank	The rank that gets displayed.
+;;
+
+(define-ranks 'alliance '(
+0 Rank0
+2000 Rank1
+5000 Rank2
+8000 Rank3
+18000 Rank4
+28000 Rank5
+40000 Rank6
+55000 Rank7
+70000 Rank8
+85000 Rank9
+105000 Rank10
+125000 Rank11
+145000 Rank12
+165000 Rank13
+185000 Rank14
+205000 Rank15
+230000 Rank16
+255000 Rank17
+280000 Rank18
+))
+
+(define-ranks 'mythical '(
+0 Rank0
+2000 Rank1
+5000 Rank2
+8000 Rank3
+18000 Rank4
+28000 Rank5
+40000 Rank6
+55000 Rank7
+70000 Rank8
+85000 Rank9
+105000 Rank10
+125000 Rank11
+145000 Rank12
+165000 Rank13
+185000 Rank14
+205000 Rank15
+230000 Rank16
+255000 Rank17
+280000 Rank18
+))

@@ -1,0 +1,29 @@
+#
+# Make RULES (Symantec MAKE)
+#
+ROOTDIR=C:\ENG
+OUTFILE=ENGINE.EXE
+ARCH=DOS
+OE=OBJ
+
+INCDIRS=$(ROOTDIR)\$(MODULE);$(ROOTDIR)\INCLUDE;$(ROOTDIR)
+
+CFLAGS=-a4 -c -mx -g -o-a -w7
+CFLAGS_O=-a4 -mx -g -o$(OUTFILE)
+
+XSTDIO=stdio
+DIRMGR=dosdir
+XTIME=std_xtm
+VIDLIBNAME=dosvideo
+
+DEPEND=command /Cmakedep -s *.cpp >Depend
+CC=sc
+RM=del
+MAKE=make
+SETINC=set include=$(INCDIRS)
+
+.SUFFIXES=.obj.cpp
+
+.cpp.obj:
+        $(SETINC)
+        $(CC) $(CFLAGS) $< -o$@

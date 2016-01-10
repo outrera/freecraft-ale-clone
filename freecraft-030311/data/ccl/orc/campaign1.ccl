@@ -1,0 +1,129 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\  ___\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	campaign1.ccl	-	Define the orc campaign 1.
+;;
+;;	(c) Copyright 2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: campaign1.ccl,v 1.8 2002/12/17 06:58:19 nehalmistry Exp $
+
+;;=============================================================================
+;;	Define the campaign
+;;
+;;	(define-campagin 'ident 'name "name" 'campaign (list elements)
+(define-campaign 'orc 'name "~!Orc campaign"
+  'campaign (list
+	'show-picture (list
+	  'image "campaigns/orc/interface/Act I   - Seas of Blood.png"
+	  'fade-in (* 30 2)
+	  'fade-out (* 30 2)
+	  'display-time (* 30 10)
+	  'text (list
+	    'font 'large-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 67)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Act I")
+	  'text (list
+	    'font 'small-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 25)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Seas of Blood"))
+	'play-level "campaigns/orc/level01o.cm"
+	'play-level "campaigns/orc/level02o.cm"
+	'play-level "campaigns/orc/level03o.cm"
+	'play-level "campaigns/orc/level04o.cm"
+	'show-picture (list
+	  'image "campaigns/orc/interface/Act II  - Khaz Modan.png"
+	  'fade-in (* 30 2)
+	  'fade-out (* 30 2)
+	  'display-time (* 30 10)
+	  'text (list
+	    'font 'large-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 67)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Act II")
+	  'text (list
+	    'font 'small-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 25)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Khaz Modan"))
+	'play-level "campaigns/orc/level05o.cm"
+	'play-level "campaigns/orc/level06o.cm"
+	'play-level "campaigns/orc/level07o.cm"
+	'show-picture (list
+	  'image "campaigns/orc/interface/Act III - Quel'Thalas.png"
+	  'fade-in (* 30 2)
+	  'fade-out (* 30 2)
+	  'display-time (* 30 10)
+	  'text (list
+	    'font 'large-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 67)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Act III")
+	  'text (list
+	    'font 'small-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 25)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Quel'Thalas"))
+	'play-level "campaigns/orc/level08o.cm"
+	'play-level "campaigns/orc/level09o.cm"
+	'play-level "campaigns/orc/level10o.cm"
+	'play-level "campaigns/orc/level11o.cm"
+	'show-picture (list
+	  'image "campaigns/orc/interface/Act IV  - Tides of Darkness.png"
+	  'fade-in (* 30 2)
+	  'fade-out (* 30 2)
+	  'display-time (* 30 10)
+	  'text (list
+	    'font 'large-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 67)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "ACT IV")
+	  'text (list
+	    'font 'small-title
+	    'x (/ 640 2)
+	    'y (- (/ 480 2) 25)
+	    'width 640
+	    'height 0
+	    'align 'center
+	    'text "Tides of Darkness"))
+	'play-level "campaigns/orc/level12o.cm"
+	'play-level "campaigns/orc/level13o.cm"
+	'play-level "campaigns/orc/level14o.cm" ) )

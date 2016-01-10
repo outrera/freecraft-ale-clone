@@ -1,0 +1,519 @@
+;;   ___________                     _________                _____  __
+;;   \_          _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __\
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;        \/                \/     \/        \/            \/
+;;  ______________________                           ______________________
+;;                        T H E   W A R   B E G I N S
+;;           FreeCraft - A free fantasy real time strategy game engine
+;;
+;;        sounds.ccl        -        Define the used sounds.
+;;
+;;        (c) Copyright 1999,2000 by Fabrice Rossi
+;;
+;;        FreeCraft is free software; you can redistribute it and/or modify
+;;        it under the terms of the GNU General Public License as published
+;;        by the Free Software Foundation; only version 2 of the License.
+;;
+;;        FreeCraft is distributed in the hope that it will be useful,
+;;        but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;        GNU General Public License for more details.
+;;
+;;        $Id: sounds.ccl,v 1.1 2001/08/21 01:45:51 rock808 Exp $
+
+(if (with-sound) (begin
+
+
+;;----------------------------------------------------------------------------
+;;	Define basic alliance sounds.
+;;
+
+(make-sound "basic alliance voices work complete" "alliance/basic voices/work complete.wav")
+(map-sound "basic human voices work complete" "basic alliance voices work complete")
+(make-sound "peasant work complete" "alliance/units/peasant/work complete.wav")
+(make-sound "basic alliance voices ready" "alliance/basic voices/ready.wav")
+(make-sound "basic alliance voices help 1" "alliance/basic voices/help 1.wav")
+(make-sound "basic alliance voices help 2" "alliance/basic voices/help 2.wav")
+(make-sound "basic alliance voices dead" "alliance/basic voices/dead.wav")
+
+(make-sound "capture (alliance)" "alliance/misc/capture.wav")
+(make-sound "rescue (alliance)" "alliance/misc/rescue.wav")
+
+
+;;----------------------------------------------------------------------------
+;;	Define alliance spell sounds.
+;;
+
+(make-sound "exorcism" "alliance/spells/exorcism.wav")
+(make-sound "flame shield" "alliance/spells/flame shield.wav")
+(make-sound "healing" "alliance/spells/healing.wav")
+(make-sound "holy vision" "alliance/spells/holy vision.wav")
+(make-sound "blizzard" "alliance/spells/blizzard.wav")
+(make-sound "invisibility" "alliance/spells/invisibility.wav")
+(make-sound "polymorph" "alliance/spells/polymorph.wav")
+(make-sound "slow" "alliance/spells/slow.wav")
+
+
+;;----------------------------------------------------------------------------
+;;	Define alliance attack sounds.
+;;
+
+(make-sound "peasant attack" "alliance/units/peasant/attack.wav")
+(make-sound "lightning" "alliance/spells/lightning.wav")
+
+(map-sound "footman-attack" "sword attack")
+(map-sound "peasant-attack" "peasant attack")
+(map-sound "ballista-attack" "catapult-ballista attack")
+(map-sound "knight-attack" "sword attack")
+(map-sound "archer-attack" "bow throw")
+(map-sound "mage-attack" "lightning")
+(map-sound "paladin-attack" "sword attack")
+(map-sound "dwarves-attack" "sword attack")
+(map-sound "ranger-attack" "bow throw")
+(map-sound "arthor-literios-attack" "sword attack")
+(map-sound "female-hero-attack" "bow throw")
+(map-sound "knight-rider-attack" "sword attack")
+(map-sound "whise-man-attack" "sword attack")
+(map-sound "man-of-light-attack" "sword attack")
+(map-sound "flying-angle-attack" "lightning")
+(map-sound "white-mage-attack" "lightning")
+;; FIXME: what sound for ships?
+(map-sound "alliance-destroyer-attack" "catapult-ballista attack")
+(map-sound "battleship-attack" "catapult-ballista attack")
+(map-sound "alliance-submarine-attack" "catapult-ballista attack")
+(map-sound "gryphon-rider-attack" "lightning")
+;; FIXME: what sound for those heroes?
+;; (map-sound "knight-rider-attack")
+;; (map-sound "arthor-literios-attack")
+;; (map-sound "wise-man-attack")
+;; (map-sound "man-of-light-attack")
+;; FIXME: what attack sounds for towers?
+(map-sound "alliance-guard-tower-attack" "bow throw")
+(map-sound "alliance-cannon-tower-attack" "catapult-ballista attack")
+(map-sound "peasant-with-gold-attack" "peasant-attack")
+(map-sound "peasant-with-wood-attack" "peasant-attack")
+
+; FIXME: missing sounds
+(map-sound "alliance-oil-tanker-attack" "missing")
+(map-sound "alliance-transport-attack" "missing")
+(map-sound "balloon-attack" "missing")
+(map-sound "wise-man-attack" "missing")
+(map-sound "alliance-farm-attack" "missing")
+(map-sound "alliance-barracks-attack" "missing")
+(map-sound "church-attack" "missing")
+(map-sound "alliance-watch-tower-attack" "missing")
+(map-sound "stables-attack" "missing")
+(map-sound "inventor-attack" "missing")
+(map-sound "gryphon-aviary-attack" "missing")
+(map-sound "alliance-shipyard-attack" "missing")
+(map-sound "alliance-lumber-mill-attack" "missing")
+(map-sound "alliance-foundry-attack" "missing")
+(map-sound "town-hall-attack" "missing")
+(map-sound "mage-tower-attack" "missing")
+(map-sound "alliance-blacksmith-attack" "missing")
+(map-sound "alliance-refinery-attack" "missing")
+(map-sound "alliance-oil-platform-attack" "missing")
+(map-sound "keep-attack" "missing")
+(map-sound "castle-attack" "missing")
+(map-sound "alliance-start-location-attack" "missing")
+(map-sound "alliance-wall-attack" "missing")
+(map-sound "alliance-oil-tanker-full-attack" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define alliance ready sounds.
+;;
+
+(make-sound "dwarves-ready" "alliance/units/dwarves/ready.wav")
+(make-sound "elven archer-ranger ready" "alliance/units/elven archer ranger/ready.wav")
+(make-sound "balloon-ready" "alliance/units/balloon/ready.wav")
+(make-sound "knight-ready" "alliance/units/knight/ready.wav")
+(make-sound "paladin-ready" "alliance/units/paladin/ready.wav")
+(make-sound "ships alliance ready" "alliance/units/ships/ready.wav")
+(make-sound "mage-ready" "alliance/units/mage/ready.wav")
+(make-sound "peasant-ready" "alliance/units/peasant/ready.wav")
+
+(map-sound "footman-ready" "basic alliance voices ready")
+(map-sound "ballista-ready" "basic alliance voices ready")
+(map-sound "archer-ready" "elven archer-ranger ready")
+(map-sound "ranger-ready" "elven archer-ranger ready")
+(map-sound "gryphon-rider-ready" "missing")
+(map-sound "alliance-oil-tanker-ready" "ships alliance ready")
+(map-sound "alliance-transport-ready" "ships alliance ready")
+(map-sound "alliance-destroyer-ready" "ships alliance ready")
+(map-sound "battleship-ready" "ships alliance ready")
+(map-sound "alliance-submarine-ready" "ships alliance ready")
+
+; FIXME: missing sounds
+(map-sound "female-hero-ready" "missing")
+(map-sound "flying-angle-ready" "missing")
+(map-sound "white-mage-ready" "missing")
+(map-sound "knight-rider-ready" "missing")
+(map-sound "arthor-literios-ready" "missing")
+(map-sound "wise-man-ready" "missing")
+(map-sound "man-of-light-ready" "missing")
+(map-sound "alliance-farm-ready" "missing")
+(map-sound "alliance-barracks-ready" "missing")
+(map-sound "church-ready" "missing")
+(map-sound "alliance-watch-tower-ready" "missing")
+(map-sound "stables-ready" "missing")
+(map-sound "inventor-ready" "missing")
+(map-sound "gryphon-aviary-ready" "missing")
+(map-sound "alliance-shipyard-ready" "missing")
+(map-sound "alliance-lumber-mill-ready" "missing")
+(map-sound "alliance-foundry-ready" "missing")
+(map-sound "town-hall-ready" "missing")
+(map-sound "mage-tower-ready" "missing")
+(map-sound "alliance-blacksmith-ready" "missing")
+(map-sound "alliance-refinery-ready" "missing")
+(map-sound "alliance-oil-platform-ready" "missing")
+(map-sound "keep-ready" "missing")
+(map-sound "castle-ready" "missing")
+(map-sound "alliance-start-location-ready" "missing")
+(map-sound "alliance-guard-tower-ready" "missing")
+(map-sound "alliance-cannon-tower-ready" "missing")
+(map-sound "alliance-wall-ready" "missing")
+(map-sound "peasant-with-gold-ready" "missing")
+(map-sound "peasant-with-wood-ready" "missing")
+(map-sound "alliance-oil-tanker-full-ready" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define alliance acknowledgement sounds.
+;;
+
+(make-sound "basic alliance voices acknowledge"
+	(list "alliance/basic voices/acknowledgement 1.wav"
+	"alliance/basic voices/acknowledgement 2.wav"
+	"alliance/basic voices/acknowledgement 3.wav"
+	"alliance/basic voices/acknowledgement 4.wav"))
+(make-sound "peasant-acknowledge"
+	(list "alliance/units/peasant/acknowledgement 1.wav"
+	"alliance/units/peasant/acknowledgement 2.wav"
+	"alliance/units/peasant/acknowledgement 3.wav"
+	"alliance/units/peasant/acknowledgement 4.wav"))
+(make-sound "knight-acknowledge"
+	(list "alliance/units/knight/acknowledgement 1.wav"
+	"alliance/units/knight/acknowledgement 2.wav"
+	"alliance/units/knight/acknowledgement 3.wav"
+	"alliance/units/knight/acknowledgement 4.wav"))
+(make-sound "elven archer-ranger acknowledge"
+	(list "alliance/units/elven archer ranger/acknowledgement 1.wav"
+	"alliance/units/elven archer ranger/acknowledgement 2.wav"
+	"alliance/units/elven archer ranger/acknowledgement 3.wav"
+	"alliance/units/elven archer ranger/acknowledgement 4.wav"))
+(make-sound "mage-acknowledge"
+	(list "alliance/units/mage/acknowledgement 1.wav"
+	"alliance/units/mage/acknowledgement 2.wav"
+	"alliance/units/mage/acknowledgement 3.wav"))
+(make-sound "paladin-acknowledge"
+	(list "alliance/units/paladin/acknowledgement 1.wav"
+	"alliance/units/paladin/acknowledgement 2.wav"
+	"alliance/units/paladin/acknowledgement 3.wav"
+	"alliance/units/paladin/acknowledgement 4.wav"))
+(make-sound "dwarves-acknowledge"
+	(list "alliance/units/dwarves/acknowledgement 1.wav"
+	"alliance/units/dwarves/acknowledgement 2.wav"
+	"alliance/units/dwarves/acknowledgement 3.wav"
+	"alliance/units/dwarves/acknowledgement 4.wav"
+	"alliance/units/dwarves/acknowledgement 5.wav"))
+(make-sound "female-hero-acknowledge"
+	(list "alliance/heroes/joan of arc/acknowledgement 1.wav"
+	"alliance/heroes/joan of arc/acknowledgement 2.wav"
+	"alliance/heroes/joan of arc/acknowledgement 3.wav"))
+(make-sound "flying-angle-acknowledge"
+	(list "alliance/heroes/perseus/acknowledgement 1.wav"
+	"alliance/heroes/perseus/acknowledgement 2.wav"
+	"alliance/heroes/perseus/acknowledgement 3.wav"))
+(make-sound "white-mage-acknowledge"
+	(list "alliance/heroes/merlin/acknowledgement 1.wav"
+	"alliance/heroes/merlin/acknowledgement 2.wav"
+	"alliance/heroes/merlin/acknowledgement 3.wav"))
+(make-sound "ships alliance acknowledge"
+	(list "alliance/units/ships/acknowledgement 1.wav"
+	"alliance/units/ships/acknowledgement 2.wav"
+	"alliance/units/ships/acknowledgement 3.wav"))
+(make-sound "balloon-acknowledge"
+	(list "alliance/units/balloon/acknowledgement 1.wav"))
+(make-sound "gryphon-rider-acknowledge"
+	(list "alliance/units/gryphon rider/acknowledgement 1.wav"))
+(make-sound "knight-rider-acknowledge"
+	(list "alliance/heroes/lancelot/acknowledgement 1.wav"
+	"alliance/heroes/lancelot/acknowledgement 2.wav"
+	"alliance/heroes/lancelot/acknowledgement 3.wav"))
+(make-sound "arthor-literios-acknowledge"
+	(list "alliance/heroes/hercules/acknowledgement 1.wav"
+	"alliance/heroes/hercules/acknowledgement 2.wav"
+	"alliance/heroes/hercules/acknowledgement 3.wav"))
+
+(map-sound "footman-acknowledge" "basic alliance voices acknowledge")
+(map-sound "ballista-acknowledge" "catapult-ballista movement")
+(map-sound "archer-acknowledge" "elven archer-ranger acknowledge")
+(map-sound "ranger-acknowledge" "elven archer-ranger acknowledge")
+(map-sound "alliance-oil-tanker-acknowledge" "tanker acknowledge")
+(map-sound "alliance-transport-acknowledge" "ships alliance acknowledge")
+(map-sound "alliance-destroyer-acknowledge" "ships alliance acknowledge")
+(map-sound "battleship-acknowledge" "ships alliance acknowledge")
+(map-sound "alliance-submarine-acknowledge" "ships alliance acknowledge")
+(map-sound "wise-man-acknowledge" "knight-acknowledge")
+(map-sound "man-of-light-acknowledge" "paladin-acknowledge")
+(map-sound "eye-of-vision-acknowledge" "missing") ;; Sound missing!
+(map-sound "peasant-with-gold-acknowledge" "peasant-acknowledge")
+(map-sound "peasant-with-wood-acknowledge" "peasant-acknowledge")
+(map-sound "alliance-oil-tanker-full-acknowledge" "tanker acknowledge")
+
+; FIXME: missing sounds
+(map-sound "alliance-farm-acknowledge" "missing")
+(map-sound "alliance-barracks-acknowledge" "missing")
+(map-sound "church-acknowledge" "missing")
+(map-sound "alliance-watch-tower-acknowledge" "missing")
+(map-sound "stables-acknowledge" "missing")
+(map-sound "inventor-acknowledge" "missing")
+(map-sound "gryphon-aviary-acknowledge" "missing")
+(map-sound "alliance-shipyard-acknowledge" "missing")
+(map-sound "alliance-lumber-mill-acknowledge" "missing")
+(map-sound "alliance-foundry-acknowledge" "missing")
+(map-sound "town-hall-acknowledge" "missing")
+(map-sound "mage-tower-acknowledge" "missing")
+(map-sound "alliance-blacksmith-acknowledge" "missing")
+(map-sound "alliance-refiner-acknowledge" "missing")
+(map-sound "alliance-oil-platform-acknowledge" "missing")
+(map-sound "keep-acknowledge" "missing")
+(map-sound "castle-acknowledge" "missing")
+(map-sound "alliance-start-location-acknowledge" "missing")
+(map-sound "alliance-guard-tower-acknowledge" "missing")
+(map-sound "alliance-cannon-tower-acknowledge" "missing")
+(map-sound "alliance-wall-acknowledge" "missing")
+(map-sound "alliance-refinery-acknowledge" "missing")
+
+ 
+;;----------------------------------------------------------------------------
+;;	Define alliance annoyed sounds.
+;;
+
+(make-sound "basic alliance voices annoyed"
+	(list "alliance/basic voices/annoyed 1.wav"
+	"alliance/basic voices/annoyed 2.wav"
+	"alliance/basic voices/annoyed 3.wav"
+	"alliance/basic voices/annoyed 4.wav"
+	"alliance/basic voices/annoyed 5.wav"
+	"alliance/basic voices/annoyed 6.wav"
+	"alliance/basic voices/annoyed 7.wav"))
+(make-sound "dwarven demolition squad annoyed"
+	(list "alliance/units/dwarves/annoyed 1.wav"
+	"alliance/units/dwarves/annoyed 2.wav"
+	"alliance/units/dwarves/annoyed 3.wav"))
+(make-sound "elven archer-ranger annoyed"
+	(list "alliance/units/elven archer ranger/annoyed 1.wav"
+	"alliance/units/elven archer ranger/annoyed 2.wav"
+	"alliance/units/elven archer ranger/annoyed 3.wav"))
+(make-sound "balloon annoyed"
+	(list "alliance/units/balloon/annoyed 1.wav"
+	"alliance/units/balloon/annoyed 2.wav"
+	"alliance/units/balloon/annoyed 3.wav"
+	"alliance/units/balloon/annoyed 4.wav"
+	"alliance/units/balloon/annoyed 5.wav"))
+(make-sound "knight annoyed"
+	(list "alliance/units/knight/annoyed 1.wav"
+	"alliance/units/knight/annoyed 2.wav"
+	"alliance/units/knight/annoyed 3.wav"))
+(make-sound "paladin annoyed"
+	(list "alliance/units/paladin/annoyed 1.wav"
+	"alliance/units/paladin/annoyed 2.wav"
+	"alliance/units/paladin/annoyed 3.wav"))
+(make-sound "ships alliance annoyed"
+	(list "alliance/units/ships/annoyed 1.wav"
+	"alliance/units/ships/annoyed 2.wav"
+	"alliance/units/ships/annoyed 3.wav"))
+(make-sound "ships submarine annoyed"
+	(list "alliance/units/submarine/annoyed 1.wav"
+	"alliance/units/submarine/annoyed 2.wav"
+	"alliance/units/submarine/annoyed 3.wav"
+	"alliance/units/submarine/annoyed 4.wav"))
+(make-sound "mage annoyed"
+	(list "alliance/units/mage/annoyed 1.wav"
+	"alliance/units/mage/annoyed 2.wav"
+	"alliance/units/mage/annoyed 3.wav"))
+(make-sound "peasant annoyed"
+	(list "alliance/units/peasant/annoyed 1.wav"
+	"alliance/units/peasant/annoyed 2.wav"
+	"alliance/units/peasant/annoyed 3.wav"
+	"alliance/units/peasant/annoyed 4.wav"
+	"alliance/units/peasant/annoyed 5.wav"
+	"alliance/units/peasant/annoyed 6.wav"
+	"alliance/units/peasant/annoyed 7.wav"))
+(make-sound "female-hero annoyed"
+	(list "alliance/heroes/joan of arc/annoyed 1.wav"
+	"alliance/heroes/joan of arc/annoyed 2.wav"
+	"alliance/heroes/joan of arc/annoyed 3.wav"))
+(make-sound "arthor-literios annoyed"
+	(list "alliance/heroes/hercules/annoyed 1.wav"
+	"alliance/heroes/hercules/annoyed 2.wav"
+	"alliance/heroes/hercules/annoyed 3.wav"))
+(make-sound "white-mage annoyed"
+	(list "alliance/heroes/merlin/annoyed 1.wav"
+	"alliance/heroes/merlin/annoyed 2.wav"
+	"alliance/heroes/merlin/annoyed 3.wav"))
+(make-sound "flying angle annoyed"
+	(list "alliance/heroes/perseus/annoyed 1.wav"
+	"alliance/heroes/perseus/annoyed 2.wav"
+	"alliance/heroes/perseus/annoyed 3.wav"))
+(make-sound "knight-rider annoyed"
+	(list "alliance/heroes/lancelot/annoyed 1.wav"
+	"alliance/heroes/lancelot/annoyed 2.wav"
+	"alliance/heroes/lancelot/annoyed 3.wav"))
+
+
+;;----------------------------------------------------------------------------
+;;	Define alliance selected sounds.
+;;
+
+(make-sound "basic alliance voices selected"
+	(list "alliance/basic voices/selected 1.wav"
+	"alliance/basic voices/selected 2.wav"
+	"alliance/basic voices/selected 3.wav"
+	"alliance/basic voices/selected 4.wav"
+	"alliance/basic voices/selected 5.wav"
+	"alliance/basic voices/selected 6.wav"))
+(make-sound "dwarven demolition squad selected"
+	(list "alliance/units/dwarves/selected 1.wav"
+	"alliance/units/dwarves/selected 2.wav"))
+(make-sound "elven archer-ranger selected"
+	(list "alliance/units/elven archer ranger/selected 1.wav"
+	"alliance/units/elven archer ranger/selected 2.wav"
+	"alliance/units/elven archer ranger/selected 3.wav"
+	"alliance/units/elven archer ranger/selected 4.wav"))
+(make-sound "knight selected"
+	(list "alliance/units/knight/selected 1.wav"
+	"alliance/units/knight/selected 2.wav"
+	"alliance/units/knight/selected 3.wav"
+	"alliance/units/knight/selected 4.wav"))
+(make-sound "paladin selected"
+	(list "alliance/units/paladin/selected 1.wav"
+	"alliance/units/paladin/selected 2.wav"
+	"alliance/units/paladin/selected 3.wav"
+	"alliance/units/paladin/selected 4.wav"))
+(make-sound "ships alliance selected"
+	(list "alliance/units/ships/selected 1.wav"
+	"alliance/units/ships/selected 2.wav"
+	"alliance/units/ships/selected 3.wav"))
+(make-sound "mage selected"
+	(list "alliance/units/mage/selected 1.wav"
+	"alliance/units/mage/selected 2.wav"
+	"alliance/units/mage/selected 3.wav"))
+(make-sound "peasant selected"
+	(list "alliance/units/peasant/selected 1.wav"
+	"alliance/units/peasant/selected 2.wav"
+	"alliance/units/peasant/selected 3.wav"
+	"alliance/units/peasant/selected 4.wav"))
+(make-sound "female-hero selected"
+	(list "alliance/heroes/joan of arc/selected 1.wav"
+	"alliance/heroes/joan of arc/selected 2.wav"
+	"alliance/heroes/joan of arc/selected 3.wav"))
+(make-sound "arthor-literios selected"
+	(list "alliance/heroes/hercules/selected 1.wav"
+	"alliance/heroes/hercules/selected 2.wav"
+	"alliance/heroes/hercules/selected 3.wav"))
+(make-sound "white-mage selected"
+	(list "alliance/heroes/merlin/selected 1.wav"
+	"alliance/heroes/merlin/selected 2.wav"
+	"alliance/heroes/merlin/selected 3.wav"))
+(make-sound "flying angle selected"
+	(list "alliance/heroes/perseus/selected 1.wav"
+	"alliance/heroes/perseus/selected 2.wav"
+	"alliance/heroes/perseus/selected 3.wav"))
+(make-sound "knight-rider selected"
+	(list "alliance/heroes/lancelot/selected 1.wav"
+	"alliance/heroes/lancelot/selected 2.wav"
+	"alliance/heroes/lancelot/selected 3.wav"))
+(make-sound "gryphon-rider-selected"
+	"alliance/units/gryphon rider/selected 1.wav")
+(make-sound "church-selected"
+	"alliance/buildings/church.wav")
+(make-sound "stables-selected"
+	"alliance/buildings/stables.wav")
+(make-sound "alliance-farm-selected"
+	"alliance/buildings/human farm.wav")
+(make-sound "gryphon-aviary-selected"
+	"alliance/buildings/gryphon aviary.wav")
+(make-sound "inventor-selected"
+	"alliance/buildings/gnomish inventor.wav")
+(make-sound "mage-tower-selected"
+	"alliance/buildings/mage tower.wav")
+
+(make-sound-group "footman-selected"
+	"basic alliance voices selected" "basic alliance voices annoyed")
+(make-sound-group "peasant-selected"
+	"peasant selected" "peasant annoyed")
+(make-sound-group "knight-selected"
+	"knight selected" "knight annoyed")
+(make-sound-group "archer-selected"
+	"elven archer-ranger selected" "elven archer-ranger annoyed")
+(make-sound-group "mage-selected"
+	"mage selected" "mage annoyed")
+(make-sound-group "paladin-selected"
+	"paladin selected" "paladin annoyed")
+(make-sound-group "dwarves-selected"
+	"dwarven demolition squad selected" "dwarven demolition squad annoyed")
+(make-sound-group "female-hero-selected"
+	"female-hero selected" "female-hero annoyed")
+(make-sound-group "flying-angle-selected"
+	"flying angle selected" "flying angle annoyed")
+(make-sound-group "white-mage-selected"
+	"white-mage selected" "white-mage annoyed")
+(make-sound-group "alliance-oil-tanker-selected"
+	"ships alliance selected" "ships alliance annoyed")
+(make-sound-group "alliance-submarine-selected"
+	"ships alliance selected" "ships submarine annoyed")
+(make-sound-group "balloon-selected"
+	"click" "balloon annoyed")
+(make-sound-group "knight-rider-selected"
+	"knight-rider selected" "knight-rider annoyed")
+(make-sound-group "arthor-literios-selected"
+	"arthor-literios selected" "arthor-literios annoyed")
+
+(map-sound "ballista-selected" "click")
+(map-sound "ranger-selected" "elven archer-ranger selected")
+(map-sound "alliance-transport-selected" "alliance-oil-tanker-selected")
+(map-sound "alliance-destroyer-selected" "alliance-oil-tanker-selected")
+(map-sound "battleship-selected" "alliance-oil-tanker-selected")
+(map-sound "wise-man-selected" "knight-selected")
+(map-sound "man-of-light-selected" "paladin-selected")
+(map-sound "alliance-barracks-selected" "click")
+(map-sound "alliance-watch-tower-selected" "click")
+(map-sound "alliance-shipyard-selected" "shipyard")
+(map-sound "town-hall-selected" "click")
+(map-sound "alliance-lumber-mill-selected" "lumbermill")
+(map-sound "alliance-foundry-selected" "foundry")
+(map-sound "alliance-blacksmith-selected" "blacksmith")
+(map-sound "alliance-refinery-selected" "oil refinery")
+(map-sound "alliance-oil-platform-selected" "oil platform")
+(map-sound "keep-selected" "click")
+(map-sound "castle-selected" "click")
+(map-sound "alliance-guard-tower-selected" "click")
+(map-sound "alliance-cannon-tower-selected" "click")
+(map-sound "peasant-with-gold-selected" "peasant-selected")
+(map-sound "peasant-with-wood-selected" "peasant-selected")
+(map-sound "alliance-oil-tanker-full-selected" "alliance-oil-tanker-selected")
+
+; FIXME: missing sounds
+(map-sound "alliance-wall-selected" "missing")
+(map-sound "alliance-start-location-selected" "missing")
+ 
+
+;;----------------------------------------------------------------------------
+;;	Define alliance sounds used by game.
+;;
+
+(define-game-sounds
+
+; FIXME: Not ready
+;  'basic-alliance-voices-work-complete
+;  'peasant-work-complete
+
+   'human-rescue (make-sound "alliance rescue" "alliance/misc/rescue.wav")
+)
+  
+))

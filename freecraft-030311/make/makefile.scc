@@ -1,0 +1,83 @@
+#
+# Makefile (Symantec MAKE)
+# rename it to makefile
+#
+
+include rules
+
+# Module Objects
+OBJS=input\input.lib
+OBJS=$(OBJS) network\network.lib
+OBJS=$(OBJS) res\res.lib
+OBJS=$(OBJS) sound\sound.lib
+OBJS=$(OBJS) utils\utils.lib
+OBJS=$(OBJS) video\video.lib
+
+all: engine.$(OE)
+        cd input
+        $(MAKE) all
+        cd ..
+        cd network
+        $(MAKE) all
+        cd ..
+        cd res
+        $(MAKE) all
+        cd ..
+        cd sound
+        $(MAKE) all
+        cd ..
+        cd utils
+        $(MAKE) all
+        cd ..
+        cd video
+        $(MAKE) all
+        cd ..
+        $(CC) $(CFLAGS_O) engine.$(OE) $(OBJS)
+
+clean: clean-
+
+clean-:
+        $(RM) $(OUTFILE)
+        $(RM) engine.$(OE)
+        cd input
+        $(MAKE) clean
+        cd ..
+        cd network
+        $(MAKE) clean
+        cd ..
+        cd res
+        $(MAKE) clean
+        cd ..
+        cd sound
+        $(MAKE) clean
+        cd ..
+        cd utils
+        $(MAKE) clean
+        cd ..
+        cd video
+        $(MAKE) clean
+        cd ..
+
+depend:
+        $(SETINC)
+        $(DEPEND)
+        cd input
+        $(MAKE) depend
+        cd ..
+        cd network
+        $(MAKE) depend
+        cd ..
+        cd res
+        $(MAKE) depend
+        cd ..
+        cd sound
+        $(MAKE) depend
+        cd ..
+        cd utils
+        $(MAKE) depend
+        cd ..
+        cd video
+        $(MAKE) depend
+        cd ..
+
+include depend

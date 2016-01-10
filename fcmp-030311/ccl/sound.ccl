@@ -1,0 +1,226 @@
+;;   ___________                     _________                _____  __
+;;   \_          _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __\
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;        \/                \/     \/        \/            \/
+;;  ______________________                           ______________________
+;;                        T H E   W A R   B E G I N S
+;;           FreeCraft - A free fantasy real time strategy game engine
+;;
+;;        sound.ccl        -        Define the used sounds.
+;;
+;;	(c) Copyright 1999-2002 by Fabrice Rossi and Lutz Sammer
+;;
+;;        FreeCraft is free software; you can redistribute it and/or modify
+;;        it under the terms of the GNU General Public License as published
+;;        by the Free Software Foundation; only version 2 of the License.
+;;
+;;        FreeCraft is distributed in the hope that it will be useful,
+;;        but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;        GNU General Public License for more details.
+;;
+;;        $Id: sound.ccl,v 1.7 2001/08/21 01:44:25 rock808 Exp $
+
+(if (with-sound) (begin
+
+;;        Uncomment this to enable threaded sound
+;(sound-thread)
+
+
+;;----------------------------------------------------------------------------
+;;        Music part
+;;
+
+(define (music-stopped)
+  (play-music (nth (rand (length play-list)) play-list)) )
+
+
+;;----------------------------------------------------------------------------
+;;      (set-cd-mode!) set how your CD is played.
+;;		all	plays all tracks
+;;		random	plays random tracks
+;;		defined	play according to playlist below
+;;		off	turns cd player off
+(set-cd-mode! 'all)
+;(set-cd-mode! 'random) 
+;(set-cd-mode! 'defined)
+;(set-cd-mode! 'off)
+
+;;----------------------------------------------------------------------------
+;;	(define-play-sections) set the playlist for different 
+;;			       sections of the game
+;;
+
+;;----------------------------------------------------------------------------
+;;	Define sounds later used
+;;
+
+(define sound-click (make-sound "click" "general/ui/click.wav"))
+
+
+;;----------------------------------------------------------------------------
+;;	Define simple misc sounds.
+;;
+
+(make-sound "missing" "general/misc/missing.wav")
+
+(make-sound "building construction" "general/misc/building construction.wav")
+(make-sound "ship sinking" "general/units/ships/sinking.wav")
+(make-sound "catapult-ballista movement" "general/units/catapult ballista/acknowledgement 1.wav")
+
+(make-sound "blacksmith" "general/buildings/blacksmith.wav")
+(make-sound "shipyard" "general/buildings/shipyard.wav")
+(make-sound "oil platform" "general/buildings/oil platform.wav")
+(make-sound "oil refinery" "general/buildings/oil refinery.wav")
+(make-sound "foundry" "general/buildings/foundry.wav")
+(make-sound "lumbermill" "general/buildings/lumbermill.wav")
+(make-sound "transport docking" "general/units/transport/docking.wav")
+(make-sound "burning" "general/misc/burning.wav")
+(make-sound "explosion" "general/misc/explosion.wav")
+(make-sound "building destroyed"
+	(list "general/misc/explosion 1.wav"
+	"general/misc/explosion 2.wav"
+	"general/misc/explosion 3.wav"))
+(make-sound "tree chopping"
+	(list "general/misc/tree chopping 1.wav"
+	"general/misc/tree chopping 2.wav"
+	"general/misc/tree chopping 3.wav"
+	"general/misc/tree chopping 4.wav"))
+
+(map-sound "critter-help" "click")
+(map-sound "critter-dead" "explosion")
+
+; FIXME: missing sounds
+(map-sound "oil-patch-help" "missing")
+(map-sound "eye-of-vision-dead" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define spell sounds.
+;;
+
+; FIXME: missing sounds
+(map-sound "runes" "missing")
+(map-sound "raise dead" "missing")
+(map-sound "circle of power" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define attack sounds.
+;;
+
+(make-sound "catapult-ballista attack" "general/missiles/catapult ballista attack.wav")
+(make-sound "punch" "general/missiles/punch.wav")
+(make-sound "fireball hit" "general/missiles/fireball hit.wav")
+(make-sound "fireball throw" "general/missiles/fireball throw.wav")
+(make-sound "bow throw" "general/missiles/bow throw.wav")
+(make-sound "bow hit" "general/missiles/bow hit.wav")
+(make-sound "axe throw" "general/missiles/axe throw.wav")
+(make-sound "fist" "general/missiles/fist.wav")
+(make-sound "sword attack"
+	(list "general/missiles/sword attack 1.wav"
+	"general/missiles/sword attack 2.wav"
+	"general/missiles/sword attack 3.wav"))
+
+(map-sound "skeleton-attack" "fist")
+
+; FIXME: missing sounds
+(map-sound "critter-attack" "missing")
+(map-sound "daemon-attack" "missing")
+(map-sound "gold-mine-attack" "missing")
+(map-sound "oil-patch-attack" "missing")
+(map-sound "circle-of-power-attack" "missing")
+(map-sound "dark-portal-attack" "missing")
+(map-sound "runestone-attack" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define selected sounds.
+;;
+
+(make-sound "sheep selected" "general/units/sheep/selected 1.wav")
+(make-sound "seal selected" "general/units/seal/selected 1.wav")
+(make-sound "pig selected" "general/units/pig/selected 1.wav")
+(make-sound "warthog selected" "general/units/warthog/selected 1.wav")
+(make-sound "gold-mine-selected" "general/buildings/gold mine.wav")
+(map-sound "skeleton-selected" "click")
+(map-sound "daemon-selected" "click")
+(map-sound "oil-patch-selected" "click")
+(map-sound "circle-of-power-selected" "click")
+(map-sound "dark-portal-selected" "click")
+(map-sound "runestone-selected" "click")
+
+
+;;----------------------------------------------------------------------------
+;;	Define ready sounds.
+;;
+
+; FIXME: missing sounds
+(map-sound "critter-ready" "missing")
+(map-sound "daemon-ready" "missing")
+(map-sound "gold-mine-ready" "missing")
+(map-sound "oil-patch-ready" "missing")
+(map-sound "circle-of-power-ready" "missing")
+(map-sound "dark-portal-ready" "missing")
+(map-sound "runestone-ready" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define acknowledgement sounds.
+;;
+
+(make-sound "tanker acknowledge"
+	(list "general/units/tanker/acknowledgement 1.wav"))
+
+; FIXME: missing sounds
+(map-sound "daemon-acknowledge" "missing")
+(map-sound "critter-acknowledge" "missing")
+(map-sound "gold-mine-acknowledge" "missing")
+(map-sound "oil-patch-acknowledge" "missing")
+(map-sound "circle-of-power-acknowledge" "missing")
+(map-sound "dark-portal-acknowledge" "missing")
+(map-sound "runestone-acknowledge" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define annoyed sounds.
+;;
+
+(make-sound "sheep annoyed" "general/units/sheep/annoyed 1.wav")
+(make-sound "seal annoyed" "general/units/seal/annoyed 1.wav")
+(make-sound "pig annoyed" "general/units/pig/annoyed 1.wav")
+(make-sound "warthog annoyed" "general/units/warthog/annoyed 1.wav")
+
+
+;;----------------------------------------------------------------------------
+;;	Define sounds used by game
+;;
+
+(define-game-sounds
+
+  'placement-error (make-sound "placement error" "general/ui/placement error.wav")
+  'placement-success (make-sound "placement success" "general/ui/placement success.wav")
+  'click sound-click
+
+; FIXME: Not ready
+;  'tree-chopping (make-sound "tree chopping" "tree chopping.wav")
+;  'transport-docking
+;  'building-construction
+;  'basic-mythical-voices-work-complete
+
+   ;; Repair sound is disabled as default
+   'repair (make-sound "repair" "general/misc/repair.wav")
+)
+
+
+;;----------------------------------------------------------------------------
+;;	Load the different races
+;;
+
+(load "ccl/alliance/sounds.ccl" #f #t)
+(load "ccl/mythical/sounds.ccl" #f #t)
+
+
+))

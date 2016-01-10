@@ -1,0 +1,499 @@
+;;   ___________                     _________                _____  __
+;;   \_          _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __\
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;        \/                \/     \/        \/            \/
+;;  ______________________                           ______________________
+;;                        T H E   W A R   B E G I N S
+;;           FreeCraft - A free fantasy real time strategy game engine
+;;
+;;        sounds.ccl        -        Define the used sounds.
+;;
+;;        (c) Copyright 1999,2000 by Fabrice Rossi
+;;
+;;        FreeCraft is free software; you can redistribute it and/or modify
+;;        it under the terms of the GNU General Public License as published
+;;        by the Free Software Foundation; only version 2 of the License.
+;;
+;;        FreeCraft is distributed in the hope that it will be useful,
+;;        but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;        GNU General Public License for more details.
+;;
+;;        $Id: sounds.ccl,v 1.1 2001/08/21 01:47:04 rock808 Exp $
+
+(if (with-sound) (begin
+
+
+;;----------------------------------------------------------------------------
+;;	Define simple mythical sounds.
+;;
+
+(make-sound "basic mythical voices work complete" "mythical/basic voices/work complete.wav")
+(map-sound "basic orc voices work complete" "basic mythical voices work complete")
+(make-sound "basic mythical voices ready" "mythical/basic voices/ready.wav")
+(make-sound "basic mythical voices help 1" "mythical/basic voices/help 1.wav")
+(map-sound "basic orc voices help 1" "basic mythical voices help 1")
+(make-sound "basic mythical voices help 2" "mythical/basic voices/help 2.wav")
+(make-sound "basic mythical voices dead" "mythical/basic voices/dead.wav")
+
+(make-sound "capture (mythical)" "mythical/misc/capture.wav")
+(make-sound "rescue (mythical)" "mythical/misc/rescue.wav")
+
+; FIXME: this is hardcoded in the source
+(map-sound "basic mythical voices help 1" "basic mythical voices help 1")
+
+; FIXME: missing sounds
+(map-sound "eye-of-vision-dead" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define mythical spell sounds.
+;;
+
+(make-sound "bloodlust" "mythical/spells/bloodlust.wav")
+(make-sound "death and decay" "mythical/spells/death and decay.wav")
+(make-sound "death coil" "mythical/spells/death coil.wav")
+(make-sound "haste" "mythical/spells/haste.wav")
+(make-sound "eye of vision" "mythical/spells/eye of vision.wav")
+(make-sound "unholy armour" "mythical/spells/unholy armor.wav")
+(make-sound "whirlwind" "mythical/spells/whirlwind.wav")
+(make-sound "touch of darkness" "mythical/spells/touch of darkness.wav")
+
+ 
+;;----------------------------------------------------------------------------
+;;	Define mythical attack sounds.
+;;
+
+(make-sound "peon attack" "mythical/units/peon/attack.wav")
+; FIXME: these are defined in general sounds, but should probably be here in mythical
+;(make-sound "catapult-ballista attack" "general/missiles/catapult ballista attack.wav")
+;(make-sound "axe throw" "general/missiles/axe throw.wav")
+
+(map-sound "grunt-attack" "sword attack")
+(map-sound "peon-attack" "peon attack")
+(map-sound "catapult-attack" "catapult-ballista attack")
+(map-sound "ogre-attack" "punch")
+(map-sound "axethrower-attack" "axe throw")
+(map-sound "death-knight-attack" "touch of darkness")
+(map-sound "ogre-mage-attack" "punch")
+(map-sound "goblin-sappers-attack" "sword attack")
+(map-sound "berserker-attack" "axe throw")
+(map-sound "quick-blade-attack" "sword attack")
+(map-sound "sharp-axe-attack" "axe throw")
+(map-sound "evil-knight-attack" "touch of darkness")
+(map-sound "ice-bringer-attack" "touch of darkness")
+(map-sound "double-head-attack" "punch")
+(map-sound "fad-man-attack" "punch")
+(map-sound "beast-cry-attack" "sword attack")
+;; FIXME: what sound for ships?
+(map-sound "mythical-destroyer-attack" "catapult-ballista attack")
+(map-sound "ogre-juggernaught-attack" "catapult-ballista attack")
+(map-sound "mythical-submarine-attack" "catapult-ballista attack")
+(map-sound "fire-breeze-attack" "fireball throw")
+(map-sound "dragon-attack" "fireball throw")
+;; FIXME: what sound for those heroes?
+;; (map-sound "quick-blade-attack")
+;; (map-sound "double-head-attack")
+;; (map-sound "ice-bringer-attack")
+;; (map-sound "sharp-axe-attack")
+;; FIXME: what attack sounds for towers?
+(map-sound "mythical-guard-tower-attack" "axe throw")
+(map-sound "mythical-cannon-tower-attack" "catapult-ballista attack")
+
+(map-sound "peon-with-gold-attack" "peon-attack")
+(map-sound "peon-with-wood-attack" "peon-attack")
+
+; FIXME: missing sounds
+(map-sound "mythical-oil-tanker-attack" "missing")
+(map-sound "mythical-transport-attack" "missing")
+(map-sound "zeppelin-attack" "missing")
+(map-sound "eye-of-vision-attack" "missing")
+(map-sound "pig-farm-attack" "missing")
+(map-sound "mythical-barracks-attack" "missing")
+(map-sound "altar-of-storms-attack" "missing")
+(map-sound "mythical-watch-tower-attack" "missing")
+(map-sound "ogre-mound-attack" "missing")
+(map-sound "alchemist-attack" "missing")
+(map-sound "dragon-roost-attack" "missing")
+(map-sound "mythical-shipyard-attack" "missing")
+(map-sound "great-hall-attack" "missing")
+(map-sound "mythical-lumber-mill-attack" "missing")
+(map-sound "mythical-foundry-attack" "missing")
+(map-sound "temple-of-the-damned-attack" "missing")
+(map-sound "mythical-blacksmith-attack" "missing")
+(map-sound "mythical-refinery-attack" "missing")
+(map-sound "mythical-oil-platform-attack" "missing")
+(map-sound "stronghold-attack" "missing")
+(map-sound "fortress-attack" "missing")
+(map-sound "mythical-start-location-attack" "missing")
+(map-sound "mythical-wall-attack" "missing")
+(map-sound "mythical-oil-tanker-full-attack" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define mythical ready sounds.
+;;
+
+(make-sound "peon-ready" "mythical/units/peon/ready.wav")
+(make-sound "death-knight-ready" "mythical/units/death knight/ready.wav")
+(make-sound "goblin-sappers-ready" "mythical/units/goblin sappers/ready.wav")
+(make-sound "zeppelin-ready" "mythical/units/zeppelin/ready.wav")
+(make-sound "ogre-ready" "mythical/units/ogre/ready.wav")
+(make-sound "ogre-mage-ready" "mythical/units/ogre mage/ready.wav")
+(make-sound "ships mythical ready" "mythical/units/ships/ready.wav")
+(make-sound "troll axethrower-berserker ready" "mythical/units/troll axethrower berserker/ready.wav")
+(make-sound "dragon-ready" "mythical/units/dragon/ready.wav")
+
+(map-sound "grunt-ready" "basic mythical voices ready")
+(map-sound "catapult-ready" "basic mythical voices ready")
+(map-sound "axethrower-ready" "troll axethrower-berserker ready")
+(map-sound "berserker-ready" "troll axethrower-berserker ready")
+(map-sound "mythical-oil-tanker-ready" "ships mythical ready")
+(map-sound "mythical-transport-ready" "ships mythical ready")
+(map-sound "mythical-destroyer-ready" "ships mythical ready")
+(map-sound "ogre-juggernaught-ready" "ships mythical ready")
+(map-sound "mythical-submarine-ready" "ships mythical ready")
+
+; FIXME: missing sounds
+(map-sound "evil-knight-ready" "missing")
+(map-sound "fad-man-ready" "missing")
+(map-sound "beast-cry-ready" "missing")
+(map-sound "fire-breeze-ready" "missing")
+(map-sound "eye-of-vision-ready" "missing")
+(map-sound "quick-blade-ready" "missing")
+(map-sound "double-head-ready" "missing")
+(map-sound "ice-bringer-ready" "missing")
+(map-sound "sharp-axe-ready" "missing")
+(map-sound "skeleton-ready" "missing")
+(map-sound "pig-farm-ready" "missing")
+(map-sound "mythical-barracks-ready" "missing")
+(map-sound "altar-of-storms-ready" "missing")
+(map-sound "mythical-watch-tower-ready" "missing")
+(map-sound "ogre-mound-ready" "missing")
+(map-sound "alchemist-ready" "missing")
+(map-sound "dragon-roost-ready" "missing")
+(map-sound "mythical-shipyard-ready" "missing")
+(map-sound "great-hall-ready" "missing")
+(map-sound "mythical-lumber-mill-ready" "missing")
+(map-sound "mythical-foundry-ready" "missing")
+(map-sound "temple-of-the-damned-ready" "missing")
+(map-sound "mythical-blacksmith-ready" "missing")
+(map-sound "mythical-refinery-ready" "missing")
+(map-sound "mythical-oil-platform-ready" "missing")
+(map-sound "stronghold-ready" "missing")
+(map-sound "fortress-ready" "missing")
+(map-sound "mythical-start-location-ready" "missing")
+(map-sound "mythical-guard-tower-ready" "missing")
+(map-sound "mythical-cannon-tower-ready" "missing")
+(map-sound "mythical-wall-ready" "missing")
+(map-sound "peon-with-gold-ready" "missing")
+(map-sound "peon-with-wood-ready" "missing")
+(map-sound "mythical-oil-tanker-full-ready" "missing")
+ 
+
+;;----------------------------------------------------------------------------
+;;	Define mythical acknowledgement sounds.
+;;
+(make-sound "basic mythical voices acknowledge"
+	(list "mythical/basic voices/acknowledgement 1.wav"
+	"mythical/basic voices/acknowledgement 2.wav"
+	"mythical/basic voices/acknowledgement 3.wav"
+	"mythical/basic voices/acknowledgement 4.wav"))
+(make-sound "ogre-acknowledge"
+	(list "mythical/units/ogre/acknowledgement 1.wav"
+	"mythical/units/ogre/acknowledgement 2.wav"
+	"mythical/units/ogre/acknowledgement 3.wav"))
+(make-sound "troll axethrower-berserker acknowledge"
+	(list "mythical/units/troll axethrower berserker/acknowledgement 1.wav"
+	"mythical/units/troll axethrower berserker/acknowledgement 2.wav"
+	"mythical/units/troll axethrower berserker/acknowledgement 3.wav"))
+(make-sound "death-knight-acknowledge"
+	(list "mythical/units/death knight/acknowledgement 1.wav"
+	"mythical/units/death knight/acknowledgement 2.wav"
+	"mythical/units/death knight/acknowledgement 3.wav"))
+(make-sound "ogre-mage-acknowledge"
+	(list "mythical/units/ogre mage/acknowledgement 1.wav"
+	"mythical/units/ogre mage/acknowledgement 2.wav"
+	"mythical/units/ogre mage/acknowledgement 3.wav"))
+(make-sound "goblin-sappers-acknowledge"
+	(list "mythical/units/goblin sappers/acknowledgement 1.wav"
+	"mythical/units/goblin sappers/acknowledgement 2.wav"
+	"mythical/units/goblin sappers/acknowledgement 3.wav"
+	"mythical/units/goblin sappers/acknowledgement 4.wav"))
+(make-sound "evil-knight-acknowledge"
+	(list "mythical/heroes/evil knight/acknowledgement 1.wav"
+	"mythical/heroes/evil knight/acknowledgement 2.wav"
+	"mythical/heroes/evil knight/acknowledgement 3.wav"))
+(make-sound "fad-man-acknowledge"
+	(list "mythical/heroes/fad man/acknowledgement 1.wav"
+	"mythical/heroes/fad man/acknowledgement 2.wav"
+	"mythical/heroes/fad man/acknowledgement 3.wav"))
+(make-sound "beast-cry-acknowledge"
+	(list "mythical/heroes/beast cry/acknowledgement 1.wav"
+	"mythical/heroes/beast cry/acknowledgement 2.wav"
+	"mythical/heroes/beast cry/acknowledgement 3.wav"))
+(make-sound "ships mythical acknowledge"
+	(list "mythical/units/ships/acknowledgement 1.wav"
+	"mythical/units/ships/acknowledgement 2.wav"
+	"mythical/units/ships/acknowledgement 3.wav"))
+(make-sound "fire-breeze-acknowledge"
+	(list "mythical/heroes/fire breeze/acknowledgement 1.wav"
+	"mythical/heroes/fire breeze/acknowledgement 2.wav"
+	"mythical/heroes/fire breeze/acknowledgement 3.wav"))
+(make-sound "zeppelin-acknowledge"
+	(list "mythical/units/zeppelin/acknowledgement 1.wav"))
+(make-sound "dragon-acknowledge"
+	(list "mythical/units/dragon/acknowledgement 1.wav"
+	"mythical/units/dragon/acknowledgement 2.wav"))
+(make-sound "quick-blade-acknowledge"
+	(list "mythical/heroes/quick blade/acknowledgement 1.wav"
+	"mythical/heroes/quick blade/acknowledgement 2.wav"
+	"mythical/heroes/quick blade/acknowledgement 3.wav"))
+
+(map-sound "grunt-acknowledge" "basic mythical voices acknowledge")
+(map-sound "peon-acknowledge" "basic mythical voices acknowledge")
+(map-sound "catapult-acknowledge" "catapult-ballista movement")
+(map-sound "axethrower-acknowledge" "troll axethrower-berserker acknowledge")
+(map-sound "berserker-acknowledge" "troll axethrower-berserker acknowledge")
+(map-sound "mythical-oil-tanker-acknowledge" "tanker acknowledge")
+(map-sound "mythical-transport-acknowledge" "ships mythical acknowledge")
+(map-sound "mythical-destroyer-acknowledge" "ships mythical acknowledge")
+(map-sound "ogre-juggernaught-acknowledge" "ships mythical acknowledge")
+(map-sound "mythical-submarine-acknowledge" "ships mythical acknowledge")
+(map-sound "double-head-acknowledge" "ogre-mage-acknowledge")
+(map-sound "ice-bringer-acknowledge" "death-knight-acknowledge")
+(map-sound "sharp-axe-acknowledge" "troll axethrower-berserker acknowledge")
+(map-sound "peon-with-gold-acknowledge" "basic mythical voices acknowledge")
+(map-sound "peon-with-wood-acknowledge" "basic mythical voices acknowledge")
+(map-sound "mythical-oil-tanker-full-acknowledge" "tanker acknowledge")
+
+; FIXME: missing sounds
+(map-sound "eye-of-vision-acknowledge" "missing")
+(map-sound "skeleton-acknowledge" "missing")
+(map-sound "pig-farm-acknowledge" "missing")
+(map-sound "mythical-barracks-acknowledge" "missing")
+(map-sound "altar-of-storms-acknowledge" "missing")
+(map-sound "mythical-watch-tower-acknowledge" "missing")
+(map-sound "ogre-mound-acknowledge" "missing")
+(map-sound "alchemist-acknowledge" "missing")
+(map-sound "dragon-roost-acknowledge" "missing")
+(map-sound "mythical-shipyard-acknowledge" "missing")
+(map-sound "great-hall-acknowledge" "missing")
+(map-sound "mythical-lumber-mill-acknowledge" "missing")
+(map-sound "mythical-foundry-acknowledge" "missing")
+(map-sound "temple-of-the-damned-acknowledge" "missing")
+(map-sound "mythical-blacksmith-acknowledge" "missing")
+(map-sound "mythical-refinery-acknowledge" "missing")
+(map-sound "mythical-oil-platform-acknowledge" "missing")
+(map-sound "stronghold-acknowledge" "missing")
+(map-sound "fortress-acknowledge" "missing")
+(map-sound "mythical-start-location-acknowledge" "missing")
+(map-sound "mythical-guard-tower-acknowledge" "missing")
+(map-sound "mythical-cannon-tower-acknowledge" "missing")
+(map-sound "mythical-wall-acknowledge" "missing")
+ 
+
+;;----------------------------------------------------------------------------
+;;	Define mythical annoyed sounds.
+;;
+
+(make-sound "basic mythical voices annoyed"
+	(list "mythical/basic voices/annoyed 1.wav"
+	"mythical/basic voices/annoyed 2.wav"
+	"mythical/basic voices/annoyed 3.wav"
+	"mythical/basic voices/annoyed 4.wav"
+	"mythical/basic voices/annoyed 5.wav"
+	"mythical/basic voices/annoyed 6.wav"
+	"mythical/basic voices/annoyed 7.wav"))
+(make-sound "death knight annoyed"
+	(list "mythical/units/death knight/annoyed 1.wav"
+	"mythical/units/death knight/annoyed 2.wav"
+	"mythical/units/death knight/annoyed 3.wav"))
+(make-sound "goblin sappers annoyed"
+	(list "mythical/units/goblin sappers/annoyed 1.wav"
+	"mythical/units/goblin sappers/annoyed 2.wav"
+	"mythical/units/goblin sappers/annoyed 3.wav"))
+(make-sound "zeppelin annoyed"
+	(list "mythical/units/zeppelin/annoyed 1.wav"
+	"mythical/units/zeppelin/annoyed 2.wav"))
+(make-sound "ogre annoyed"
+	(list "mythical/units/ogre/annoyed 1.wav"
+	"mythical/units/ogre/annoyed 2.wav"
+	"mythical/units/ogre/annoyed 3.wav"
+	"mythical/units/ogre/annoyed 4.wav"
+	"mythical/units/ogre/annoyed 5.wav"))
+(make-sound "ogre-mage annoyed"
+	(list "mythical/units/ogre mage/annoyed 1.wav"
+	"mythical/units/ogre mage/annoyed 2.wav"
+	"mythical/units/ogre mage/annoyed 3.wav"))
+(make-sound "ships mythical annoyed"
+	(list "mythical/units/ships/annoyed 1.wav"
+	"mythical/units/ships/annoyed 2.wav"
+	"mythical/units/ships/annoyed 3.wav"))
+(make-sound "troll axethrower-berserker annoyed"
+	(list "mythical/units/troll axethrower berserker/annoyed 1.wav"
+	"mythical/units/troll axethrower berserker/annoyed 2.wav"
+	"mythical/units/troll axethrower berserker/annoyed 3.wav"))
+(make-sound "fire-breeze annoyed"
+	(list "mythical/heroes/fire breeze/annoyed 1.wav"
+	"mythical/heroes/fire breeze/annoyed 2.wav"
+	"mythical/heroes/fire breeze/annoyed 3.wav"))
+(make-sound "fad-man annoyed"
+	(list "mythical/heroes/fad man/annoyed 1.wav"
+	"mythical/heroes/fad man/annoyed 2.wav"
+	"mythical/heroes/fad man/annoyed 3.wav"))
+(make-sound "beast cry annoyed"
+	(list "mythical/heroes/beast cry/annoyed 1.wav"
+	"mythical/heroes/beast cry/annoyed 2.wav"
+	"mythical/heroes/beast cry/annoyed 3.wav"))
+(make-sound "quick blade annoyed"
+	(list "mythical/heroes/quick blade/annoyed 1.wav"
+	"mythical/heroes/quick blade/annoyed 2.wav"
+	"mythical/heroes/quick blade/annoyed 3.wav"))
+(make-sound "evil knight annoyed"
+	(list "mythical/heroes/evil knight/annoyed 1.wav"
+	"mythical/heroes/evil knight/annoyed 2.wav"
+	"mythical/heroes/evil knight/annoyed 3.wav"))
+
+
+;;----------------------------------------------------------------------------
+;;	Define mythical selected sounds.
+;;
+
+(make-sound "basic mythical voices selected"
+	(list "mythical/basic voices/selected 1.wav"
+	"mythical/basic voices/selected 2.wav"
+	"mythical/basic voices/selected 3.wav"
+	"mythical/basic voices/selected 4.wav"
+	"mythical/basic voices/selected 5.wav"
+	"mythical/basic voices/selected 6.wav"))
+(make-sound "death knight selected"
+	(list "mythical/units/death knight/selected 1.wav"
+	"mythical/units/death knight/selected 2.wav"))
+(make-sound "goblin sappers selected"
+	(list "mythical/units/goblin sappers/selected 1.wav"
+	"mythical/units/goblin sappers/selected 2.wav"
+	"mythical/units/goblin sappers/selected 3.wav"
+	"mythical/units/goblin sappers/selected 4.wav"))
+(make-sound "ogre selected"
+	(list "mythical/units/ogre/selected 1.wav"
+	"mythical/units/ogre/selected 2.wav"
+	"mythical/units/ogre/selected 3.wav"
+	"mythical/units/ogre/selected 4.wav"))
+(make-sound "ogre-mage selected"
+	(list "mythical/units/ogre mage/selected 1.wav"
+	"mythical/units/ogre mage/selected 2.wav"
+	"mythical/units/ogre mage/selected 3.wav"
+	"mythical/units/ogre mage/selected 4.wav"))
+(make-sound "ships mythical selected"
+	(list "mythical/units/ships/selected 1.wav"
+	"mythical/units/ships/selected 2.wav"
+	"mythical/units/ships/selected 3.wav"))
+(make-sound "troll axethrower-berserker selected"
+	(list "mythical/units/troll axethrower berserker/selected 1.wav"
+	"mythical/units/troll axethrower berserker/selected 2.wav"
+	"mythical/units/troll axethrower berserker/selected 3.wav"))
+(make-sound "fire-breeze selected"
+	(list "mythical/heroes/fire breeze/selected 1.wav"
+	"mythical/heroes/fire breeze/selected 2.wav"
+	"mythical/heroes/fire breeze/selected 3.wav"))
+(make-sound "fad-man selected"
+	(list "mythical/heroes/fad man/selected 1.wav"
+	"mythical/heroes/fad man/selected 2.wav"
+	"mythical/heroes/fad man/selected 3.wav"))
+(make-sound "beast cry selected"
+	(list "mythical/heroes/beast cry/selected 1.wav"
+	"mythical/heroes/beast cry/selected 2.wav"
+	"mythical/heroes/beast cry/selected 3.wav"))
+(make-sound "quick blade selected"
+	(list "mythical/heroes/quick blade/selected 1.wav"
+	"mythical/heroes/quick blade/selected 2.wav"
+	"mythical/heroes/quick blade/selected 3.wav"))
+(make-sound "evil knight selected"
+	(list "mythical/heroes/evil knight/selected 1.wav"
+	"mythical/heroes/evil knight/selected 2.wav"
+	"mythical/heroes/evil knight/selected 3.wav"))
+(make-sound "dragon-selected" "mythical/units/dragon/selected 1.wav")
+(make-sound "altar-of-storms-selected" "mythical/buildings/altar of storms.wav")
+(make-sound "ogre-mound-selected" "mythical/buildings/ogre mound.wav")
+(make-sound "pig-farm-selected" "mythical/buildings/pig farm.wav")
+(make-sound "dragon-roost-selected" "mythical/buildings/dragon roost.wav")
+(make-sound "alchemist-selected" "mythical/buildings/goblin alchemist.wav")
+(make-sound "temple-of-the-damned-selected" "mythical/buildings/temple of the damned.wav")
+
+(make-sound-group "grunt-selected"
+	"basic mythical voices selected" "basic mythical voices annoyed")
+(make-sound-group "ogre-selected"
+	"ogre selected" "ogre annoyed")
+(make-sound-group "axethrower-selected"
+	"troll axethrower-berserker selected"
+	"troll axethrower-berserker annoyed")
+(make-sound-group "death-knight-selected"
+	"death knight selected" "death knight annoyed")
+(make-sound-group "ogre-mage-selected"
+	"ogre-mage selected" "ogre-mage annoyed")
+(make-sound-group "goblin-sappers-selected"
+	"goblin sappers selected" "goblin sappers annoyed")
+(make-sound-group "evil-knight-selected"
+	"evil knight selected"
+	"evil knight annoyed")
+(make-sound-group "fad-man-selected"
+	"fad-man selected" "fad-man annoyed")
+(make-sound-group "beast-cry-selected"
+	"beast cry selected" "beast cry annoyed")
+(make-sound-group "mythical-oil-tanker-selected"
+	"ships mythical selected" "ships mythical annoyed")
+(make-sound-group "fire-breeze-selected"
+	"fire-breeze selected" "fire-breeze annoyed")
+(make-sound-group "zeppelin-selected"
+	"click" "zeppelin annoyed")
+(make-sound-group "quick-blade-selected"
+	"quick blade selected" "quick blade annoyed")
+
+(map-sound "peon-selected" "grunt-selected")
+(map-sound "catapult-selected" "click")
+(map-sound "berserker-selected" "troll axethrower-berserker selected")
+(map-sound "mythical-transport-selected" "mythical-oil-tanker-selected")
+(map-sound "mythical-destroyer-selected" "mythical-oil-tanker-selected")
+(map-sound "ogre-juggernaught-selected" "mythical-oil-tanker-selected")
+(map-sound "mythical-submarine-selected" "mythical-oil-tanker-selected")
+(map-sound "eye-of-vision-selected" "click")
+(map-sound "double-head-selected" "ogre-mage-selected")
+(map-sound "ice-bringer-selected" "death-knight-selected")
+(map-sound "sharp-axe-selected" "troll axethrower-berserker selected")
+(map-sound "mythical-barracks-selected" "click")
+(map-sound "mythical-watch-tower-selected" "click")
+(map-sound "mythical-shipyard-selected" "shipyard")
+(map-sound "great-hall-selected" "click")
+(map-sound "mythical-lumber-mill-selected" "lumbermill")
+(map-sound "mythical-foundry-selected" "foundry")
+(map-sound "mythical-blacksmith-selected" "blacksmith")
+(map-sound "mythical-refinery-selected" "oil refinery")
+(map-sound "mythical-oil-platform-selected" "oil platform")
+(map-sound "stronghold-selected" "click")
+(map-sound "fortress-selected" "click")
+(map-sound "mythical-guard-tower-selected" "click")
+(map-sound "mythical-cannon-tower-selected" "click")
+(map-sound "peon-with-gold-selected" "peon-selected")
+(map-sound "peon-with-wood-selected" "peon-selected")
+(map-sound "mythical-oil-tanker-full-selected" "mythical-oil-tanker-selected")
+
+; FIXME: missing sounds
+(map-sound "mythical-wall-selected" "missing")
+(map-sound "mythical-start-location-selected" "missing")
+
+
+;;----------------------------------------------------------------------------
+;;	Define mythical sounds used by game.
+;;
+(define-game-sounds
+
+; FIXME: Not ready
+;  'basic-mythical-voices-work-complete
+
+   'orc-rescue (make-sound "mythical rescue" "mythical/misc/rescue.wav")
+)
+  
+))

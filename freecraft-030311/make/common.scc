@@ -1,0 +1,23 @@
+#
+# Common mk (Symantec MAKE)
+# rename it to common.mk
+#
+all: $(MODULE).lib
+
+$(MODULE).lib: $(OBJS)
+        echo >$(MODULE).lib
+        $(RM) $(MODULE).lib
+        for %%i in ($(OBJS)) do lib $(MODULE).lib +%i,,$(MODULE).lib
+
+clean: clean-
+
+clean-:
+        $(RM) *.$(OE)
+        $(RM) $(MODULE).lib
+
+depend:
+        $(SETINC)
+        $(DEPEND)
+
+include depend
+

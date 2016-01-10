@@ -1,0 +1,195 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __\ 
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	ui.ccl		-	Define the alliance user interface
+;;
+;;	(c) Copyright 2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; either version 2 of the License,
+;;	or (at your option) any later version.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: ui.ccl,v 1.1 2001/06/18 01:50:33 johns Exp $
+;;
+
+;;=============================================================================
+;;	Define a cursor.
+;;
+;;	(define-cursor 'ident 'race 'image "file-path"
+;;		'hotspot ( x y ) 'size ( width height ))
+;;
+(define-cursor	'cursor-point		'alliance
+    'image "ui/alliance/cursors/alliance gauntlet.png"
+    'hot-spot '( 3  2) 'size '(28 32) )
+(define-cursor	'cursor-green-hair	'alliance
+    'image "ui/alliance/cursors/green eagle.png"
+    'hot-spot '(15 15) 'size '(32 32) )
+(define-cursor	'cursor-yellow-hair	'alliance
+    'image "ui/alliance/cursors/yellow eagle.png"
+    'hot-spot '(15 15) 'size '(32 32) )
+(define-cursor	'cursor-red-hair	'alliance
+    'image "ui/alliance/cursors/red eagle.png"
+    'hot-spot '(15 15) 'size '(32 32) )
+
+;;=============================================================================
+;;	Define the user interface
+;;
+;;	(define-ui "race" screen-width screen-height
+;;
+;;	This defines the position and sizes of the different user
+;;	interface sections.
+;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;	* Race alliance.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;Screen looks like
+;;(0 0)
+;;+----------------------------------------+
+;;|(0 Map_top)                             |
+;;+----------------------------------------+
+;;|The Map                                 |
+;;|(0 Map_Bottom)                          |
+;;+----------------------------------------+
+;;|                                        |
+;;|                                        |
+;;+----------------------------------------+
+;;(0 screen_height)
+
+(define (alliance_screen screen_width screen_height)    
+  (print screen_width)
+  (print screen_height)
+  (let (
+	;;(screen_height-(16+((screen_height - 192)/32)*32))
+	(map_bottom (+ 16 (* 32 (trunc (/ (- screen_height 192) 32)))))
+	)
+    
+    (define-ui "alliance" screen_width screen_height ; Selector
+					;	Filler 1
+      (list (string-append
+	"graphics/ui/alliance/"
+	(number->string screen_width) "x" (number->string screen_height)
+	"/filler1.png") 528 (+ map_bottom 16))
+
+					;	Resource line
+      (list (string-append
+	"graphics/ui/alliance/"
+	(number->string screen_width) "x" (number->string screen_height)
+	"/resource.png") 0 0)
+
+      
+					; gold resource
+      (list "graphics/ui/gold,wood,oil,mana.png"	0
+	    (trunc (*(/ screen_width 10) 1)) 0 14 14 (trunc (+(*(/ screen_width 10) 1) 18)) 1)
+	; wood resource
+      (list "graphics/ui/gold,wood,oil,mana.png"	1
+	    (trunc (*(/ screen_width 10) 2)) 0 14 14 (trunc (+(*(/ screen_width 10) 2) 18)) 1)
+	;  oil resource
+      (list "graphics/ui/gold,wood,oil,mana.png"	2
+	    (trunc (*(/ screen_width 10) 3)) 0 14 14 (trunc (+(*(/ screen_width 10) 3) 18)) 1)
+	;  ore resource
+      (list "graphics/ui/ore,stone,coal.png"		0
+	    (trunc (*(/ screen_width 10) 4)) 0 14 14 (trunc (+(*(/ screen_width 10) 4) 18)) 1)
+	;  stone resource
+      (list "graphics/ui/ore,stone,coal.png"		1
+	    (trunc (*(/ screen_width 10) 5)) 0 14 14 (trunc (+(*(/ screen_width 10) 5) 18)) 1)
+	;  coal resource
+      (list "graphics/ui/ore,stone,coal.png"		2
+	    (trunc (*(/ screen_width 10) 6)) 0 14 14 (trunc (+(*(/ screen_width 10) 6) 18)) 1)
+
+	; food resource
+      (list "graphics/ui/food.png"			0
+	    (trunc (*(/ screen_width 10) 7)) 0 14 14 (trunc (+(*(/ screen_width 10) 7) 18)) 1)
+	; score
+      (list "graphics/ui/score.png"			0
+	    (trunc (*(/ screen_width 10) 8)) 0 14 14 (trunc (+(*(/ screen_width 10) 8) 18)) 1)
+      
+					; Info panel
+      (list "graphics/ui/alliance/infopanel.png" 0 map_bottom 176 176)
+
+					; Completed bar
+      (list color-dark-green  12 (+ map_bottom 153) 50 (+ map_bottom 153))
+
+					; Command button panel
+      (list "graphics/ui/alliance/buttonpanel.png" 352 (+ map_bottom 16))
+
+	; The big map
+      (list 0 16 screen_width map_bottom)
+
+					; Menu button
+      (list "graphics/ui/alliance/menubutton.png" 176 (+ map_bottom 16))
+
+					; Minimap
+      (list "graphics/ui/alliance/minimap.png" 176 (+ map_bottom 40))
+
+					;	Status line
+      (list (string-append
+	"graphics/ui/alliance/"
+	(number->string screen_width) "x" (number->string screen_height)
+	"/statusline.png") 176 map_bottom)
+
+      
+	;	Defines position and size of the different buttons.
+	; Menu button
+      (list 198 (+ map_bottom 18) 128 17 )
+	; 9 Character portraits
+      (list   6 (+ map_bottom 6)  46 38 )
+      (list  62 (+ map_bottom 6)  46 38 )
+      (list 118 (+ map_bottom 6)  46 38 )
+      (list   6 (+ map_bottom 58) 46 38 )
+      (list  62 (+ map_bottom 58) 46 38 )
+      (list 118 (+ map_bottom 58) 46 38 )
+      (list   6 (+ map_bottom 110) 46 38 )
+      (list  62 (+ map_bottom 110) 46 38 )
+      (list 118 (+ map_bottom 110) 46 38 )
+	; 9 Buttons interface
+      (list 358 (+ map_bottom 33)  46 38 )
+      (list 414 (+ map_bottom 33)  46 38 )
+      (list 470 (+ map_bottom 33)  46 38 )
+      (list 358 (+ map_bottom 80)  46 38 )
+      (list 414 (+ map_bottom 80)  46 38 )
+      (list 470 (+ map_bottom 80)  46 38 )
+      (list 358 (+ map_bottom 127) 46 38 )
+      (list 414 (+ map_bottom 127) 46 38 )
+      (list 470 (+ map_bottom 127) 46 38 )
+
+	;	Defines position and size of the training queue buttons.
+      (list   6 (+ map_bottom 56)  46 38 )
+      (list  62 (+ map_bottom 56)  46 38 )
+      (list 118 (+ map_bottom 56)  46 38 )
+      (list   6 (+ map_bottom 103) 46 38 )
+      (list  62 (+ map_bottom 103) 46 38 )
+      (list 118 (+ map_bottom 103) 46 38 ) 
+      (list 'cursor-point 'cursor-glass 'cursor-cross
+	  'cursor-yellow-hair 'cursor-green-hair 'cursor-red-hair
+	  'cursor-scroll 'cursor-arrow-e 'cursor-arrow-ne 'cursor-arrow-n
+	  'cursor-arrow-nw 'cursor-arrow-w 'cursor-arrow-sw
+	  'cursor-arrow-s 'cursor-arrow-se )
+      '("graphics/ui/alliance/panel 1.png")
+      '("graphics/ui/alliance/panel 2.png")
+      '("graphics/ui/alliance/panel 3.png")
+      '("graphics/ui/alliance/panel 4.png")
+      '("graphics/ui/alliance/panel 5.png")
+      )
+    )
+  )
+
+(alliance_screen 640 480)
+(alliance_screen 800 600)
+(alliance_screen 1024 768)
+(alliance_screen 1280 960)
+(alliance_screen 1600 1200)

@@ -1,0 +1,4487 @@
+;;
+;;	A clone of a famous game.
+;;
+;;	units.ccl	-	Define the used units.
+;;
+;;	(c) Copyright 1998 by Lutz Sammer
+;;
+;;	$Id: units.ccl,v 1.2 1999/06/18 00:56:18 root Exp $
+;;
+
+;;=============================================================================
+;;	Define units
+;;
+;;	WARNING: udta can generate this tables.
+;;
+(unit-type UnitFootman
+  "Footman"
+  nil
+  #(				;;; Graphics
+    "footman.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconFootman			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   600    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  2				;;; Armor
+  60				;;; Priority
+  6				;;; Basic-damage
+  3				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  50				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGrunt
+  "Grunt"
+  nil
+  #(				;;; Graphics
+    "grunt.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconGrunt			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   600    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  2				;;; Armor
+  60				;;; Priority
+  6				;;; Basic-damage
+  3				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  50				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitPeasant
+  "Peasant"
+  nil
+  #(				;;; Graphics
+    "peasant.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeasant			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'harvest			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'cower-peon
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitPeon
+  "Peon"
+  nil
+  #(				;;; Graphics
+    "peon.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeon			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'harvest			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'cower-peon
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitBallista
+  "Ballista"
+  nil
+  #(				;;; Graphics
+    "ballista.png"
+    nil
+    nil
+    nil)
+  64  64			;;; graphic size
+  'IconBallista			;;; Icon
+  5				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  110				;;; Hit-points
+  0				;;; Magic
+  250				;;; Build-time
+   900  300    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   8 11  9			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  80				;;; Basic-damage
+  0				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileBallistaBolt			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 
+				;;; Flags
+  'explode-when-killed
+  'can-groundattack
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitCatapult
+  "Catapult"
+  nil
+  #(				;;; Graphics
+    "catapult.png"
+    nil
+    nil
+    nil)
+  64  64			;;; graphic size
+  'IconCatapult			;;; Icon
+  5				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  110				;;; Hit-points
+  0				;;; Magic
+  250				;;; Build-time
+   900  300    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   8 11  9			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  80				;;; Basic-damage
+  0				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileCatapultRock			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 
+				;;; Flags
+  'explode-when-killed
+  'can-groundattack
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitKnight
+  "Knight"
+  nil
+  #(				;;; Graphics
+    "knight.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconKnight			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   800  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  6  4			;;; Ranges
+  4				;;; Armor
+  63				;;; Priority
+  8				;;; Basic-damage
+  4				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitOgre
+  "Ogre"
+  nil
+  #(				;;; Graphics
+    "ogre.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconOgre			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   800  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  6  4			;;; Ranges
+  4				;;; Armor
+  63				;;; Priority
+  8				;;; Basic-damage
+  4				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitArcher
+  "Archer"
+  nil
+  #(				;;; Graphics
+    "archer.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconArcher			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   500   50    0		;;; Costs
+  1 1				;;; Tile size
+   33  33			;;; Box size
+   4  7  5			;;; Ranges
+  0				;;; Armor
+  55				;;; Priority
+  3				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileArrow			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  60				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitAxethrower
+  "Troll Axethrower"
+  nil
+  #(				;;; Graphics
+    "axethrower.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconAxethrower			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   500   50    0		;;; Costs
+  1 1				;;; Tile size
+   36  36			;;; Box size
+   4  7  5			;;; Ranges
+  0				;;; Armor
+  55				;;; Priority
+  3				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileAxe			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  60				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitMage
+  "Mage"
+  nil
+  #(				;;; Graphics
+    "mage.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconMage			;;; Icon
+  8				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  60				;;; Hit-points
+  1				;;; Magic
+  120				;;; Build-time
+  1200    0    0		;;; Costs
+  1 1				;;; Tile size
+   33  33			;;; Box size
+   2 11  9			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  9				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'cower-mage
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitDeathKnight
+  "Death Knight"
+  nil
+  #(				;;; Graphics
+    "death knight.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconDeathKnight			;;; Icon
+  8				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  60				;;; Hit-points
+  1				;;; Magic
+  120				;;; Build-time
+  1200    0    0		;;; Costs
+  1 1				;;; Tile size
+   39  39			;;; Box size
+   3 11  9			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  9				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileTouchOfDeath			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'isundead
+  'can-cast-spell
+  'can-attack
+  'cower-mage
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitPaladin
+  "Paladin"
+  UnitKnight
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPaladin			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   800  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  7  5			;;; Ranges
+  4				;;; Armor
+  65				;;; Priority
+  8				;;; Basic-damage
+  4				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  110				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitOgreMage
+  "Ogre Mage"
+  UnitOgre
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconOgreMage			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   800  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  7  5			;;; Ranges
+  4				;;; Armor
+  65				;;; Priority
+  8				;;; Basic-damage
+  4				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  110				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitDwarves
+  "Dwarves"
+  nil
+  #(				;;; Graphics
+    "dwarves.png"
+    nil
+    nil
+    nil)
+  56  56			;;; graphic size
+  'IconDwarves			;;; Icon
+  11				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   700  250    0		;;; Costs
+  1 1				;;; Tile size
+   32  32			;;; Box size
+   1  4  2			;;; Ranges
+  0				;;; Armor
+  55				;;; Priority
+  4				;;; Basic-damage
+  2				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'demolish			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'volatile
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGoblinSappers
+  "Goblin Sappers"
+  nil
+  #(				;;; Graphics
+    "goblin sapper.png"
+    nil
+    nil
+    nil)
+  56  56			;;; graphic size
+  'IconGoblinSappers			;;; Icon
+  11				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   700  250    0		;;; Costs
+  1 1				;;; Tile size
+   37  37			;;; Box size
+   1  4  2			;;; Ranges
+  0				;;; Armor
+  55				;;; Priority
+  4				;;; Basic-damage
+  2				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'demolish			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'volatile
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitAttackPeasant
+  "Peasant"
+  UnitPeasant
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeasant			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitAttackPeon
+  "Peon"
+  UnitPeon
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeon			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitRanger
+  "Ranger"
+  UnitArcher
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconRanger			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  50				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   500   50    0		;;; Costs
+  1 1				;;; Tile size
+   33  33			;;; Box size
+   4  9  6			;;; Ranges
+  0				;;; Armor
+  57				;;; Priority
+  3				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileArrow			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  70				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitBerserker
+  "Berserker"
+  UnitAxethrower
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconBerserker			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  50				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   500   50    0		;;; Costs
+  1 1				;;; Tile size
+   36  36			;;; Box size
+   4  9  6			;;; Ranges
+  0				;;; Armor
+  57				;;; Priority
+  3				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileAxe			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  70				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitAlleria
+  "Alleria"
+  UnitArcher
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconAlleria			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  120				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   500   50    0		;;; Costs
+  1 1				;;; Tile size
+   33  33			;;; Box size
+   7  7  5			;;; Ranges
+  5				;;; Armor
+  55				;;; Priority
+  10				;;; Basic-damage
+  18				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileArrow			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  60				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTeronGorefiend
+  "Teron Gorefiend"
+  UnitDeathKnight
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTeronGorefiend			;;; Icon
+  8				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  180				;;; Hit-points
+  1				;;; Magic
+  120				;;; Build-time
+  1200    0    0		;;; Costs
+  1 1				;;; Tile size
+   39  39			;;; Box size
+   4 11  9			;;; Ranges
+  2				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  16				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileTouchOfDeath			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'isundead
+  'can-cast-spell
+  'can-attack
+  'cower-mage
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitKurdanAndSky_ree
+  "Kurdan and Sky'ree"
+  UnitGryphonRider
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  80  80			;;; graphic size
+  'IconKurdanAndSky_ree			;;; Icon
+  14				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  250				;;; Hit-points
+  0				;;; Magic
+  250				;;; Build-time
+  2500    0    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   5  8  6			;;; Ranges
+  6				;;; Armor
+  65				;;; Priority
+  0				;;; Basic-damage
+  25				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileGriffonHammer			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  150				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitDentarg
+  "Dentarg"
+  UnitGrunt
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  99				;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  300				;;; Hit-points
+  1				;;; Magic
+  90				;;; Build-time
+   800  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  6  4			;;; Ranges
+  8				;;; Armor
+  63				;;; Priority
+  18				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitKhadgar
+  "Khadgar"
+  UnitMage
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconKhadgar			;;; Icon
+  8				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  120				;;; Hit-points
+  1				;;; Magic
+  120				;;; Build-time
+  1200    0    0		;;; Costs
+  1 1				;;; Tile size
+   33  33			;;; Box size
+   6 11  9			;;; Ranges
+  3				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  16				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'cower-mage
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGromHellscream
+  "Grom Hellscream"
+  UnitGrunt
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconGromHellscream			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  240				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   600    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  8				;;; Armor
+  60				;;; Priority
+  16				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  50				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTankerHuman
+  "Oil tanker"
+  nil
+  #(				;;; Graphics
+    "human tanker (empty).png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTankerHuman			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  50				;;; Build-time
+   400  200    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1  0  0			;;; Ranges
+  10				;;; Armor
+  50				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  10				;;; Annoy computer factor
+  'haul-oil			;;; Right mouse button
+  40				;;; Points
+				;;; Flags
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTankerOrc
+  "Oil tanker"
+  nil
+  #(				;;; Graphics
+    "orc tanker (empty).png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTankerOrc			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  50				;;; Build-time
+   400  200    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1  0  0			;;; Ranges
+  10				;;; Armor
+  50				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  10				;;; Annoy computer factor
+  'haul-oil			;;; Right mouse button
+  40				;;; Points
+				;;; Flags
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTransportHuman
+  "Transport"
+  nil
+  #(				;;; Graphics
+    "human transport.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTransportHuman			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  150				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   600  200  500		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1  0  0			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  15				;;; Annoy computer factor
+  'sail			;;; Right mouse button
+  50				;;; Points
+				;;; Flags
+  'sea-unit
+  'transporter
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTransportOrc
+  "Transport"
+  nil
+  #(				;;; Graphics
+    "orc transport.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTransportOrc			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  150				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   600  200  500		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1  0  0			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  15				;;; Annoy computer factor
+  'sail			;;; Right mouse button
+  50				;;; Points
+				;;; Flags
+  'sea-unit
+  'transporter
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitElvenDestroyer
+  "Elven Destroyer"
+  nil
+  #(				;;; Graphics
+    "elven destroyer.png"
+    nil
+    nil
+    nil)
+  80  88			;;; graphic size
+  'IconElvenDestroyer			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  8				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   700  350  700		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   4 10  8			;;; Ranges
+  10				;;; Armor
+  65				;;; Priority
+  35				;;; Basic-damage
+  0				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileSmallCannon			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  150				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'sea-unit
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTrollDestroyer
+  "Troll Destroyer"
+  nil
+  #(				;;; Graphics
+    "troll destroyer.png"
+    nil
+    nil
+    nil)
+  88  88			;;; graphic size
+  'IconTrollDestroyer			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  8				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   700  350  700		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   4 10  8			;;; Ranges
+  10				;;; Armor
+  65				;;; Priority
+  35				;;; Basic-damage
+  0				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileSmallCannon			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  150				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'sea-unit
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitBattleship
+  "Battleship"
+  nil
+  #(				;;; Graphics
+    "battleship.png"
+    nil
+    nil
+    nil)
+  88  88			;;; graphic size
+  'IconBattleship			;;; Icon
+  6				;;; Speed
+  0				;;; Overlap frame
+  8				;;; Sight-range
+  150				;;; Hit-points
+  0				;;; Magic
+  140				;;; Build-time
+  1000  500 1000		;;; Costs
+  1 1				;;; Tile size
+   70  70			;;; Box size
+   6 10  8			;;; Ranges
+  15				;;; Armor
+  63				;;; Priority
+  130				;;; Basic-damage
+  0				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileBigCannon			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  25				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  300				;;; Points
+  'can-target-land 'can-target-sea 
+				;;; Flags
+  'sea-unit
+  'can-groundattack
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitJuggernaught
+  "Ogre Juggernaught"
+  nil
+  #(				;;; Graphics
+    "juggernaught.png"
+    nil
+    nil
+    nil)
+  88  88			;;; graphic size
+  'IconJuggernaught			;;; Icon
+  6				;;; Speed
+  0				;;; Overlap frame
+  8				;;; Sight-range
+  150				;;; Hit-points
+  0				;;; Magic
+  140				;;; Build-time
+  1000  500 1000		;;; Costs
+  1 1				;;; Tile size
+   70  70			;;; Box size
+   6 10  8			;;; Ranges
+  15				;;; Armor
+  63				;;; Priority
+  130				;;; Basic-damage
+  0				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileBigCannon			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  25				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  300				;;; Points
+  'can-target-land 'can-target-sea 
+				;;; Flags
+  'sea-unit
+  'can-groundattack
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitNothing
+  "Nothing 22"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+   0   0			;;; graphic size
+  99			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  0 0				;;; Tile size
+    0   0			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  )
+
+(unit-type UnitDeathwing
+  "Deathwing"
+  UnitDragon
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  88  80			;;; graphic size
+  'IconDeathwing			;;; Icon
+  14				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  800				;;; Hit-points
+  0				;;; Magic
+  250				;;; Build-time
+  2500    0    0		;;; Costs
+  1 1				;;; Tile size
+   71  71			;;; Box size
+   5  8  6			;;; Ranges
+  10				;;; Armor
+  65				;;; Priority
+  10				;;; Basic-damage
+  25				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileDragonBreath			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  150				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitNothing1
+  "Nothing 24"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+  32  32			;;; graphic size
+  99			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1 20 10			;;; Ranges
+  2				;;; Armor
+  40				;;; Priority
+  9				;;; Basic-damage
+  1				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'sea-unit
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitNothing2
+  "Nothing 25"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+  32  32			;;; graphic size
+  99			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1 20 10			;;; Ranges
+  2				;;; Armor
+  40				;;; Priority
+  9				;;; Basic-damage
+  1				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'sea-unit
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGnomishSubmarine
+  "Gnomish Submarine"
+  nil
+  #(				;;; Graphics
+    "gnomish submarine (summer,winter).png"
+    nil
+    "gnomish submarine (wasteland).png"
+    "gnomish submarine (swamp).png")
+  72  72			;;; graphic size
+  'IconGnomishSubmarine			;;; Icon
+  7				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+   800  150  900		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   4  7  5			;;; Ranges
+  0				;;; Armor
+  60				;;; Priority
+  50				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileSubmarineMissile			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-sea 
+				;;; Flags
+  'sea-unit
+  'submarine
+  'can-see-submarine
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGiantTurtle
+  "Giant Turtle"
+  nil
+  #(				;;; Graphics
+    "giant turtle (summer,winter).png"
+    nil
+    "giant turtle (wasteland).png"
+    "giant turtle (swamp).png")
+  72  72			;;; graphic size
+  'IconGiantTurtle			;;; Icon
+  7				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+   800  150  900		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   4  7  5			;;; Ranges
+  0				;;; Armor
+  60				;;; Priority
+  50				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileTurtleMissile			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-sea 
+				;;; Flags
+  'sea-unit
+  'submarine
+  'can-see-submarine
+  'can-attack
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGnomishFlyingMachine
+  "Gnomish Flying Machine"
+  nil
+  #(				;;; Graphics
+    "gnomish flying machine.png"
+    nil
+    nil
+    nil)
+  80  80			;;; graphic size
+  'IconGnomishFlyingMachine			;;; Icon
+  17				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  150				;;; Hit-points
+  0				;;; Magic
+  65				;;; Build-time
+   500  100    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1 19 15			;;; Ranges
+  2				;;; Armor
+  40				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'move			;;; Right mouse button
+  40				;;; Points
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGoblinZeppelin
+  "Goblin Zeppelin"
+  nil
+  #(				;;; Graphics
+    "goblin zeppelin.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconGoblinZeppelin			;;; Icon
+  17				;;; Speed
+  0				;;; Overlap frame
+  9				;;; Sight-range
+  150				;;; Hit-points
+  0				;;; Magic
+  65				;;; Build-time
+   500  100    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1 19 15			;;; Ranges
+  2				;;; Armor
+  40				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'move			;;; Right mouse button
+  40				;;; Points
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGryphonRider
+  "Gryphon Rider"
+  nil
+  #(				;;; Graphics
+    "gryphon rider.png"
+    nil
+    nil
+    nil)
+  80  80			;;; graphic size
+  'IconGryphonRider			;;; Icon
+  14				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  250				;;; Build-time
+  2500    0    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   4  8  6			;;; Ranges
+  5				;;; Armor
+  65				;;; Priority
+  0				;;; Basic-damage
+  16				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileGriffonHammer			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  150				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitDragon
+  "Dragon"
+  nil
+  #(				;;; Graphics
+    "dragon.png"
+    nil
+    nil
+    nil)
+  88  80			;;; graphic size
+  'IconDragon			;;; Icon
+  14				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  250				;;; Build-time
+  2500    0    0		;;; Costs
+  1 1				;;; Tile size
+   71  71			;;; Box size
+   4  8  6			;;; Ranges
+  5				;;; Armor
+  65				;;; Priority
+  0				;;; Basic-damage
+  16				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileDragonBreath			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  150				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTuralyon
+  "Turalyon"
+  UnitKnight
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTuralyon			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  180				;;; Hit-points
+  0				;;; Magic
+  90				;;; Build-time
+   800  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  7  5			;;; Ranges
+  10				;;; Armor
+  65				;;; Priority
+  14				;;; Basic-damage
+  5				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  110				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitEyeOfKilrogg
+  "Eye of Kilrogg"
+  nil
+  #(				;;; Graphics
+    "eye of kilrogg.png"
+    nil
+    nil
+    nil)
+  32  32			;;; graphic size
+  'IconEyeOfKilrogg			;;; Icon
+  42				;;; Speed
+  0				;;; Overlap frame
+  3				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1 20 10			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'fly
+  3				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'move			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'air-unit
+  'can-see-submarine
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitDanath
+  "Danath"
+  UnitFootman
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconDanath			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  220				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   600    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  8				;;; Armor
+  60				;;; Priority
+  15				;;; Basic-damage
+  8				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  50				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitKorgathBladefist
+  "Korgath Bladefist"
+  UnitGrunt
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconKorgathBladefist			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  240				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   600    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  8				;;; Armor
+  60				;;; Priority
+  16				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  50				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitNothing3
+  "Nothing 30"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+   0   0			;;; graphic size
+  99			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  0 0				;;; Tile size
+    0   0			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  )
+
+(unit-type UnitCho_gall
+  "Cho'gall"
+  UnitOgre
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconCho_gall			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+  1100   50    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  7  5			;;; Ranges
+  0				;;; Armor
+  65				;;; Priority
+  10				;;; Basic-damage
+  5				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'hero
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitLothar
+  "Lothar"
+  UnitKnight
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconLothar			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+   900  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  7  5			;;; Ranges
+  4				;;; Armor
+  65				;;; Priority
+  8				;;; Basic-damage
+  4				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'hero
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitGul_dan
+  "Gul'dan"
+  UnitDeathKnight
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconGul_dan			;;; Icon
+  8				;;; Speed
+  0				;;; Overlap frame
+  8				;;; Sight-range
+  40				;;; Hit-points
+  1				;;; Magic
+  120				;;; Build-time
+  1200    0    0		;;; Costs
+  1 1				;;; Tile size
+   33  33			;;; Box size
+   3 10  8			;;; Ranges
+  0				;;; Armor
+  70				;;; Priority
+  0				;;; Basic-damage
+  3				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileTouchOfDeath			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'isundead
+  'can-cast-spell
+  'can-attack
+  'hero
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitUtherLightbringer
+  "Uther Lightbringer"
+  UnitKnight
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconUtherLightbringer			;;; Icon
+  13				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+   900  100    0		;;; Costs
+  1 1				;;; Tile size
+   42  42			;;; Box size
+   1  7  5			;;; Ranges
+  4				;;; Armor
+  65				;;; Priority
+  8				;;; Basic-damage
+  4				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  1				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'can-cast-spell
+  'can-attack
+  'hero
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitZuljin
+  "Zuljin"
+  UnitAxethrower
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconZuljin			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  6				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  70				;;; Build-time
+   500   50    0		;;; Costs
+  1 1				;;; Tile size
+   36  36			;;; Box size
+   5  8  6			;;; Ranges
+  0				;;; Armor
+  55				;;; Priority
+  3				;;; Basic-damage
+  6				;;; Piercing-damage
+  1				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileAxe			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  120				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'land-unit
+  'can-attack
+  'hero
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitNothing4
+  "Nothing 36"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+   0   0			;;; graphic size
+  99			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  0 0				;;; Tile size
+    0   0			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  )
+
+(unit-type UnitSkeleton
+  "Skeleton"
+  nil
+  #(				;;; Graphics
+    "skeleton.png"
+    nil
+    nil
+    nil)
+  56  56			;;; graphic size
+  114			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  3				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  4  2			;;; Ranges
+  0				;;; Armor
+  55				;;; Priority
+  6				;;; Basic-damage
+  3				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  100				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  0				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'critter
+  'isundead
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitDaemon
+  "Daemon"
+  nil
+  #(				;;; Graphics
+    "daemon.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  37			;;; Icon
+  99				;;; Speed
+  0				;;; Overlap frame
+  5				;;; Sight-range
+  60				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   2  7  5			;;; Ranges
+  2				;;; Armor
+  63				;;; Priority
+  9				;;; Basic-damage
+  1				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileDaemonFire			;;; Missile
+  'fly
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'attack			;;; Right mouse button
+  100				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'air-unit
+  'critter
+  'can-see-submarine
+  'can-attack
+  'organic
+  )
+
+(unit-type UnitCritter
+  "Critter"
+  nil
+  #(				;;; Graphics
+    "critter (summer).png"
+    "critter (winter).png"
+    "critter (wasteland).png"
+    "critter (swamp).png")
+  32  32			;;; graphic size
+  115			;;; Icon
+  3				;;; Speed
+  0				;;; Overlap frame
+  2				;;; Sight-range
+  5				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1 20 10			;;; Ranges
+  0				;;; Armor
+  37				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'move			;;; Right mouse button
+  1				;;; Points
+				;;; Flags
+  'land-unit
+  'critter
+  'organic
+  )
+
+(unit-type UnitFarm
+  "Farm"
+  nil
+  #(				;;; Graphics
+    "farm (summer).png"
+    "farm (winter).png"
+    "farm (wasteland).png"
+    "farm (swamp).png")
+  64  64			;;; graphic size
+  'IconFarm			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  400				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+   500  250    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  20				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  45				;;; Annoy computer factor
+  			;;; Right mouse button
+  100				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitPigFarm
+  "Pig Farm"
+  nil
+  #(				;;; Graphics
+    "pig farm (summer).png"
+    "pig farm (winter).png"
+    "pig farm (wasteland).png"
+    "pig farm (swamp).png")
+  64  64			;;; graphic size
+  'IconPigFarm			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  400				;;; Hit-points
+  0				;;; Magic
+  100				;;; Build-time
+   500  250    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  20				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  45				;;; Annoy computer factor
+  			;;; Right mouse button
+  100				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitBarracksHuman
+  "Barracks"
+  nil
+  #(				;;; Graphics
+    "human barracks (summer).png"
+    "human barracks (winter).png"
+    nil
+    "human barracks (swamp).png")
+  96  96			;;; graphic size
+  'IconBarracksHuman			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  800				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   700  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  30				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  35				;;; Annoy computer factor
+  			;;; Right mouse button
+  160				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitBarracksOrc
+  "Barracks"
+  nil
+  #(				;;; Graphics
+    "orc barracks (summer).png"
+    "orc barracks (winter).png"
+    nil
+    "orc barracks (swamp).png")
+  96  96			;;; graphic size
+  'IconBarracksOrc			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  800				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   700  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  30				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  35				;;; Annoy computer factor
+  			;;; Right mouse button
+  160				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitChurch
+  "Church"
+  nil
+  #(				;;; Graphics
+    "church (summer).png"
+    "church (winter).png"
+    nil
+    "church (swamp).png")
+  96  96			;;; graphic size
+  62			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  700				;;; Hit-points
+  0				;;; Magic
+  175				;;; Build-time
+   900  500    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  35				;;; Annoy computer factor
+  			;;; Right mouse button
+  240				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitAltarOfStorms
+  "Altar of Storms"
+  nil
+  #(				;;; Graphics
+    "altar of storms (summer).png"
+    "altar of storms (winter).png"
+    nil
+    "altar of storms (swamp).png")
+  96  96			;;; graphic size
+  63			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  700				;;; Hit-points
+  0				;;; Magic
+  175				;;; Build-time
+   900  500    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  35				;;; Annoy computer factor
+  			;;; Right mouse button
+  240				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitScoutTowerHuman
+  "Watch Tower"
+  nil
+  #(				;;; Graphics
+    "human scout tower (summer).png"
+    "human scout tower (winter).png"
+    nil
+    "human scout tower (swamp).png")
+  64  64			;;; graphic size
+  60			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   550  200    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  55				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  95				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'building
+  'can-see-submarine
+  )
+
+(unit-type UnitScoutTowerOrc
+  "Watch Tower"
+  nil
+  #(				;;; Graphics
+    "orc scout tower (summer).png"
+    "orc scout tower (winter).png"
+    nil
+    "orc scout tower (swamp).png")
+  64  64			;;; graphic size
+  61			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  100				;;; Hit-points
+  0				;;; Magic
+  60				;;; Build-time
+   550  200    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  55				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  95				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'building
+  'can-see-submarine
+  )
+
+(unit-type UnitStables
+  "Stables"
+  nil
+  #(				;;; Graphics
+    "stables (summer).png"
+    nil
+    nil
+    nil)
+  96  96			;;; graphic size
+  56			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+  1000  300    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  15				;;; Annoy computer factor
+  			;;; Right mouse button
+  210				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitOgreMound
+  "Ogre Mound"
+  nil
+  #(				;;; Graphics
+    "ogre mound (summer).png"
+    nil
+    nil
+    nil)
+  96  96			;;; graphic size
+  57			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+  1000  300    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  15				;;; Annoy computer factor
+  			;;; Right mouse button
+  210				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitGnomishInventor
+  "Gnomish Inventor"
+  nil
+  #(				;;; Graphics
+    "gnomish inventor (summer).png"
+    nil
+    nil
+    nil)
+  96  96			;;; graphic size
+  58			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+  1000  400    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  230				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitGoblinAlchemist
+  "Goblin Alchemist"
+  nil
+  #(				;;; Graphics
+    "goblin alchemist (summer).png"
+    nil
+    nil
+    nil)
+  96  96			;;; graphic size
+  59			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+  1000  400    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  230				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitGryphonAviary
+  "Gryphon Aviary"
+  nil
+  #(				;;; Graphics
+    "gryphon aviary (summer).png"
+    "gryphon aviary (winter).png"
+    nil
+    "gryphon aviary (swamp).png")
+  96  96			;;; graphic size
+  72			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+  1000  400    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  280				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitDragonRoost
+  "Dragon Roost"
+  nil
+  #(				;;; Graphics
+    "dragon roost (summer).png"
+    "dragon roost (winter).png"
+    nil
+    "dragon roost (swamp).png")
+  96  96			;;; graphic size
+  73			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+  1000  400    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  280				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitShipyardHuman
+  "Shipyard"
+  nil
+  #(				;;; Graphics
+    "human shipyard (summer).png"
+    "human shipyard (winter).png"
+    nil
+    "human shipyard (swamp).png")
+  96  96			;;; graphic size
+  48			;;; Icon
+  0				;;; Speed
+  7				;;; Overlap frame
+  3				;;; Sight-range
+  1100				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   800  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  30				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  170				;;; Points
+				;;; Flags
+  'building
+  'shore-building
+  'stores-oil
+  )
+
+(unit-type UnitShipyardOrc
+  "Shipyard"
+  nil
+  #(				;;; Graphics
+    "orc shipyard (summer).png"
+    "orc shipyard (winter).png"
+    nil
+    "orc shipyard (swamp).png")
+  96  96			;;; graphic size
+  49			;;; Icon
+  0				;;; Speed
+  8				;;; Overlap frame
+  3				;;; Sight-range
+  1100				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   800  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  30				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  170				;;; Points
+				;;; Flags
+  'building
+  'shore-building
+  'stores-oil
+  )
+
+(unit-type UnitTownHall
+  "Town Hall"
+  nil
+  #(				;;; Graphics
+    "town hall (summer).png"
+    "town hall (winter).png"
+    nil
+    "town hall (swamp).png")
+ 128 128			;;; graphic size
+  'IconTownHall			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  4				;;; Sight-range
+  1200				;;; Hit-points
+  0				;;; Magic
+  255				;;; Build-time
+  1200  800    0		;;; Costs
+  4 4				;;; Tile size
+  126 126			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  35				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  45				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+				;;; Flags
+  'building
+  'stores-gold
+  )
+
+(unit-type UnitGreatHall
+  "Great Hall"
+  nil
+  #(				;;; Graphics
+    "great hall (summer).png"
+    "great hall (winter).png"
+    nil
+    "great hall (swamp).png")
+ 128 128			;;; graphic size
+  41			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  4				;;; Sight-range
+  1200				;;; Hit-points
+  0				;;; Magic
+  255				;;; Build-time
+  1200  800    0		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  35				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  45				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+				;;; Flags
+  'building
+  'stores-gold
+  )
+
+(unit-type UnitElvenLumberMill
+  "Elven Lumber Mill"
+  nil
+  #(				;;; Graphics
+    "elven lumber mill (summer).png"
+    "elven lumber mill (winter).png"
+    "elven lumber mill (wasteland).png"
+    "elven lumber mill (swamp).png")
+  96  96			;;; graphic size
+  44			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  600				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+   600  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  25				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  15				;;; Annoy computer factor
+  			;;; Right mouse button
+  150				;;; Points
+				;;; Flags
+  'building
+  'stores-wood
+  )
+
+(unit-type UnitTrollLumberMill
+  "Troll Lumber Mill"
+  nil
+  #(				;;; Graphics
+    "troll lumber mill (summer).png"
+    "troll lumber mill (winter).png"
+    "troll lumber mill (wasteland).png"
+    "troll lumber mill (swamp).png")
+  96  96			;;; graphic size
+  45			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  600				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+   600  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  25				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  15				;;; Annoy computer factor
+  			;;; Right mouse button
+  150				;;; Points
+				;;; Flags
+  'building
+  'stores-wood
+  )
+
+(unit-type UnitFoundryHuman
+  "Foundry"
+  nil
+  #(				;;; Graphics
+    "human foundry (summer).png"
+    "human foundry (winter).png"
+    nil
+    "human foundry (swamp).png")
+  96  96			;;; graphic size
+  52			;;; Icon
+  0				;;; Speed
+  13				;;; Overlap frame
+  3				;;; Sight-range
+  750				;;; Hit-points
+  0				;;; Magic
+  175				;;; Build-time
+   700  400  400		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+				;;; Flags
+  'building
+  'shore-building
+  )
+
+(unit-type UnitFoundryOrc
+  "Foundry"
+  nil
+  #(				;;; Graphics
+    "orc foundry (summer).png"
+    "orc foundry (winter).png"
+    nil
+    "orc foundry (swamp).png")
+  96  96			;;; graphic size
+  53			;;; Icon
+  0				;;; Speed
+  14				;;; Overlap frame
+  3				;;; Sight-range
+  750				;;; Hit-points
+  0				;;; Magic
+  175				;;; Build-time
+   700  400  400		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+				;;; Flags
+  'building
+  'shore-building
+  )
+
+(unit-type UnitMageTower
+  "Mage Tower"
+  nil
+  #(				;;; Graphics
+    "mage tower (summer).png"
+    "mage tower (winter).png"
+    nil
+    "mage tower (swamp).png")
+  96  96			;;; graphic size
+  64			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  125				;;; Build-time
+  1000  200    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  35				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  240				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitTempleOfTheDamned
+  "Temple of the Damned"
+  nil
+  #(				;;; Graphics
+    "temple of the damned (summer).png"
+    "temple of the damned (winter).png"
+    nil
+    "temple of the damned (swamp).png")
+  96  96			;;; graphic size
+  65			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  500				;;; Hit-points
+  0				;;; Magic
+  125				;;; Build-time
+  1000  200    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  35				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  240				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitBlacksmithHuman
+  "Blacksmith"
+  nil
+  #(				;;; Graphics
+    "human blacksmith (summer).png"
+    "human blacksmith (winter).png"
+    nil
+    "human blacksmith (swamp).png")
+  96  96			;;; graphic size
+  46			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  775				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   800  450  100		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  170				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitBlacksmithOrc
+  "Blacksmith"
+  nil
+  #(				;;; Graphics
+    "orc blacksmith (summer).png"
+    "orc blacksmith (winter).png"
+    nil
+    "orc blacksmith (swamp).png")
+  96  96			;;; graphic size
+  47			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  775				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   800  450  100		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  170				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitRefineryHuman
+  "Refinery"
+  nil
+  #(				;;; Graphics
+    "human refinery (summer).png"
+    "human refinery (winter).png"
+    nil
+    "human refinery (swamp).png")
+  96  96			;;; graphic size
+  50			;;; Icon
+  0				;;; Speed
+  11				;;; Overlap frame
+  3				;;; Sight-range
+  600				;;; Hit-points
+  0				;;; Magic
+  225				;;; Build-time
+   800  350  200		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  25				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+				;;; Flags
+  'building
+  'shore-building
+  'stores-oil
+  )
+
+(unit-type UnitRefineryOrc
+  "Refinery"
+  nil
+  #(				;;; Graphics
+    "orc refinery (summer).png"
+    "orc refinery (winter).png"
+    nil
+    "orc refinery (swamp).png")
+  96  96			;;; graphic size
+  51			;;; Icon
+  0				;;; Speed
+  12				;;; Overlap frame
+  3				;;; Sight-range
+  600				;;; Hit-points
+  0				;;; Magic
+  225				;;; Build-time
+   800  350  200		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  25				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+				;;; Flags
+  'building
+  'shore-building
+  'stores-oil
+  )
+
+(unit-type UnitOilPlatformHuman
+  "Oil Platform"
+  nil
+  #(				;;; Graphics
+    "human oil well (summer).png"
+    "human oil well (winter).png"
+    "human oil well (wasteland).png"
+    "human oil well (swamp).png")
+  96  96			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  9				;;; Overlap frame
+  3				;;; Sight-range
+  650				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   700  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  20				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  160				;;; Points
+				;;; Flags
+  'building
+  'gives-oil
+  )
+
+(unit-type UnitOilPlatformOrc
+  "Oil Platform"
+  nil
+  #(				;;; Graphics
+    "orc oil well (summer).png"
+    "orc oil well (winter).png"
+    "orc oil well (wasteland).png"
+    "orc oil well (swamp).png")
+  96  96			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  10				;;; Overlap frame
+  3				;;; Sight-range
+  650				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+   700  450    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  20				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  20				;;; Annoy computer factor
+  			;;; Right mouse button
+  160				;;; Points
+				;;; Flags
+  'building
+  'gives-oil
+  )
+
+(unit-type UnitKeep
+  "Keep"
+  nil
+  #(				;;; Graphics
+    "keep (summer).png"
+    "keep (winter).png"
+    nil
+    "keep (swamp).png")
+ 128 128			;;; graphic size
+  65			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  6				;;; Sight-range
+  1400				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+  2000 1000  200		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  37				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  40				;;; Annoy computer factor
+  			;;; Right mouse button
+  600				;;; Points
+				;;; Flags
+  'building
+  'stores-gold
+  )
+
+(unit-type UnitStronghold
+  "Stronghold"
+  nil
+  #(				;;; Graphics
+    "stronghold (summer).png"
+    "stronghold (winter).png"
+    nil
+    "stronghold (swamp).png")
+ 128 128			;;; graphic size
+  66			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  6				;;; Sight-range
+  1400				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+  2000 1000  200		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  37				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  40				;;; Annoy computer factor
+  			;;; Right mouse button
+  600				;;; Points
+				;;; Flags
+  'building
+  'stores-gold
+  )
+
+(unit-type UnitCastle
+  "Castle"
+  nil
+  #(				;;; Graphics
+    "castle (summer).png"
+    "castle (winter).png"
+    nil
+    "castle (swamp).png")
+ 128 128			;;; graphic size
+  67			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  1600				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+  2500 1200  500		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  40				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  1500				;;; Points
+				;;; Flags
+  'building
+  'stores-gold
+  )
+
+(unit-type UnitFortress
+  "Fortress"
+  nil
+  #(				;;; Graphics
+    "fortress (summer).png"
+    "fortress (winter).png"
+    nil
+    "fortress (swamp).png")
+ 128 128			;;; graphic size
+  68			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  1600				;;; Hit-points
+  0				;;; Magic
+  200				;;; Build-time
+  2500 1200  500		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  40				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  1500				;;; Points
+				;;; Flags
+  'building
+  'stores-gold
+  )
+
+(unit-type UnitGoldMine
+  "Gold Mine"
+  nil
+  #(				;;; Graphics
+    "gold mine (summer).png"
+    "gold mine (winter).png"
+    "gold mine (wasteland).png"
+    "gold mine (swamp).png")
+  96  96			;;; graphic size
+  74			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  3				;;; Sight-range
+  25500				;;; Hit-points
+  0				;;; Magic
+  150				;;; Build-time
+     0    0    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  'gold-mine
+  )
+
+(unit-type UnitOilPatch
+  "Oil Patch"
+  nil
+  #(				;;; Graphics
+    "oil patch (summer).png"
+    nil
+    "oil patch (wasteland).png"
+    "oil patch (swamp).png")
+  96  96			;;; graphic size
+  79			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  'oil-patch
+  )
+
+(unit-type UnitStartLocationHuman
+  "Start Location"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+  32  32			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  )
+
+(unit-type UnitStartLocationOrc
+  "Start Location"
+  nil
+  #(				;;; Graphics
+    ".png"
+    nil
+    nil
+    nil)
+  32  32			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  )
+
+(unit-type UnitGuardTowerHuman
+  "Guard Tower"
+  nil
+  #(				;;; Graphics
+    "human guard tower (summer).png"
+    "human guard tower (winter).png"
+    nil
+    "human guard tower (swamp).png")
+  64  64			;;; graphic size
+  76			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  130				;;; Hit-points
+  0				;;; Magic
+  140				;;; Build-time
+   500  150    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   6  6  6			;;; Ranges
+  20				;;; Armor
+  40				;;; Priority
+  4				;;; Basic-damage
+  12				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileArrow			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'building
+  'can-see-submarine
+  'can-attack
+  'tower
+  )
+
+(unit-type UnitGuardTowerOrc
+  "Guard Tower"
+  nil
+  #(				;;; Graphics
+    "orc guard tower (summer).png"
+    "orc guard tower (winter).png"
+    nil
+    "orc guard tower (swamp).png")
+  64  64			;;; graphic size
+  78			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  130				;;; Hit-points
+  0				;;; Magic
+  140				;;; Build-time
+   500  150    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   6  6  6			;;; Ranges
+  20				;;; Armor
+  40				;;; Priority
+  4				;;; Basic-damage
+  12				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileArrow			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  200				;;; Points
+  'can-target-land 'can-target-sea 'can-target-air 
+				;;; Flags
+  'building
+  'can-see-submarine
+  'can-attack
+  'tower
+  )
+
+(unit-type UnitCannonTowerHuman
+  "Cannon Tower"
+  nil
+  #(				;;; Graphics
+    "human cannon tower (summer).png"
+    "human cannon tower (winter).png"
+    nil
+    "human cannon tower (swamp).png")
+  64  64			;;; graphic size
+  77			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  160				;;; Hit-points
+  0				;;; Magic
+  190				;;; Build-time
+  1000  300    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   7  7  7			;;; Ranges
+  20				;;; Armor
+  40				;;; Priority
+  50				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileSmallCannon			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  250				;;; Points
+  'can-target-land 'can-target-sea 
+				;;; Flags
+  'building
+  'can-see-submarine
+  'can-attack
+  'tower
+  )
+
+(unit-type UnitCannonTowerOrc
+  "Cannon Tower"
+  nil
+  #(				;;; Graphics
+    "orc cannon tower (summer).png"
+    "orc cannon tower (winter).png"
+    nil
+    "orc cannon tower (swamp).png")
+  64  64			;;; graphic size
+  79			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  9				;;; Sight-range
+  160				;;; Hit-points
+  0				;;; Magic
+  190				;;; Build-time
+  1000  300    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   7  7  7			;;; Ranges
+  20				;;; Armor
+  40				;;; Priority
+  50				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileSmallCannon			;;; Missile
+  'land
+  0				;;; Decay-rate
+  50				;;; Annoy computer factor
+  			;;; Right mouse button
+  250				;;; Points
+  'can-target-land 'can-target-sea 
+				;;; Flags
+  'building
+  'can-see-submarine
+  'can-attack
+  'tower
+  )
+
+(unit-type UnitCircleofPower
+  "Circle of Power"
+  nil
+  #(				;;; Graphics
+    "circle of power.png"
+    nil
+    nil
+    nil)
+  64  64			;;; graphic size
+  81			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  0				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitDarkPortal
+  "Dark Portal"
+  nil
+  #(				;;; Graphics
+    "dark portal (summer).png"
+    "dark portal (winter).png"
+    "dark portal (wasteland).png"
+    "dark portal (swamp).png")
+ 128 128			;;; graphic size
+  80			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  0				;;; Sight-range
+  5000				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitRunestone
+  "Runestone"
+  nil
+  #(				;;; Graphics
+    "runestone (summer,wasteland).png"
+    "runestone (winter).png"
+    nil
+    "runestone (swamp).png")
+  64  64			;;; graphic size
+  82			;;; Icon
+  0				;;; Speed
+  6				;;; Overlap frame
+  4				;;; Sight-range
+  5000				;;; Hit-points
+  0				;;; Magic
+  175				;;; Build-time
+   900  500    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  20				;;; Armor
+  15				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  35				;;; Annoy computer factor
+  			;;; Right mouse button
+  150				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitWallHuman
+  "Wall H - not yet build"
+  nil
+  #(				;;; Graphics
+    "wall (summer).png"
+    "wall (winter).png"
+    "wall (wasteland).png"
+    nil)
+  32  32			;;; graphic size
+  92			;;; Icon
+  0				;;; Speed
+  15				;;; Overlap frame
+  1				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  30				;;; Build-time
+    20   10    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  45				;;; Annoy computer factor
+  			;;; Right mouse button
+  1				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitWallOrc
+  "Wall O - not yet build"
+  UnitWallHuman
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  32  32			;;; graphic size
+  93			;;; Icon
+  0				;;; Speed
+  15				;;; Overlap frame
+  1				;;; Sight-range
+  40				;;; Hit-points
+  0				;;; Magic
+  30				;;; Build-time
+    20   10    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  45				;;; Annoy computer factor
+  			;;; Right mouse button
+  1				;;; Points
+				;;; Flags
+  'building
+  )
+
+(unit-type UnitDeadBody
+  "Dead Body"
+  nil
+  #(				;;; Graphics
+    "corpses.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  1				;;; Sight-range
+  255				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   71  71			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning		;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  				;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'vanishes
+  )
+
+(unit-type Unit1x1DestroyedPlace
+  "1x1 Destroyed Place"
+  nil
+  #(				;;; Graphics
+    "small destroyed site (summer).png"
+    "small destroyed site (winter).png"
+    "small destroyed site (wasteland).png"
+    "small destroyed site (swamp).png")
+  32  32			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  2				;;; Sight-range
+  255				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  'vanishes
+  )
+
+(unit-type Unit2x2DestroyedPlace
+  "2x2 Destroyed Place"
+  nil
+  #(				;;; Graphics
+    "destroyed site (summer).png"
+    "destroyed site (winter).png"
+    "destroyed site (wasteland).png"
+    "destroyed site (swamp).png")
+  64  64			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  2				;;; Sight-range
+  255				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  2 2				;;; Tile size
+   63  63			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  'vanishes
+  )
+
+(unit-type Unit3x3DestroyedPlace
+  "3x3 Destroyed Place"
+  Unit2x2DestroyedPlace
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+  96  96			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  3				;;; Sight-range
+  255				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  3 3				;;; Tile size
+   95  95			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  'vanishes
+  )
+
+(unit-type Unit4x4DestroyedPlace
+  "4x4 Destroyed Place"
+  Unit2x2DestroyedPlace
+  #(				;;; Graphics
+    nil
+    nil
+    nil
+    nil)
+ 128 128			;;; graphic size
+  99			;;; Icon
+  0				;;; Speed
+  0				;;; Overlap frame
+  3				;;; Sight-range
+  255				;;; Hit-points
+  0				;;; Magic
+  0				;;; Build-time
+     0    0    0		;;; Costs
+  4 4				;;; Tile size
+  127 127			;;; Box size
+   0  0  0			;;; Ranges
+  0				;;; Armor
+  0				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileLightning			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  			;;; Right mouse button
+  0				;;; Points
+				;;; Flags
+  'building
+  'vanishes
+  )
+
+(unit-type UnitPeasantWithGold
+  "Peasant"
+  nil
+  #(				;;; Graphics
+    "peasant with gold.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeasant			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'harvest			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'cower-peon
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitPeonWithGold
+  "Peon"
+  nil
+  #(				;;; Graphics
+    "peon with gold.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeon			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'harvest			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'cower-peon
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitPeasantWithWood
+  "Peasant"
+  nil
+  #(				;;; Graphics
+    "peasant with wood.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeasant			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'harvest			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'cower-peon
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitPeonWithWood
+  "Peon"
+  nil
+  #(				;;; Graphics
+    "peon with wood.png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconPeon			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  30				;;; Hit-points
+  0				;;; Magic
+  45				;;; Build-time
+   400    0    0		;;; Costs
+  1 1				;;; Tile size
+   31  31			;;; Box size
+   1  6  4			;;; Ranges
+  0				;;; Armor
+  50				;;; Priority
+  3				;;; Basic-damage
+  2				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'land
+  0				;;; Decay-rate
+  0				;;; Annoy computer factor
+  'harvest			;;; Right mouse button
+  30				;;; Points
+  'can-target-land 
+				;;; Flags
+  'land-unit
+  'cower-peon
+  'can-attack
+  'organic
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTankerHuman
+  "Oil tanker"
+  nil
+  #(				;;; Graphics
+    "human tanker (full).png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTankerHuman			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  50				;;; Build-time
+   400  200    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1  0  0			;;; Ranges
+  10				;;; Armor
+  50				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  10				;;; Annoy computer factor
+  'haul-oil			;;; Right mouse button
+  40				;;; Points
+				;;; Flags
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  )
+
+(unit-type UnitTankerOrc
+  "Oil tanker"
+  nil
+  #(				;;; Graphics
+    "orc tanker (full).png"
+    nil
+    nil
+    nil)
+  72  72			;;; graphic size
+  'IconTankerOrc			;;; Icon
+  10				;;; Speed
+  0				;;; Overlap frame
+  4				;;; Sight-range
+  90				;;; Hit-points
+  0				;;; Magic
+  50				;;; Build-time
+   400  200    0		;;; Costs
+  1 1				;;; Tile size
+   63  63			;;; Box size
+   1  0  0			;;; Ranges
+  10				;;; Armor
+  50				;;; Priority
+  0				;;; Basic-damage
+  0				;;; Piercing-damage
+  0				;;; Weapon-upgradeable
+  0				;;; Armor-upgradeable
+  'MissileNone			;;; Missile
+  'naval
+  0				;;; Decay-rate
+  10				;;; Annoy computer factor
+  'haul-oil			;;; Right mouse button
+  40				;;; Points
+				;;; Flags
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  )

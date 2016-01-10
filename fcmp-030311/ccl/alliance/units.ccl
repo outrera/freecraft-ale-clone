@@ -1,0 +1,1433 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	units.ccl	-	Define the used alliance unit-types.
+;;
+;;	(c) Copyright 2001,2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: units.ccl,v 1.13 2002/12/17 06:40:32 nehalmistry Exp $
+
+;;=============================================================================
+;;	Define unit-types.
+;;
+;;	NOTE: Save can generate this table.
+;;
+(define-unit-type 'unit-footman 'name "Footman"
+  'files '(tileset-summer "alliance/units/footman.png")
+  'size '(72 72)
+  'animations 'animations-footman 'icon 'icon-footman
+  'costs '(time 60 gold 600)
+  'speed 10
+  'hit-points 60
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 2 'basic-damage 6 'piercing-damage 3 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 60
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "footman-selected"
+    acknowledge "footman-acknowledge"
+    ready "footman-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "footman-attack"))
+
+(define-unit-type 'unit-peasant 'name "Peasant"
+  'files '(tileset-summer "alliance/units/peasant.png")
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peasant
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-harvest
+  'can-attack
+  'can-target-land
+  'land-unit
+  'cower-worker
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peasant-selected"
+    acknowledge "peasant-acknowledge"
+    ready "peasant-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "peasant-attack"))
+
+(define-unit-type 'unit-ballista 'name "Ballista"
+  'files '(tileset-summer "alliance/units/ballista.png")
+  'size '(64 64)
+  'animations 'animations-ballista 'icon 'icon-ballista
+  'costs '(time 250 gold 900 wood 300)
+  'speed 5
+  'hit-points 110
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 11 'person-reaction-range 9
+  'basic-damage 80 'piercing-damage 0 'missile 'missile-ballista-bolt
+  'min-attack-range 1 'max-attack-range 8
+  'weapons-upgradable 1
+  'priority 70
+  'points 100
+  'demand 1
+  'explode-when-killed
+  'type-land
+  'right-attack
+  'can-ground-attack
+  'can-attack
+  'can-target-land 'can-target-sea
+  'selectable-by-rectangle
+  'sounds '(
+    selected "ballista-selected"
+    acknowledge "ballista-acknowledge"
+    ready "ballista-ready"
+    help "basic alliance voices help 1"
+    dead "explosion"
+    attack "ballista-attack"))
+
+(define-unit-type 'unit-knight 'name "Knight"
+  'files '(tileset-summer "alliance/units/knight.png")
+  'size '(72 72)
+  'animations 'animations-knight 'icon 'icon-knight
+  'costs '(time 90 gold 800 wood 100)
+  'speed 13
+  'hit-points 90
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 4 'basic-damage 8 'piercing-damage 4 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 63
+  'points 100
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "knight-selected"
+    acknowledge "knight-acknowledge"
+    ready "knight-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "knight-attack"))
+
+(define-unit-type 'unit-archer 'name "Archer"
+  'files '(tileset-summer "alliance/units/archer.png")
+  'size '(72 72)
+  'animations 'animations-archer 'icon 'icon-archer
+  'costs '(time 70 gold 500 wood 50)
+  'speed 10
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(33 33)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'basic-damage 3 'piercing-damage 6 'missile 'missile-arrow
+  'max-attack-range 4
+  'weapons-upgradable 1
+  'priority 55
+  'points 60
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "archer-selected"
+    acknowledge "archer-acknowledge"
+    ready "archer-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "archer-attack"))
+
+(define-unit-type 'unit-mage 'name "Mage"
+  'files '(tileset-summer "alliance/units/mage.png")
+  'size '(72 72)
+  'animations 'animations-mage 'icon 'icon-mage
+  'costs '(time 120 gold 1200)
+  'speed 8
+  'hit-points 60
+  'max-mana 255
+  'magic 1
+  'tile-size '(1 1) 'box-size '(33 33)
+  'sight-range 9 'computer-reaction-range 11 'person-reaction-range 9
+  'basic-damage 0 'piercing-damage 9 'missile 'missile-lightning
+  'max-attack-range 2
+  'priority 70
+  'points 100
+  'demand 1
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'cower-mage
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "mage-selected"
+    acknowledge "mage-acknowledge"
+    ready "mage-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "mage-attack"))
+
+(define-unit-type 'unit-paladin 'name "Paladin"
+  'use 'unit-knight
+  'size '(72 72)
+  'animations 'animations-knight 'icon 'icon-paladin
+  'costs '(time 90 gold 800 wood 100)
+  'speed 13
+  'hit-points 90
+  'max-mana 255
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'armor 4 'basic-damage 8 'piercing-damage 4 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65
+  'points 110
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "paladin-selected"
+    acknowledge "paladin-acknowledge"
+    ready "paladin-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "paladin-attack"))
+
+(define-unit-type 'unit-dwarves 'name "Dwarves"
+  'files '(tileset-summer "alliance/units/demolition squad.png")
+  'size '(56 56)
+  'animations 'animations-dwarves 'icon 'icon-dwarves
+  'costs '(time 200 gold 700 wood 250)
+  'speed 11
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(32 32)
+  'sight-range 4 'computer-reaction-range 4 'person-reaction-range 2
+  'basic-damage 4 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1
+  'priority 55
+  'points 100
+  'demand 1
+  'type-land
+  'right-demolish
+  'can-attack
+  'can-target-land
+  'land-unit
+  'volatile
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "dwarves-selected"
+    acknowledge "dwarves-acknowledge"
+    ready "dwarves-ready"
+    help "basic alliance voices help 1"
+    dead "explosion"
+    attack "dwarves-attack"))
+
+(define-unit-type 'unit-attack-peasant 'name "Peasant"
+  'use 'unit-peasant
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peasant
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peasant-selected"
+    acknowledge "peasant-acknowledge"
+    ready "peasant-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "peasant-attack"))
+
+(define-unit-type 'unit-ranger 'name "Ranger"
+  'use 'unit-archer
+  'size '(72 72)
+  'animations 'animations-archer 'icon 'icon-ranger
+  'costs '(time 70 gold 500 wood 50)
+  'speed 10
+  'hit-points 50
+  'tile-size '(1 1) 'box-size '(33 33)
+  'sight-range 6 'computer-reaction-range 9 'person-reaction-range 6
+  'basic-damage 3 'piercing-damage 6 'missile 'missile-arrow
+  'max-attack-range 4
+  'weapons-upgradable 1
+  'priority 57
+  'points 70
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "ranger-selected"
+    acknowledge "ranger-acknowledge"
+    ready "ranger-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "ranger-attack"))
+
+(define-unit-type 'unit-female-hero 'name "Female Hero"
+  'use 'unit-archer
+  'size '(72 72)
+  'animations 'animations-archer 'icon 'icon-female-hero
+  'costs '(time 70 gold 500 wood 50)
+  'speed 10
+  'hit-points 120
+  'tile-size '(1 1) 'box-size '(33 33)
+  'sight-range 9 'computer-reaction-range 7 'person-reaction-range 5
+  'armor 5 'basic-damage 10 'piercing-damage 18 'missile 'missile-arrow
+  'max-attack-range 7
+  'weapons-upgradable 1
+  'priority 55
+  'points 60
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "female-hero-selected"
+    acknowledge "female-hero-acknowledge"
+    ready "female-hero-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "female-hero-attack"))
+
+(define-unit-type 'unit-flying-angle 'name "Flying Angle"
+  'files '(tileset-summer "alliance/units/gryphon rider.png")
+  'size '(80 80)
+  'animations 'animations-flying-angle 'icon 'icon-flying-angle
+  'costs '(time 250 gold 2500)
+  'speed 14
+  'hit-points 250
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 8 'person-reaction-range 6
+  'armor 6 'basic-damage 0 'piercing-damage 25 'missile 'missile-griffon-hammer
+  'max-attack-range 5
+  'priority 65
+  'points 150
+  'demand 1
+  'type-fly
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'air-unit
+  'can-see-submarine
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "flying-angle-selected"
+    acknowledge "flying-angle-acknowledge"
+    ready "flying-angle-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "flying-angle-attack"))
+
+(define-unit-type 'unit-white-mage 'name "White Mage"
+  'use 'unit-mage
+  'size '(72 72)
+  'animations 'animations-mage 'icon 'icon-white-mage
+  'costs '(time 120 gold 1200)
+  'speed 8
+  'hit-points 120
+  'max-mana 255
+  'magic 1
+  'tile-size '(1 1) 'box-size '(33 33)
+  'sight-range 9 'computer-reaction-range 11 'person-reaction-range 9
+  'armor 3 'basic-damage 0 'piercing-damage 16 'missile 'missile-lightning
+  'max-attack-range 6
+  'priority 70
+  'points 100
+  'demand 1
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'cower-mage
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "white-mage-selected"
+    acknowledge "white-mage-acknowledge"
+    ready "white-mage-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "white-mage-attack"))
+
+(define-unit-type 'unit-human-oil-tanker 'name "Oil tanker"
+  'files '(tileset-summer "alliance/units/oil tanker empty.png")
+  'size '(72 72)
+  'animations 'animations-alliance-oil-tanker 'icon 'icon-alliance-oil-tanker
+  'costs '(time 50 gold 400 wood 200)
+  'speed 10
+  'hit-points 90
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 4
+  'armor 10 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50 'annoy-computer-factor 10
+  'points 40
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-haul-oil
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  'sounds '(
+    selected "alliance-oil-tanker-selected"
+    acknowledge "alliance-oil-tanker-acknowledge"
+    ready "alliance-oil-tanker-ready"
+    help "basic alliance voices help 1"
+    dead "ship sinking"
+    attack "alliance-oil-tanker-attack"))
+
+(define-unit-type 'unit-alliance-transport 'name "Transport"
+  'files '(tileset-summer "alliance/units/transport.png")
+  'size '(72 72)
+  'animations 'animations-alliance-transport 'icon 'icon-alliance-transport
+  'costs '(time 70 gold 600 wood 200 oil 500)
+  'speed 10
+  'hit-points 150
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 4
+  'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'armor-upgradable 1
+  'priority 70 'annoy-computer-factor 15
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-sail
+  'sea-unit
+  'transporter
+  'selectable-by-rectangle
+  'sounds '(
+    selected "alliance-transport-selected"
+    acknowledge "alliance-transport-acknowledge"
+    ready "alliance-transport-ready"
+    help "basic alliance voices help 1"
+    dead "ship sinking"
+    attack "alliance-transport-attack"))
+
+(define-unit-type 'unit-alliance-destroyer 'name "Alliance Destroyer"
+  'files '(tileset-summer "alliance/units/alliance destroyer.png")
+  'size '(80 88)
+  'animations 'animations-alliance-destroyer 'icon 'icon-alliance-destroyer
+  'costs '(time 90 gold 700 wood 350 oil 700)
+  'speed 10
+  'hit-points 100
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 8 'computer-reaction-range 10 'person-reaction-range 8
+  'armor 10 'basic-damage 35 'piercing-damage 0 'missile 'missile-small-cannon
+  'max-attack-range 4
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65 'annoy-computer-factor 20
+  'points 150
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'sea-unit
+  'selectable-by-rectangle
+  'sounds '(
+    selected "alliance-destroyer-selected"
+    acknowledge "alliance-destroyer-acknowledge"
+    ready "alliance-destroyer-ready"
+    help "basic alliance voices help 1"
+    dead "ship sinking"
+    attack "alliance-destroyer-attack"))
+
+(define-unit-type 'unit-battleship 'name "Battleship"
+  'files '(tileset-summer "alliance/units/battleship.png")
+  'size '(88 88)
+  'animations 'animations-battleship 'icon 'icon-battleship
+  'costs '(time 140 gold 1000 wood 500 oil 1000)
+  'speed 6
+  'hit-points 150
+  'tile-size '(1 1) 'box-size '(70 70)
+  'sight-range 8 'computer-reaction-range 10 'person-reaction-range 8
+  'armor 15 'basic-damage 130 'piercing-damage 0 'missile 'missile-big-cannon
+  'max-attack-range 6
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 63 'annoy-computer-factor 25
+  'points 300
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-attack
+  'can-ground-attack
+  'can-attack
+  'can-target-land 'can-target-sea
+  'sea-unit
+  'selectable-by-rectangle
+  'sounds '(
+    selected "battleship-selected"
+    acknowledge "battleship-acknowledge"
+    ready "battleship-ready"
+    help "basic alliance voices help 1"
+    dead "ship sinking"
+    attack "battleship-attack"))
+
+(define-unit-type 'unit-alliance-submarine 'name "Alliance Submarine"
+  'files '(tileset-summer "alliance/units/submarine.png"
+    tileset-wasteland "tilesets/wasteland/alliance/units/submarine.png"
+    tileset-swamp "tilesets/swamp/alliance/units/submarine.png")
+  'size '(72 72)
+  'animations 'animations-submarine 'icon 'icon-alliance-submarine
+  'costs '(time 100 gold 800 wood 150 oil 900)
+  'speed 7
+  'hit-points 60
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'basic-damage 50 'piercing-damage 0 'missile 'missile-submarine-missile
+  'max-attack-range 4
+  'priority 60 'annoy-computer-factor 20
+  'points 120
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-attack
+  'can-attack
+  'can-target-sea
+  'sea-unit
+  'submarine
+  'can-see-submarine
+  'selectable-by-rectangle
+  'sounds '(
+    selected "alliance-submarine-selected"
+    acknowledge "alliance-submarine-acknowledge"
+    ready "alliance-submarine-ready"
+    help "basic alliance voices help 1"
+    dead "ship sinking"
+    attack "alliance-submarine-attack"))
+
+(define-unit-type 'unit-balloon 'name "Balloon"
+  'files '(tileset-summer "alliance/units/balloon.png")
+  'size '(80 80)
+  'animations 'animations-balloon 'icon 'icon-balloon
+  'costs '(time 65 gold 500 wood 100)
+  'speed 17
+  'hit-points 150
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 19 'person-reaction-range 15
+  'armor 2 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 40
+  'points 40
+  'demand 1
+  'type-fly
+  'right-move
+  'air-unit
+  'can-see-submarine
+  'selectable-by-rectangle
+  'sounds '(
+    selected "balloon-selected"
+    acknowledge "balloon-acknowledge"
+    ready "balloon-ready"
+    help "basic alliance voices help 1"
+    dead "explosion"
+    attack "balloon-attack"))
+
+(define-unit-type 'unit-gryphon-rider 'name "Gryphon Rider"
+  'use 'unit-flying-angle
+  'size '(80 80)
+  'animations 'animations-flying-angle 'icon 'icon-gryphon-rider
+  'costs '(time 250 gold 2500)
+  'speed 14
+  'hit-points 100
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 6 'computer-reaction-range 8 'person-reaction-range 6
+  'armor 5 'basic-damage 0 'piercing-damage 16 'missile 'missile-griffon-hammer
+  'max-attack-range 4
+  'priority 65
+  'points 150
+  'demand 1
+  'type-fly
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'air-unit
+  'can-see-submarine
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "gryphon-rider-selected"
+    acknowledge "gryphon-rider-acknowledge"
+    ready "gryphon-rider-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "gryphon-rider-attack"))
+
+(define-unit-type 'unit-knight-rider 'name "Knight Rider"
+  'use 'unit-knight
+  'size '(72 72)
+  'animations 'animations-knight 'icon 'icon-knight-rider
+  'costs '(time 90 gold 800 wood 100)
+  'speed 13
+  'hit-points 180
+  'max-mana 255
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 6 'computer-reaction-range 7 'person-reaction-range 5
+  'armor 10 'basic-damage 14 'piercing-damage 5 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65
+  'points 110
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "knight-rider-selected"
+    acknowledge "knight-rider-acknowledge"
+    ready "knight-rider-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "knight-rider-attack"))
+
+(define-unit-type 'unit-arthor-literios 'name "Arthor Literios"
+  'use 'unit-footman
+  'size '(72 72)
+  'animations 'animations-footman 'icon 'icon-arthor-literios
+  'costs '(time 60 gold 600)
+  'speed 10
+  'hit-points 220
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 6 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 8 'basic-damage 15 'piercing-damage 8 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 60
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "arthor-literios-selected"
+    acknowledge "arthor-literios-acknowledge"
+    ready "arthor-literios-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "arthor-literios-attack"))
+
+(define-unit-type 'unit-wise-man 'name "Wise Man"
+  'use 'unit-knight
+  'size '(72 72)
+  'animations 'animations-knight 'icon 'icon-wise-man
+  'costs '(time 100 gold 900 wood 100)
+  'speed 13
+  'hit-points 90
+  'max-mana 255
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'armor 4 'basic-damage 8 'piercing-damage 4 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65
+  'points 120
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'hero
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "wise-man-selected"
+    acknowledge "wise-man-acknowledge"
+    ready "wise-man-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "wise-man-attack"))
+
+(define-unit-type 'unit-man-of-light 'name "Man of Light"
+  'use 'unit-knight
+  'size '(72 72)
+  'animations 'animations-knight 'icon 'icon-man-of-light
+  'costs '(time 100 gold 900 wood 100)
+  'speed 13
+  'hit-points 90
+  'max-mana 255
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'armor 4 'basic-damage 8 'piercing-damage 4 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65
+  'points 120
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'hero
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "man-of-light-selected"
+    acknowledge "man-of-light-acknowledge"
+    ready "man-of-light-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "man-of-light-attack"))
+
+(define-unit-type 'unit-farm 'name "Farm"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/farm.png"
+    tileset-winter "tilesets/winter/alliance/buildings/farm.png"
+    tileset-wasteland "tilesets/wasteland/alliance/buildings/farm.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/farm.png")
+  'size '(64 64)
+  'animations 'animations-building 'icon 'icon-farm
+  'costs '(time 100 gold 500 wood 250)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 400
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 20 'annoy-computer-factor 45
+  'points 100
+  'supply 4
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "alliance-farm-selected"
+    acknowledge "alliance-farm-acknowledge"
+    ready "alliance-farm-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-farm-attack"))
+
+(define-unit-type 'unit-alliance-barracks 'name "Barracks"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/barracks.png"
+    tileset-winter "tilesets/winter/alliance/buildings/barracks.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/barracks.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alliance-barracks
+  'costs '(time 200 gold 700 wood 450)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 800
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 30 'annoy-computer-factor 35
+  'points 160
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "alliance-barracks-selected"
+    acknowledge "alliance-barracks-acknowledge"
+    ready "alliance-barracks-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-barracks-attack"))
+
+(define-unit-type 'unit-church 'name "Church"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/church.png"
+    tileset-winter "tilesets/winter/alliance/buildings/church.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/church.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-church
+  'costs '(time 175 gold 900 wood 500)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 700
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 35
+  'points 240
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "church-selected"
+    acknowledge "church-acknowledge"
+    ready "church-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "church-attack"))
+
+(define-unit-type 'unit-alliance-watch-tower 'name "Scout Tower"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/scout tower.png"
+    tileset-winter "tilesets/winter/alliance/buildings/scout tower.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/scout tower.png")
+  'size '(64 64)
+  'animations 'animations-building 'icon 'icon-alliance-watch-tower
+  'costs '(time 60 gold 550 wood 200)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 100
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 9
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 55 'annoy-computer-factor 50
+  'points 95
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'can-target-land 'can-target-sea 'can-target-air
+  'building
+  'can-see-submarine
+  'sounds '(
+    selected "alliance-watch-tower-selected"
+    acknowledge "alliance-watch-tower-acknowledge"
+    ready "alliance-watch-tower-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-watch-tower-attack"))
+
+(define-unit-type 'unit-stables 'name "Stables"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/stables.png"
+    tileset-winter "tilesets/winter/alliance/buildings/stables.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/stables.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-stables
+  'costs '(time 150 gold 1000 wood 300)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 15
+  'points 210
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "stables-selected"
+    acknowledge "stables-acknowledge"
+    ready "stables-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "stables-attack"))
+
+(define-unit-type 'unit-inventor 'name "Inventor"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/inventor.png"
+    tileset-winter "tilesets/winter/alliance/buildings/inventor.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/inventor.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-inventor
+  'costs '(time 150 gold 1000 wood 400)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 230
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "inventor-selected"
+    acknowledge "inventor-acknowledge"
+    ready "inventor-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "inventor-attack"))
+
+(define-unit-type 'unit-gryphon-aviary 'name "Gryphon Aviary"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/gryphon aviary.png"
+    tileset-winter "tilesets/winter/alliance/buildings/gryphon aviary.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/gryphon aviary.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-gryphon-aviary
+  'costs '(time 150 gold 1000 wood 400)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 280
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "gryphon-aviary-selected"
+    acknowledge "gryphon-aviary-acknowledge"
+    ready "gryphon-aviary-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "gryphon-aviary-attack"))
+
+(define-unit-type 'unit-alliance-shipyard 'name "Shipyard"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/shipyard.png"
+    tileset-winter "tilesets/winter/alliance/buildings/shipyard.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/shipyard.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alliance-shipyard
+  'costs '(time 200 gold 800 wood 450)
+  'construction 'construction-alliance-shipyard
+  'speed 0
+  'hit-points 1100
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 30 'annoy-computer-factor 20
+  'points 170
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-land
+  'building
+  'shore-building
+  'stores-oil
+  'sounds '(
+    selected "alliance-shipyard-selected"
+    acknowledge "alliance-shipyard-acknowledge"
+    ready "alliance-shipyard-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-shipyard-attack"))
+
+(define-unit-type 'unit-elven-lumber-mill 'name "Alliance Lumber Mill"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/alliance lumber mill.png"
+    tileset-winter "tilesets/winter/alliance/buildings/alliance lumber mill.png"
+    tileset-wasteland "tilesets/wasteland/alliance/buildings/alliance lumber mill.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/alliance lumber mill.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-elven-lumber-mill
+  'costs '(time 150 gold 600 wood 450)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 600
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 25 'annoy-computer-factor 15
+  'points 150
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'stores-wood
+  'sounds '(
+    selected "elven-lumber-mill-selected"
+    acknowledge "elven-lumber-mill-acknowledge"
+    ready "elven-lumber-mill-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "elven-lumber-mill-attack"))
+
+(define-unit-type 'unit-alliance-foundry 'name "Foundry"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/foundry.png"
+    tileset-winter "tilesets/winter/alliance/buildings/foundry.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/foundry.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alliance-foundry
+  'costs '(time 175 gold 700 wood 400 oil 400)
+  'construction 'construction-alliance-foundry
+  'speed 0
+  'hit-points 750
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 200
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-land
+  'building
+  'shore-building
+  'sounds '(
+    selected "alliance-foundry-selected"
+    acknowledge "alliance-foundry-acknowledge"
+    ready "alliance-foundry-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-foundry-attack"))
+
+(define-unit-type 'unit-town-hall 'name "Town Hall"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/town hall.png"
+    tileset-winter "tilesets/winter/alliance/buildings/town hall.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/town hall.png")
+  'size '(128 128)
+  'animations 'animations-building 'icon 'icon-town-hall
+  'costs '(time 255 gold 1200 wood 800)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 1200
+  'tile-size '(4 4) 'box-size '(126 126)
+  'sight-range 4
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 35 'annoy-computer-factor 45
+  'points 200
+  'supply 1
+  'corpse '(unit-destroyed-4x4-place 0)
+  'type-land
+  'building
+  'stores-gold
+  'sounds '(
+    selected "town-hall-selected"
+    acknowledge "town-hall-acknowledge"
+    ready "town-hall-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "town-hall-attack"))
+
+(define-unit-type 'unit-mage-tower 'name "Mage Tower"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/mage tower.png"
+    tileset-winter "tilesets/winter/alliance/buildings/mage tower.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/mage tower.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mage-tower
+  'costs '(time 125 gold 1000 wood 200)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 35 'annoy-computer-factor 20
+  'points 240
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "mage-tower-selected"
+    acknowledge "mage-tower-acknowledge"
+    ready "mage-tower-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "mage-tower-attack"))
+
+(define-unit-type 'unit-alliance-blacksmith 'name "Blacksmith"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/blacksmith.png"
+    tileset-winter "tilesets/winter/alliance/buildings/blacksmith.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/blacksmith.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alliance-blacksmith
+  'costs '(time 200 gold 800 wood 450 oil 100)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 775
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 170
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "alliance-blacksmith-selected"
+    acknowledge "alliance-blacksmith-acknowledge"
+    ready "alliance-blacksmith-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-blacksmith-attack"))
+
+(define-unit-type 'unit-human-refinery 'name "Refinery"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/refinery.png"
+    tileset-winter "tilesets/winter/alliance/buildings/refinery.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/refinery.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alliance-refinery
+  'costs '(time 225 gold 800 wood 350 oil 200)
+  'construction 'construction-alliance-refinery
+  'speed 0
+  'hit-points 600
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 25 'annoy-computer-factor 20
+  'points 200
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-land
+  'building
+  'shore-building
+  'stores-oil
+  'sounds '(
+    selected "alliance-refinery-selected"
+    acknowledge "alliance-refinery-acknowledge"
+    ready "alliance-refinery-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-refinery-attack"))
+
+(define-unit-type 'unit-alliance-oil-platform 'name "Oil Platform"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/oil platform.png"
+    tileset-winter "tilesets/winter/alliance/buildings/oil platform.png"
+    tileset-wasteland "tilesets/wasteland/alliance/buildings/oil platform.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/oil platform.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alliance-oil-platform
+  'costs '(time 200 gold 700 wood 450)
+  'construction 'construction-alliance-oil-well
+  'speed 0
+  'hit-points 650
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 20 'annoy-computer-factor 20
+  'points 160
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-naval
+  'building
+  'gives-oil
+  'sounds '(
+    selected "alliance-oil-platform-selected"
+    acknowledge "alliance-oil-platform-acknowledge"
+    ready "alliance-oil-platform-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-oil-platform-attack"))
+
+(define-unit-type 'unit-keep 'name "Keep"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/keep.png"
+    tileset-winter "tilesets/winter/alliance/buildings/keep.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/keep.png")
+  'size '(128 128)
+  'animations 'animations-building 'icon 'icon-keep
+  'costs '(time 200 gold 2000 wood 1000 oil 200)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 1400
+  'tile-size '(4 4) 'box-size '(127 127)
+  'sight-range 6
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 37 'annoy-computer-factor 40
+  'points 600
+  'supply 1
+  'corpse '(unit-destroyed-4x4-place 0)
+  'type-land
+  'building
+  'stores-gold
+  'sounds '(
+    selected "keep-selected"
+    acknowledge "keep-acknowledge"
+    ready "keep-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "keep-attack"))
+
+(define-unit-type 'unit-castle 'name "Castle"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/castle.png"
+    tileset-winter "tilesets/winter/alliance/buildings/castle.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/castle.png")
+  'size '(128 128)
+  'animations 'animations-building 'icon 'icon-castle
+  'costs '(time 200 gold 2500 wood 1200 oil 500)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 1600
+  'tile-size '(4 4) 'box-size '(127 127)
+  'sight-range 9
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 40 'annoy-computer-factor 50
+  'points 1500
+  'supply 1
+  'corpse '(unit-destroyed-4x4-place 0)
+  'type-land
+  'building
+  'stores-gold
+  'sounds '(
+    selected "castle-selected"
+    acknowledge "castle-acknowledge"
+    ready "castle-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "castle-attack"))
+
+(define-unit-type 'unit-alliance-start-location 'name "Start Location"
+  'files '(tileset-summer "alliance/x startpoint.png")
+  'size '(32 32)
+  'animations 'animations-building 'icon 'icon-cancel
+  'speed 0
+  'hit-points 0
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 0
+  'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 0
+  'demand 1
+  'type-land
+  'sounds '(
+    selected "alliance-start-location-selected"
+    acknowledge "alliance-start-location-acknowledge"
+    ready "alliance-start-location-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-start-location-attack"))
+
+(define-unit-type 'unit-alliance-guard-tower 'name "Guard Tower"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/guard tower.png"
+    tileset-winter "tilesets/winter/alliance/buildings/guard tower.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/guard tower.png")
+  'size '(64 64)
+  'animations 'animations-alliance-guard-tower 'icon 'icon-alliance-guard-tower
+  'costs '(time 140 gold 500 wood 150)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 130
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 6 'person-reaction-range 6
+  'armor 20 'basic-damage 4 'piercing-damage 12 'missile 'missile-arrow
+  'max-attack-range 6
+  'priority 40 'annoy-computer-factor 50
+  'points 200
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'building
+  'can-see-submarine
+  'tower
+  'sounds '(
+    selected "alliance-guard-tower-selected"
+    acknowledge "alliance-guard-tower-acknowledge"
+    ready "alliance-guard-tower-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-guard-tower-attack"))
+
+(define-unit-type 'unit-alliance-cannon-tower 'name "Cannon Tower"
+  'files '(tileset-summer "tilesets/summer/alliance/buildings/cannon tower.png"
+    tileset-winter "tilesets/winter/alliance/buildings/cannon tower.png"
+    tileset-swamp "tilesets/swamp/alliance/buildings/cannon tower.png")
+  'size '(64 64)
+  'animations 'animations-alliance-cannon-tower 'icon 'icon-alliance-cannon-tower
+  'costs '(time 190 gold 1000 wood 300)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 160
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 7 'person-reaction-range 7
+  'armor 20 'basic-damage 50 'piercing-damage 0 'missile 'missile-small-cannon
+  'min-attack-range 1 'max-attack-range 7
+  'priority 40 'annoy-computer-factor 50
+  'points 250
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'can-attack
+  'can-target-land 'can-target-sea
+  'building
+  'can-see-submarine
+  'tower
+  'sounds '(
+    selected "alliance-cannon-tower-selected"
+    acknowledge "alliance-cannon-tower-acknowledge"
+    ready "alliance-cannon-tower-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-cannon-tower-attack"))
+
+(define-unit-type 'unit-human-wall 'name "Wall"
+  'files '(tileset-summer "tilesets/summer/neutral/buildings/wall.png"
+    tileset-winter "tilesets/winter/neutral/buildings/wall.png"
+    tileset-wasteland "tilesets/wasteland/neutral/buildings/wall.png")
+  'size '(32 32)
+  'animations 'animations-building 'icon 'icon-alliance-wall
+  'costs '(time 30 gold 20 wood 10)
+  'construction 'construction-wall
+  'speed 0
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 1
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 0 'annoy-computer-factor 45
+  'points 1
+  'corpse '(unit-destroyed-1x1-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "alliance-wall-selected"
+    acknowledge "alliance-wall-acknowledge"
+    ready "alliance-wall-ready"
+    help "basic alliance voices help 2"
+    dead "building destroyed"
+    attack "alliance-wall-attack"))
+
+(define-unit-type 'unit-peasant-with-gold 'name "Peasant"
+  'files '(tileset-summer "alliance/units/peasant with gold.png")
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peasant
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-harvest
+  'can-attack
+  'can-target-land
+  'land-unit
+  'cower-worker
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peasant-with-gold-selected"
+    acknowledge "peasant-with-gold-acknowledge"
+    ready "peasant-with-gold-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "peasant-with-gold-attack"))
+
+(define-unit-type 'unit-peasant-with-wood 'name "Peasant"
+  'files '(tileset-summer "alliance/units/peasant with wood.png")
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peasant
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-harvest
+  'can-attack
+  'can-target-land
+  'land-unit
+  'cower-worker
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peasant-with-wood-selected"
+    acknowledge "peasant-with-wood-acknowledge"
+    ready "peasant-with-wood-ready"
+    help "basic alliance voices help 1"
+    dead "basic alliance voices dead"
+    attack "peasant-with-wood-attack"))
+
+(define-unit-type 'unit-human-oil-tanker-full 'name "Oil tanker"
+  'files '(tileset-summer "alliance/units/oil tanker full.png")
+  'size '(72 72)
+  'animations 'animations-alliance-oil-tanker 'icon 'icon-alliance-oil-tanker
+  'costs '(time 50 gold 400 wood 200)
+  'speed 10
+  'hit-points 90
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 4
+  'armor 10 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50 'annoy-computer-factor 10
+  'points 40
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-haul-oil
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  'sounds '(
+    selected "alliance-oil-tanker-full-selected"
+    acknowledge "alliance-oil-tanker-full-acknowledge"
+    ready "alliance-oil-tanker-full-ready"
+    help "basic alliance voices help 1"
+    dead "ship sinking"
+    attack "alliance-oil-tanker-full-attack"))

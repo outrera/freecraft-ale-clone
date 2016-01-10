@@ -1,0 +1,96 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	fonts.ccl	-	Define the used fonts.
+;;
+;;	(c) Copyright 2000-2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: fonts.ccl,v 1.9 2002/12/17 06:40:30 nehalmistry Exp $
+
+;;=============================================================================
+;;	Define the used fonts.
+;;
+;;	(define-font type file size)
+;;
+;;	type:	type of font, currently supported 'game,'small,'large
+;;		'small-title 'large-title
+;;	file:	file name for font file, currently only multicolor bitmap
+;;		fonts supported.
+;;	size:	font size width and height.
+
+(define-font 'small	"graphics/ui/fonts/small.png"	 7  6)
+(define-font 'game	"graphics/ui/fonts/game.png"	13 14)
+(define-font 'large	"graphics/ui/fonts/large.png"	17 17)
+(define-font 'small-title "graphics/ui/fonts/small episode titles.png"	32 35)
+(define-font 'large-title "graphics/ui/fonts/large episode titles.png"	52 50)
+
+;;=============================================================================
+;;	Define the font colors.
+;;
+;;	(define-font-colors color0 ... color15)
+;;
+;;	color0:		array of 7 colors #( 1 2 3 4 5 6 7 )
+;;	...
+;;	color15:	16 different font colors supported.
+;;
+;;	The colors are:
+;;		#0   is background color
+;;		#1   is the light font color
+;;		#2   is the middle (main) font color
+;;		#3   is the dark font color
+;;		#4   is the font/shadow antialias color
+;;		#5   is the dark shadow color
+;;		#6   is the light shadow color
+;;		#255 is transparent
+;;
+;;	FIXME: only 3=yellow and 7=white and 8=grey are correct.
+;;
+(define-font-colors
+    ;; 0 black
+    #(   0 228 228 228 228 239   0 )
+    ;; 1 red
+    #(   0 208 209 210 211 239   0 )
+    ;; 2 green
+    #(   0 216 216 216 216 239   0 )
+    ;; 3 yellow
+    #( 246 200 199 197 192 239 104 )
+    ;; 4 blue
+    #(   0   1   1   1   1 239   0 )
+    ;; 5 magenta
+    #(   0 220 220 220 220 239   0 )
+    ;; 6 cyan
+    #(   0 224 224 224 224 239   0 )
+    ;; 7 white
+    #(   0 246 246 246 104 239   0 )
+    ;; 8 grey
+    #(   0 111 110 109 104 239   0 )
+    ;; 9 light-red
+    #(   0 208 208 208 208 239   0 )
+    ;; a light-green
+    #(   0 216 216 216 216 239   0 )
+    ;; b light-yellow
+    #( 246 200 199 197 192 239 104 )
+    ;; c light-blue
+    #(   0   1   1   1   1 239   0 )
+    ;; d light-magenta
+    #(   0 220 220 220 220 239   0 )
+    ;; e light-cyan
+    #(   0 224 224 224 224 239   0 )
+    ;; f light grey
+    #(   0 111 110 109 104 239   0 ) )

@@ -1,0 +1,61 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	upgrade.ccl	-	Define the dependencies and upgrades.
+;;
+;;	(c) Copyright 2001 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: upgrade.ccl,v 1.12 2002/12/17 06:40:31 nehalmistry Exp $
+
+;; Load the different races
+(load "ccl/alliance/upgrade.ccl" #f #t)
+(load "ccl/mythical/upgrade.ccl" #f #t)
+
+;;=============================================================================
+;;
+;;	Define which units/upgrades are allowed.
+;;		A: allowed, E: enabled, F: forbidden, R: researched
+;;
+;;	(define-allow unit/upgrade "AAAAAAAAAAAAAAAA")
+;;				    ^- player 0 ... 15
+;;
+;;	NOTE: Save can generate this table.
+;;
+
+(define-allow 'unit-nothing-22			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-nothing-24			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-nothing-25			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-nothing-30			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-nothing-36			"AAAAAAAAAAAAAAAA")
+
+(define-allow 'unit-critter			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-skeleton			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-daemon			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-gold-mine			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-oil-patch			"AAAAAAAAAAAAAAAA")
+
+(define-allow 'unit-circle-of-power		"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-dark-portal			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-runestone			"AAAAAAAAAAAAAAAA")
+
+(define-allow 'unit-dead-body			"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-destroyed-1x1-place		"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-destroyed-2x2-place		"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-destroyed-3x3-place		"AAAAAAAAAAAAAAAA")
+(define-allow 'unit-destroyed-4x4-place		"AAAAAAAAAAAAAAAA")

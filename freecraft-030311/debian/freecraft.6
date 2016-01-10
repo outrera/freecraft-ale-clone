@@ -1,0 +1,74 @@
+.TH FREECRAFT 6 "April 2002" "FreeCraft v1.17pre1build17"
+.SH NAME
+freecraft \- Realtime strategy game
+.SH SYNOPSIS
+.B freecraft
+.I "[-c file.ccl] [-d datapath] [-f factor] [-l logfile] [-L lag] [-n [localport:]host[:port]]
+.I [-N name] [-p\ nplayers] [-h] [map.pud|map.pud.gz|map.cm|map.cm.gz]"
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.BR freecraft
+command.
+.PP
+.B freecraft
+is a free clone of Blizzard's famous realtime strategy game, WarCraft II.
+.SH OPTIONS
+A summary of options are included below.
+.TP
+.B \-h
+Show summary of all options.
+.TP
+.B \-c file.ccl
+Choose a different clone config file.
+.TP
+.B \-d datapath
+Choose a different directory to use for game data files.
+.TP
+.B \-f factor
+With this parameter you will set up the relative cost for the computer's units.
+Default is 100. If you set this to a higher value, computer will have to spend
+more resources for creating units, and viceversa.
+.TP
+.B \-l file
+With this option you can log freecraft messages into a file.
+.TP
+.B \-L lag
+This is the network lag in number of frames (default 5 = 165 ms).
+.TP
+.B \-n [localport:]host[:port]
+With this option you can specify the network arguments for network play.
+.TP
+.B \-N name
+The name of the player (will appear in network games).
+.TP
+.B \-p number
+Number of network players to connect.
+.TP
+.B \-s number
+Number of frames before AI awakes. This is useful if the AI is beating
+you hard, and you want to make it sweet like a cat.
+.SH "FILES"
+.TP
+.B /usr/share/games/freecraft/default
+Default directory for FreeCraft data files
+.TP
+.B /usr/share/games/freecraft/default/default.pud.gz
+Default PUD.
+.TP
+.B /usr/share/games/freecraft/default/ccl/clone.ccl
+Default start file.
+.SH "SEE ALSO"
+More complete documentation is available in /usr/share/doc/freecraft.
+.SH NOTES
+WarCraft is a registered trademark of Blizzard Entertainment. FreeCraft
+needs a lot of data (maps and artwork), that can come from WarCraft II
+CD, or from the FreeCraft Media Project, codename
+.B
+fcmp
+, that has support for almost all the data present in WarCraft II.
+.SH AUTHOR
+ALE Clone was written by Lutz Sammer, Fabrice Rossie and others.
+.PP
+This manual page was written by Anthony Towns <ajt@debian.org> and
+David Martínez Moreno <ender@debian.org>, for the Debian GNU/Linux
+system (but may be used by others).

@@ -1,0 +1,1522 @@
+;;   ___________		     _________		      _____  __
+;;   \_	  _____/______   ____   ____ \_   ___ \____________ _/ ____\/  |_
+;;    |    __) \_  __ \_/ __ \_/ __ \/    \  \/\_  __ \__  \\   __\\   __|
+;;    |     \   |  | \/\  ___/\  ___/\     \____|  | \// __ \|  |   |  |
+;;    \___  /   |__|    \___  >\___  >\______  /|__|  (____  /__|   |__|
+;;	  \/		    \/	   \/	     \/		   \/
+;;  ______________________                           ______________________
+;;			  T H E   W A R   B E G I N S
+;;	   FreeCraft - A free fantasy real time strategy game engine
+;;
+;;	units.ccl	-	Define the used mythical unit-types.
+;;
+;;	(c) Copyright 2001,2002 by Lutz Sammer
+;;
+;;	FreeCraft is free software; you can redistribute it and/or modify
+;;	it under the terms of the GNU General Public License as published
+;;	by the Free Software Foundation; only version 2 of the License.
+;;
+;;	FreeCraft is distributed in the hope that it will be useful,
+;;	but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;	GNU General Public License for more details.
+;;
+;;	$Id: units.ccl,v 1.17 2002/12/17 06:40:32 nehalmistry Exp $
+
+;;=============================================================================
+;;	Define unit-types.
+;;
+(define-unit-type 'unit-grunt 'name "Black Knight"
+  'files '(tileset-summer "mythical/units/black knight.png")
+  'size '(72 72)
+  'animations 'animations-footman 'icon 'icon-grunt
+  'costs '(time 60 gold 600)
+  'speed 10
+  'hit-points 60
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 2 'basic-damage 6 'piercing-damage 3 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 60
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "grunt-selected"
+    acknowledge "grunt-acknowledge"
+    ready "grunt-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "grunt-attack"))
+
+(define-unit-type 'unit-peon 'name "Faun"
+  'files '(tileset-summer "mythical/units/faun.png")
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peon
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-harvest
+  'can-attack
+  'can-target-land
+  'land-unit
+  'cower-worker
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peon-selected"
+    acknowledge "peon-acknowledge"
+    ready "peon-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "peon-attack"))
+
+(define-unit-type 'unit-catapult 'name "Catapult"
+  'files '(tileset-summer "mythical/units/catapult.png")
+  'size '(64 64)
+  'animations 'animations-catapult 'icon 'icon-catapult
+  'costs '(time 250 gold 900 wood 300)
+  'speed 5
+  'hit-points 110
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 11 'person-reaction-range 9
+  'basic-damage 80 'piercing-damage 0 'missile 'missile-catapult-rock
+  'min-attack-range 1 'max-attack-range 8
+  'weapons-upgradable 1
+  'priority 70
+  'points 100
+  'demand 1
+  'explode-when-killed
+  'type-land
+  'right-attack
+  'can-ground-attack
+  'can-attack
+  'can-target-land 'can-target-sea
+  'selectable-by-rectangle
+  'sounds '(
+    selected "catapult-selected"
+    acknowledge "catapult-acknowledge"
+    ready "catapult-ready"
+    help "basic mythical voices help 1"
+    dead "explosion"
+    attack "catapult-attack"))
+
+(define-unit-type 'unit-ogre 'name "Ogre"
+  'files '(tileset-summer "mythical/units/ogre.png")
+  'size '(72 72)
+  'animations 'animations-ogre 'icon 'icon-ogre
+  'costs '(time 90 gold 800 wood 100)
+  'speed 13
+  'hit-points 90
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 4 'basic-damage 8 'piercing-damage 4 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 63
+  'points 100
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "ogre-selected"
+    acknowledge "ogre-acknowledge"
+    ready "ogre-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "ogre-attack"))
+
+(define-unit-type 'unit-axethrower 'name "Axethrower"
+  'files '(tileset-summer "mythical/units/axethrower.png")
+  'size '(72 72)
+  'animations 'animations-axethrower 'icon 'icon-axethrower
+  'costs '(time 70 gold 500 wood 50)
+  'speed 10
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(36 36)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'basic-damage 3 'piercing-damage 6 'missile 'missile-axe
+  'max-attack-range 4
+  'weapons-upgradable 1
+  'priority 55
+  'points 60
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "axethrower-selected"
+    acknowledge "axethrower-acknowledge"
+    ready "axethrower-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "axethrower-attack"))
+
+(define-unit-type 'unit-death-knight 'name "Death Knight"
+  'files '(tileset-summer "mythical/units/death knight.png")
+  'size '(72 72)
+  'animations 'animations-death-knight 'icon 'icon-death-knight
+  'costs '(time 120 gold 1200)
+  'speed 8
+  'hit-points 60
+  'max-mana 255
+  'magic 1
+  'tile-size '(1 1) 'box-size '(39 39)
+  'sight-range 9 'computer-reaction-range 11 'person-reaction-range 9
+  'basic-damage 0 'piercing-damage 9 'missile 'missile-touch-of-death
+  'max-attack-range 3
+  'priority 70
+  'points 100
+  'demand 1
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'cower-mage
+  'isundead
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "death-knight-selected"
+    acknowledge "death-knight-acknowledge"
+    ready "death-knight-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "death-knight-attack"))
+
+(define-unit-type 'unit-ogre-mage 'name "Ogre Mage"
+  'use 'unit-ogre
+  'size '(72 72)
+  'animations 'animations-ogre 'icon 'icon-ogre-mage
+  'costs '(time 90 gold 800 wood 100)
+  'speed 13
+  'hit-points 90
+  'max-mana 255
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'armor 4 'basic-damage 8 'piercing-damage 4 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65
+  'points 110
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "ogre-mage-selected"
+    acknowledge "ogre-mage-acknowledge"
+    ready "ogre-mage-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "ogre-mage-attack"))
+
+(define-unit-type 'unit-goblin-sappers 'name "Goblin Sappers"
+  'files '(tileset-summer "mythical/units/goblin sappers.png")
+  'size '(56 56)
+  'animations 'animations-goblin-sappers 'icon 'icon-goblin-sappers
+  'costs '(time 200 gold 700 wood 250)
+  'speed 11
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(37 37)
+  'sight-range 4 'computer-reaction-range 4 'person-reaction-range 2
+  'basic-damage 4 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1
+  'priority 55
+  'points 100
+  'demand 1
+  'type-land
+  'right-demolish
+  'can-attack
+  'can-target-land
+  'land-unit
+  'volatile
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "goblin-sappers-selected"
+    acknowledge "goblin-sappers-acknowledge"
+    ready "goblin-sappers-ready"
+    help "basic mythical voices help 1"
+    dead "explosion"
+    attack "goblin-sappers-attack"))
+
+(define-unit-type 'unit-attack-peon 'name "Faun"
+  'use 'unit-peon
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peon
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peon-selected"
+    acknowledge "peon-acknowledge"
+    ready "peon-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "peon-attack"))
+
+(define-unit-type 'unit-berserker 'name "Berserker"
+  'use 'unit-axethrower
+  'size '(72 72)
+  'animations 'animations-axethrower 'icon 'icon-berserker
+  'costs '(time 70 gold 500 wood 50)
+  'speed 10
+  'hit-points 50
+  'tile-size '(1 1) 'box-size '(36 36)
+  'sight-range 6 'computer-reaction-range 9 'person-reaction-range 6
+  'basic-damage 3 'piercing-damage 6 'missile 'missile-axe
+  'max-attack-range 4
+  'weapons-upgradable 1
+  'priority 57
+  'points 70
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "berserker-selected"
+    acknowledge "berserker-acknowledge"
+    ready "berserker-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "berserker-attack"))
+
+(define-unit-type 'unit-evil-knight 'name "Evil Knight"
+  'use 'unit-death-knight
+  'size '(72 72)
+  'animations 'animations-death-knight 'icon 'icon-evil-knight
+  'costs '(time 120 gold 1200)
+  'speed 8
+  'hit-points 180
+  'max-mana 255
+  'magic 1
+  'tile-size '(1 1) 'box-size '(39 39)
+  'sight-range 9 'computer-reaction-range 11 'person-reaction-range 9
+  'armor 2 'basic-damage 0 'piercing-damage 16 'missile 'missile-touch-of-death
+  'max-attack-range 4
+  'priority 70
+  'points 100
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'cower-mage
+  'isundead
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "evil-knight-selected"
+    acknowledge "evil-knight-acknowledge"
+    ready "evil-knight-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "evil-knight-attack"))
+
+(define-unit-type 'unit-fad-man 'name "Fad Man"
+  'use 'unit-ogre
+  'size '(72 72)
+  'animations 'animations-ogre 'icon 'icon-fad-man
+  'costs '(time 90 gold 800 wood 100)
+  'speed 13
+  'hit-points 300
+  'max-mana 255
+  'magic 1
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 6 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 8 'basic-damage 18 'piercing-damage 6 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 63
+  'points 100
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "fad-man-selected"
+    acknowledge "fad-man-acknowledge"
+    ready "fad-man-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "fad-man-attack"))
+
+(define-unit-type 'unit-beast-cry 'name "Beast Cry"
+  'use 'unit-grunt
+  'size '(72 72)
+  'animations 'animations-footman 'icon 'icon-beast-cry
+  'costs '(time 60 gold 600)
+  'speed 10
+  'hit-points 240
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 5 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 8 'basic-damage 16 'piercing-damage 6 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 60
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "beast-cry-selected"
+    acknowledge "beast-cry-acknowledge"
+    ready "beast-cry-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "beast-cry-attack"))
+
+(define-unit-type 'unit-orc-oil-tanker 'name "Oil tanker"
+  'files '(tileset-summer "mythical/units/oil tanker empty.png")
+  'size '(72 72)
+  'animations 'animations-alliance-oil-tanker 'icon 'icon-mythical-oil-tanker
+  'costs '(time 50 gold 400 wood 200)
+  'speed 10
+  'hit-points 90
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 4
+  'armor 10 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50 'annoy-computer-factor 10
+  'points 40
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-haul-oil
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  'sounds '(
+    selected "mythical-oil-tanker-selected"
+    acknowledge "mythical-oil-tanker-acknowledge"
+    ready "mythical-oil-tanker-ready"
+    help "basic mythical voices help 1"
+    dead "ship sinking"
+    attack "mythical-oil-tanker-attack"))
+
+(define-unit-type 'unit-mythical-transport 'name "Transport"
+  'files '(tileset-summer "mythical/units/transport.png")
+  'size '(72 72)
+  'animations 'animations-alliance-transport 'icon 'icon-mythical-transport
+  'costs '(time 70 gold 600 wood 200 oil 500)
+  'speed 10
+  'hit-points 150
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 4
+  'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'armor-upgradable 1
+  'priority 70 'annoy-computer-factor 15
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-sail
+  'sea-unit
+  'transporter
+  'selectable-by-rectangle
+  'sounds '(
+    selected "mythical-transport-selected"
+    acknowledge "mythical-transport-acknowledge"
+    ready "mythical-transport-ready"
+    help "basic mythical voices help 1"
+    dead "ship sinking"
+    attack "mythical-transport-attack"))
+
+(define-unit-type 'unit-mythical-destroyer 'name "Mythical Destroyer"
+  'files '(tileset-summer "mythical/units/mythical destroyer.png")
+  'size '(88 88)
+  'animations 'animations-alliance-destroyer 'icon 'icon-mythical-destroyer
+  'costs '(time 90 gold 700 wood 350 oil 700)
+  'speed 10
+  'hit-points 100
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 8 'computer-reaction-range 10 'person-reaction-range 8
+  'armor 10 'basic-damage 35 'piercing-damage 0 'missile 'missile-small-cannon
+  'max-attack-range 4
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65 'annoy-computer-factor 20
+  'points 150
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'sea-unit
+  'selectable-by-rectangle
+  'sounds '(
+    selected "mythical-destroyer-selected"
+    acknowledge "mythical-destroyer-acknowledge"
+    ready "mythical-destroyer-ready"
+    help "basic mythical voices help 1"
+    dead "ship sinking"
+    attack "mythical-destroyer-attack"))
+
+(define-unit-type 'unit-ogre-juggernaught 'name "Juggernaught"
+  'files '(tileset-summer "mythical/units/juggernaught.png")
+  'size '(88 88)
+  'animations 'animations-battleship 'icon 'icon-ogre-juggernaught
+  'costs '(time 140 gold 1000 wood 500 oil 1000)
+  'speed 6
+  'hit-points 150
+  'tile-size '(1 1) 'box-size '(70 70)
+  'sight-range 8 'computer-reaction-range 10 'person-reaction-range 8
+  'armor 15 'basic-damage 130 'piercing-damage 0 'missile 'missile-big-cannon
+  'max-attack-range 6
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 63 'annoy-computer-factor 25
+  'points 300
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-attack
+  'can-ground-attack
+  'can-attack
+  'can-target-land 'can-target-sea
+  'sea-unit
+  'selectable-by-rectangle
+  'sounds '(
+    selected "ogre-juggernaught-selected"
+    acknowledge "ogre-juggernaught-acknowledge"
+    ready "ogre-juggernaught-ready"
+    help "basic mythical voices help 1"
+    dead "ship sinking"
+    attack "ogre-juggernaught-attack"))
+
+(define-unit-type 'unit-fire-breeze 'name "Fire Breeze"
+  'files '(tileset-summer "mythical/units/dragon.png")
+  'size '(88 80)
+  'animations 'animations-fire-breeze 'icon 'icon-fire-breeze
+  'costs '(time 250 gold 2500)
+  'speed 14
+  'hit-points 800
+  'tile-size '(1 1) 'box-size '(71 71)
+  'sight-range 9 'computer-reaction-range 8 'person-reaction-range 6
+  'armor 10 'basic-damage 10 'piercing-damage 25 'missile 'missile-dragon-breath
+  'max-attack-range 5
+  'priority 65
+  'points 150
+  'demand 1
+  'type-fly
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'air-unit
+  'can-see-submarine
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "fire-breeze-selected"
+    acknowledge "fire-breeze-acknowledge"
+    ready "fire-breeze-ready"
+    help "basic mythical voices help 1"
+    dead "explosion"
+    attack "fire-breeze-attack"))
+
+(define-unit-type 'unit-mythical-submarine 'name "Mythical Submarine"
+  'files '(tileset-summer "mythical/units/submarine.png"
+    tileset-wasteland "tilesets/wasteland/mythical/units/submarine.png"
+    tileset-swamp "tilesets/swamp/mythical/units/submarine.png")
+  'size '(72 72)
+  'animations 'animations-submarine 'icon 'icon-mythical-submarine
+  'costs '(time 100 gold 800 wood 150 oil 900)
+  'speed 7
+  'hit-points 60
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'basic-damage 50 'piercing-damage 0 'missile 'missile-turtle-missile
+  'max-attack-range 4
+  'priority 60 'annoy-computer-factor 20
+  'points 120
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-attack
+  'can-attack
+  'can-target-sea
+  'sea-unit
+  'submarine
+  'can-see-submarine
+  'selectable-by-rectangle
+  'sounds '(
+    selected "mythical-submarine-selected"
+    acknowledge "mythical-submarine-acknowledge"
+    ready "mythical-submarine-ready"
+    help "basic mythical voices help 1"
+    dead "ship sinking"
+    attack "mythical-submarine-attack"))
+
+(define-unit-type 'unit-zeppelin 'name "Zeppelin"
+  'files '(tileset-summer "mythical/units/zeppelin.png")
+  'size '(72 72)
+  'animations 'animations-zeppelin 'icon 'icon-zeppelin
+  'costs '(time 65 gold 500 wood 100)
+  'speed 17
+  'hit-points 150
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 19 'person-reaction-range 15
+  'armor 2 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 40
+  'points 40
+  'demand 1
+  'type-fly
+  'right-move
+  'air-unit
+  'can-see-submarine
+  'selectable-by-rectangle
+  'sounds '(
+    selected "zeppelin-selected"
+    acknowledge "zeppelin-acknowledge"
+    ready "zeppelin-ready"
+    help "basic mythical voices help 1"
+    dead "explosion"
+    attack "zeppelin-attack"))
+
+(define-unit-type 'unit-dragon 'name "Dragon"
+  'use 'unit-fire-breeze
+  'size '(88 80)
+  'animations 'animations-fire-breeze 'icon 'icon-dragon
+  'costs '(time 250 gold 2500)
+  'speed 14
+  'hit-points 100
+  'tile-size '(1 1) 'box-size '(71 71)
+  'sight-range 6 'computer-reaction-range 8 'person-reaction-range 6
+  'armor 5 'basic-damage 0 'piercing-damage 16 'missile 'missile-dragon-breath
+  'max-attack-range 4
+  'priority 65
+  'points 150
+  'demand 1
+  'type-fly
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'air-unit
+  'can-see-submarine
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "dragon-selected"
+    acknowledge "dragon-acknowledge"
+    ready "dragon-ready"
+    help "basic mythical voices help 1"
+    dead "explosion"
+    attack "dragon-attack"))
+
+(define-unit-type 'unit-eye-of-vision 'name "Eye of Vision"
+  'files '(tileset-summer "mythical/units/eye of vision.png")
+  'size '(32 32)
+  'animations 'animations-eye-of-vision 'icon 'icon-eye-of-kilrogg
+  'speed 42
+  'hit-points 100
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 3 'computer-reaction-range 20 'person-reaction-range 10
+  'basic-damage 1 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 0
+  'decay-rate 3
+  'demand 1
+  'type-fly
+  'right-move
+  'air-unit
+  'can-see-submarine
+  'selectable-by-rectangle
+  'sounds '(
+    selected "eye-of-vision-selected"
+    acknowledge "eye-of-vision-acknowledge"
+    ready "eye-of-vision-ready"
+    help "basic mythical voices help 1"
+    dead "eye-of-vision-dead"
+    attack "eye-of-vision-attack"))
+
+(define-unit-type 'unit-quick-blade 'name "Quick Blade"
+  'use 'unit-grunt
+  'size '(72 72)
+  'animations 'animations-footman 'icon 'icon-quick-blade
+  'costs '(time 60 gold 600)
+  'speed 10
+  'hit-points 240
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 5 'computer-reaction-range 6 'person-reaction-range 4
+  'armor 8 'basic-damage 16 'piercing-damage 6 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 60
+  'points 50
+  'demand 1
+  'corpse '(unit-dead-body 6)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "quick-blade-selected"
+    acknowledge "quick-blade-acknowledge"
+    ready "quick-blade-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "quick-blade-attack"))
+
+(define-unit-type 'unit-double-head 'name "Double Head"
+  'use 'unit-ogre
+  'size '(72 72)
+  'animations 'animations-ogre 'icon 'icon-double-head
+  'costs '(time 100 gold 1100 wood 50)
+  'speed 13
+  'hit-points 100
+  'max-mana 255
+  'tile-size '(1 1) 'box-size '(42 42)
+  'sight-range 5 'computer-reaction-range 7 'person-reaction-range 5
+  'basic-damage 10 'piercing-damage 5 'missile 'missile-none
+  'max-attack-range 1
+  'weapons-upgradable 1 'armor-upgradable 1
+  'priority 65
+  'points 120
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'hero
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "double-head-selected"
+    acknowledge "double-head-acknowledge"
+    ready "double-head-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "double-head-attack"))
+
+(define-unit-type 'unit-ice-bringer 'name "Ice Bringer"
+  'use 'unit-death-knight
+  'size '(72 72)
+  'animations 'animations-death-knight 'icon 'icon-ice-bringer
+  'costs '(time 120 gold 1200)
+  'speed 8
+  'hit-points 40
+  'max-mana 255
+  'magic 1
+  'tile-size '(1 1) 'box-size '(33 33)
+  'sight-range 8 'computer-reaction-range 10 'person-reaction-range 8
+  'basic-damage 0 'piercing-damage 3 'missile 'missile-touch-of-death
+  'max-attack-range 3
+  'priority 70
+  'points 120
+  'demand 1
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'hero
+  'isundead
+  'can-cast-spell
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "ice-bringer-selected"
+    acknowledge "ice-bringer-acknowledge"
+    ready "ice-bringer-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "ice-bringer-attack"))
+
+(define-unit-type 'unit-sharp-axe 'name "Sharp Axe"
+  'use 'unit-axethrower
+  'size '(72 72)
+  'animations 'animations-axethrower 'icon 'icon-sharp-axe
+  'costs '(time 70 gold 500 wood 50)
+  'speed 10
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(36 36)
+  'sight-range 6 'computer-reaction-range 8 'person-reaction-range 6
+  'basic-damage 3 'piercing-damage 6 'missile 'missile-axe
+  'max-attack-range 5
+  'weapons-upgradable 1
+  'priority 55
+  'points 120
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'land-unit
+  'hero
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "sharp-axe-selected"
+    acknowledge "sharp-axe-acknowledge"
+    ready "sharp-axe-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "sharp-axe-attack"))
+
+(define-unit-type 'unit-skeleton 'name "Skeleton"
+  'files '(tileset-summer "neutral/units/skeleton.png")
+  'size '(56 56)
+  'animations 'animations-skeleton 'icon 'icon-skeleton
+  'speed 8
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 3 'computer-reaction-range 4 'person-reaction-range 2
+  'basic-damage 6 'piercing-damage 3 'missile 'missile-none
+  'max-attack-range 1
+  'priority 55
+  'decay-rate 100
+  'demand 1
+  'type-land
+  'right-attack
+  'can-attack
+  'can-target-land
+  'land-unit
+  'critter
+  'isundead
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "skeleton-selected"
+    acknowledge "skeleton-acknowledge"
+    ready "skeleton-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "skeleton-attack"))
+
+(define-unit-type 'unit-pig-farm 'name "Pig Farm"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/farm.png"
+    tileset-winter "tilesets/winter/mythical/buildings/farm.png"
+    tileset-wasteland "tilesets/wasteland/mythical/buildings/farm.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/farm.png")
+  'size '(64 64)
+  'animations 'animations-building 'icon 'icon-pig-farm
+  'costs '(time 100 gold 500 wood 250)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 400
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 20 'annoy-computer-factor 45
+  'points 100
+  'supply 4
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "pig-farm-selected"
+    acknowledge "pig-farm-acknowledge"
+    ready "pig-farm-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "pig-farm-attack"))
+
+(define-unit-type 'unit-mythical-barracks 'name "Barracks"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/barracks.png"
+    tileset-winter "tilesets/winter/mythical/buildings/barracks.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/barracks.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mythical-barracks
+  'costs '(time 200 gold 700 wood 450)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 800
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 30 'annoy-computer-factor 35
+  'points 160
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "mythical-barracks-selected"
+    acknowledge "mythical-barracks-acknowledge"
+    ready "mythical-barracks-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-barracks-attack"))
+
+(define-unit-type 'unit-altar-of-storms 'name "Altar of Storms"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/altar of storms.png"
+    tileset-winter "tilesets/winter/mythical/buildings/altar of storms.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/altar of storms.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-altar-of-storms
+  'costs '(time 175 gold 900 wood 500)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 700
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 35
+  'points 240
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "altar-of-storms-selected"
+    acknowledge "altar-of-storms-acknowledge"
+    ready "altar-of-storms-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "altar-of-storms-attack"))
+
+(define-unit-type 'unit-mythical-watch-tower 'name "Watch Tower"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/watch tower.png"
+    tileset-winter "tilesets/winter/mythical/buildings/watch tower.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/watch tower.png")
+  'size '(64 64)
+  'animations 'animations-building 'icon 'icon-mythical-watch-tower
+  'costs '(time 60 gold 550 wood 200)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 100
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 9
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 55 'annoy-computer-factor 50
+  'points 95
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'can-target-land 'can-target-sea 'can-target-air
+  'building
+  'can-see-submarine
+  'sounds '(
+    selected "mythical-watch-tower-selected"
+    acknowledge "mythical-watch-tower-acknowledge"
+    ready "mythical-watch-tower-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-watch-tower-attack"))
+
+(define-unit-type 'unit-ogre-mound 'name "Ogre Mound"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/ogre mound.png"
+    tileset-winter "tilesets/winter/mythical/buildings/ogre mound.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/ogre mound.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-ogre-mound
+  'costs '(time 150 gold 1000 wood 300)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 15
+  'points 210
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "ogre-mound-selected"
+    acknowledge "ogre-mound-acknowledge"
+    ready "ogre-mound-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "ogre-mound-attack"))
+
+(define-unit-type 'unit-alchemist 'name "Alchemist"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/alchemist.png"
+    tileset-winter "tilesets/winter/mythical/buildings/alchemist.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/alchemist.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-alchemist
+  'costs '(time 150 gold 1000 wood 400)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 230
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "alchemist-selected"
+    acknowledge "alchemist-acknowledge"
+    ready "alchemist-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "alchemist-attack"))
+
+(define-unit-type 'unit-dragon-roost 'name "Dragon Roost"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/dragon roost.png"
+    tileset-winter "tilesets/winter/mythical/buildings/dragon roost.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/dragon roost.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-dragon-roost
+  'costs '(time 150 gold 1000 wood 400)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 280
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "dragon-roost-selected"
+    acknowledge "dragon-roost-acknowledge"
+    ready "dragon-roost-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "dragon-roost-attack"))
+
+(define-unit-type 'unit-mythical-shipyard 'name "Shipyard"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/shipyard.png"
+    tileset-winter "tilesets/winter/mythical/buildings/shipyard.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/shipyard.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mythical-shipyard
+  'costs '(time 200 gold 800 wood 450)
+  'construction 'construction-mythical-shipyard
+  'speed 0
+  'hit-points 1100
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 30 'annoy-computer-factor 20
+  'points 170
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-land
+  'building
+  'shore-building
+  'stores-oil
+  'sounds '(
+    selected "mythical-shipyard-selected"
+    acknowledge "mythical-shipyard-acknowledge"
+    ready "mythical-shipyard-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-shipyard-attack"))
+
+(define-unit-type 'unit-great-hall 'name "Great Hall"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/great hall.png"
+    tileset-winter "tilesets/winter/mythical/buildings/great hall.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/great hall.png")
+  'size '(128 128)
+  'animations 'animations-building 'icon 'icon-great-hall
+  'costs '(time 255 gold 1200 wood 800)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 1200
+  'tile-size '(4 4) 'box-size '(127 127)
+  'sight-range 4
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 35 'annoy-computer-factor 45
+  'points 200
+  'supply 1
+  'corpse '(unit-destroyed-4x4-place 0)
+  'type-land
+  'building
+  'stores-gold
+  'sounds '(
+    selected "great-hall-selected"
+    acknowledge "great-hall-acknowledge"
+    ready "great-hall-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "great-hall-attack"))
+
+(define-unit-type 'unit-troll-lumber-mill 'name "Mythical Lumber Mill"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/mythical lumber mill.png"
+    tileset-winter "tilesets/winter/mythical/buildings/mythical lumber mill.png"
+    tileset-wasteland "tilesets/wasteland/mythical/buildings/mythical lumber mill.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/mythical lumber mill.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-troll-lumber-mill
+  'costs '(time 150 gold 600 wood 450)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 600
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 25 'annoy-computer-factor 15
+  'points 150
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'stores-wood
+  'sounds '(
+    selected "troll-lumber-mill-selected"
+    acknowledge "troll-lumber-mill-acknowledge"
+    ready "troll-lumber-mill-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "troll-lumber-mill-attack"))
+
+(define-unit-type 'unit-mythical-foundry 'name "Foundry"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/foundry.png"
+    tileset-winter "tilesets/winter/mythical/buildings/foundry.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/foundry.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mythical-foundry
+  'costs '(time 175 gold 700 wood 400 oil 400)
+  'construction 'construction-mythical-foundry
+  'speed 0
+  'hit-points 750
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 200
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-land
+  'building
+  'shore-building
+  'sounds '(
+    selected "mythical-foundry-selected"
+    acknowledge "mythical-foundry-acknowledge"
+    ready "mythical-foundry-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-foundry-attack"))
+
+(define-unit-type 'unit-temple-of-the-damned 'name "Temple of the Damned"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/temple of the damned.png"
+    tileset-winter "tilesets/winter/mythical/buildings/temple of the damned.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/temple of the damned.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-temple-of-the-damned
+  'costs '(time 125 gold 1000 wood 200)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 500
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 35 'annoy-computer-factor 20
+  'points 240
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "temple-of-the-damned-selected"
+    acknowledge "temple-of-the-damned-acknowledge"
+    ready "temple-of-the-damned-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "temple-of-the-damned-attack"))
+
+(define-unit-type 'unit-mythical-blacksmith 'name "Blacksmith"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/blacksmith.png"
+    tileset-winter "tilesets/winter/mythical/buildings/blacksmith.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/blacksmith.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mythical-blacksmith
+  'costs '(time 200 gold 800 wood 450 oil 100)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 775
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 15 'annoy-computer-factor 20
+  'points 170
+  'corpse '(unit-destroyed-3x3-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "mythical-blacksmith-selected"
+    acknowledge "mythical-blacksmith-acknowledge"
+    ready "mythical-blacksmith-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-blacksmith-attack"))
+
+(define-unit-type 'unit-orc-refinery 'name "Refinery"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/refinery.png"
+    tileset-winter "tilesets/winter/mythical/buildings/refinery.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/refinery.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mythical-refinery
+  'costs '(time 225 gold 800 wood 350 oil 200)
+  'construction 'construction-mythical-refinery
+  'speed 0
+  'hit-points 600
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 25 'annoy-computer-factor 20
+  'points 200
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-land
+  'building
+  'shore-building
+  'stores-oil
+  'sounds '(
+    selected "mythical-refinery-selected"
+    acknowledge "mythical-refinery-acknowledge"
+    ready "mythical-refinery-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-refinery-attack"))
+
+(define-unit-type 'unit-mythical-oil-platform 'name "Oil Platform"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/oil platform.png"
+    tileset-winter "tilesets/winter/mythical/buildings/oil platform.png"
+    tileset-wasteland "tilesets/wasteland/mythical/buildings/oil platform.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/oil platform.png")
+  'size '(96 96)
+  'animations 'animations-building 'icon 'icon-mythical-oil-platform
+  'costs '(time 200 gold 700 wood 450)
+  'construction 'construction-mythical-oil-well
+  'speed 0
+  'hit-points 650
+  'tile-size '(3 3) 'box-size '(95 95)
+  'sight-range 3
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 20 'annoy-computer-factor 20
+  'points 160
+  'corpse '(unit-destroyed-3x3-place 3)
+  'type-naval
+  'building
+  'gives-oil
+  'sounds '(
+    selected "mythical-oil-platform-selected"
+    acknowledge "mythical-oil-platform-acknowledge"
+    ready "mythical-oil-platform-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-oil-platform-attack"))
+
+(define-unit-type 'unit-stronghold 'name "Stronghold"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/stronghold.png"
+    tileset-winter "tilesets/winter/mythical/buildings/stronghold.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/stronghold.png")
+  'size '(128 128)
+  'animations 'animations-building 'icon 'icon-stronghold
+  'costs '(time 200 gold 2000 wood 1000 oil 200)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 1400
+  'tile-size '(4 4) 'box-size '(127 127)
+  'sight-range 6
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 37 'annoy-computer-factor 40
+  'points 600
+  'supply 1
+  'corpse '(unit-destroyed-4x4-place 0)
+  'type-land
+  'building
+  'stores-gold
+  'sounds '(
+    selected "stronghold-selected"
+    acknowledge "stronghold-acknowledge"
+    ready "stronghold-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "stronghold-attack"))
+
+(define-unit-type 'unit-fortress 'name "Fortress"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/fortress.png"
+    tileset-winter "tilesets/winter/mythical/buildings/fortress.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/fortress.png")
+  'size '(128 128)
+  'animations 'animations-building 'icon 'icon-fortress
+  'costs '(time 200 gold 2500 wood 1200 oil 500)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 1600
+  'tile-size '(4 4) 'box-size '(127 127)
+  'sight-range 9
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 40 'annoy-computer-factor 50
+  'points 1500
+  'supply 1
+  'corpse '(unit-destroyed-4x4-place 0)
+  'type-land
+  'building
+  'stores-gold
+  'sounds '(
+    selected "fortress-selected"
+    acknowledge "fortress-acknowledge"
+    ready "fortress-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "fortress-attack"))
+
+(define-unit-type 'unit-mythical-start-location 'name "Start Location"
+  'files '(tileset-summer "mythical/o startpoint.png")
+  'size '(32 32)
+  'animations 'animations-building 'icon 'icon-cancel
+  'speed 0
+  'hit-points 0
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 0
+  'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 0
+  'demand 1
+  'type-land
+  'sounds '(
+    selected "mythical-start-location-selected"
+    acknowledge "mythical-start-location-acknowledge"
+    ready "mythical-start-location-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-start-location-attack"))
+
+(define-unit-type 'unit-mythical-guard-tower 'name "Guard Tower"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/guard tower.png"
+    tileset-winter "tilesets/winter/mythical/buildings/guard tower.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/guard tower.png")
+  'size '(64 64)
+  'animations 'animations-alliance-guard-tower 'icon 'icon-mythical-guard-tower
+  'costs '(time 140 gold 500 wood 150)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 130
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 6 'person-reaction-range 6
+  'armor 20 'basic-damage 4 'piercing-damage 12 'missile 'missile-arrow
+  'max-attack-range 6
+  'priority 40 'annoy-computer-factor 50
+  'points 200
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'can-attack
+  'can-target-land 'can-target-sea 'can-target-air
+  'building
+  'can-see-submarine
+  'tower
+  'sounds '(
+    selected "mythical-guard-tower-selected"
+    acknowledge "mythical-guard-tower-acknowledge"
+    ready "mythical-guard-tower-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-guard-tower-attack"))
+
+(define-unit-type 'unit-mythical-cannon-tower 'name "Cannon Tower"
+  'files '(tileset-summer "tilesets/summer/mythical/buildings/cannon tower.png"
+    tileset-winter "tilesets/winter/mythical/buildings/cannon tower.png"
+    tileset-swamp "tilesets/swamp/mythical/buildings/cannon tower.png")
+  'size '(64 64)
+  'animations 'animations-alliance-cannon-tower 'icon 'icon-mythical-cannon-tower
+  'costs '(time 190 gold 1000 wood 300)
+  'construction 'construction-land
+  'speed 0
+  'hit-points 160
+  'tile-size '(2 2) 'box-size '(63 63)
+  'sight-range 9 'computer-reaction-range 7 'person-reaction-range 7
+  'armor 20 'basic-damage 50 'piercing-damage 0 'missile 'missile-small-cannon
+  'min-attack-range 1 'max-attack-range 7
+  'priority 40 'annoy-computer-factor 50
+  'points 250
+  'corpse '(unit-destroyed-2x2-place 0)
+  'type-land
+  'can-attack
+  'can-target-land 'can-target-sea
+  'building
+  'can-see-submarine
+  'tower
+  'sounds '(
+    selected "mythical-cannon-tower-selected"
+    acknowledge "mythical-cannon-tower-acknowledge"
+    ready "mythical-cannon-tower-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-cannon-tower-attack"))
+
+(define-unit-type 'unit-orc-wall 'name "Wall"
+  'use 'unit-human-wall
+  'size '(32 32)
+  'animations 'animations-building 'icon 'icon-mythical-wall
+  'costs '(time 30 gold 20 wood 10)
+  'construction 'construction-wall
+  'speed 0
+  'hit-points 40
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 1
+  'armor 20 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'priority 0 'annoy-computer-factor 45
+  'points 1
+  'corpse '(unit-destroyed-1x1-place 0)
+  'type-land
+  'building
+  'sounds '(
+    selected "mythical-wall-selected"
+    acknowledge "mythical-wall-acknowledge"
+    ready "mythical-wall-ready"
+    help "basic mythical voices help 2"
+    dead "building destroyed"
+    attack "mythical-wall-attack"))
+
+(define-unit-type 'unit-peon-with-gold 'name "Faun"
+  'files '(tileset-summer "mythical/units/faun with gold.png")
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peon
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-harvest
+  'can-attack
+  'can-target-land
+  'land-unit
+  'cower-worker
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peon-with-gold-selected"
+    acknowledge "peon-with-gold-acknowledge"
+    ready "peon-with-gold-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "peon-with-gold-attack"))
+
+(define-unit-type 'unit-peon-with-wood 'name "Faun"
+  'files '(tileset-summer "mythical/units/faun with wood.png")
+  'size '(72 72)
+  'animations 'animations-peasant 'icon 'icon-peon
+  'costs '(time 45 gold 400)
+  'speed 10
+  'hit-points 30
+  'tile-size '(1 1) 'box-size '(31 31)
+  'sight-range 4 'computer-reaction-range 6 'person-reaction-range 4
+  'basic-damage 3 'piercing-damage 2 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50
+  'points 30
+  'demand 1
+  'corpse '(unit-dead-body 0)
+  'type-land
+  'right-harvest
+  'can-attack
+  'can-target-land
+  'land-unit
+  'cower-worker
+  'organic
+  'selectable-by-rectangle
+  'sounds '(
+    selected "peon-with-wood-selected"
+    acknowledge "peon-with-wood-acknowledge"
+    ready "peon-with-wood-ready"
+    help "basic mythical voices help 1"
+    dead "basic mythical voices dead"
+    attack "peon-with-wood-attack"))
+
+(define-unit-type 'unit-orc-oil-tanker-full 'name "Oil tanker"
+  'files '(tileset-summer "mythical/units/oil tanker full.png")
+  'size '(72 72)
+  'animations 'animations-alliance-oil-tanker 'icon 'icon-mythical-oil-tanker
+  'costs '(time 50 gold 400 wood 200)
+  'speed 10
+  'hit-points 90
+  'tile-size '(1 1) 'box-size '(63 63)
+  'sight-range 4
+  'armor 10 'basic-damage 0 'piercing-damage 0 'missile 'missile-none
+  'max-attack-range 1
+  'priority 50 'annoy-computer-factor 10
+  'points 40
+  'demand 1
+  'corpse '(unit-dead-body 12)
+  'type-naval
+  'right-haul-oil
+  'sea-unit
+  'tanker
+  'selectable-by-rectangle
+  'sounds '(
+    selected "mythical-oil-tanker-full-selected"
+    acknowledge "mythical-oil-tanker-full-acknowledge"
+    ready "mythical-oil-tanker-full-ready"
+    help "basic mythical voices help 1"
+    dead "ship sinking"
+    attack "mythical-oil-tanker-full-attack"))

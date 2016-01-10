@@ -1,0 +1,25 @@
+;;
+;;      A clone of a famous game.
+;;
+;;      tst.cm       -       A gtk file requester map.
+;;
+;;      (c) Copyright 1999 by Lutz Sammer
+;;
+;;      $Id: $
+;;
+
+(use-modules (gtk gtk))
+
+(let* ((window (gtk-file-selection-new "Choose map *.pud|*.pud.gz")))
+  (gtk-signal-connect
+    (gtk-file-selection-ok-button window)
+      "clicked" (lambda ()
+	(load-pud (gtk-file-selection-get-filename window))
+	(gtk-widget-destroy window) (gtk-main-quit)))
+  (gtk-signal-connect
+    (gtk-file-selection-cancel-button window)
+      "clicked" (lambda () (gtk-widget-destroy window) (gtk-main-quit)))
+  (gtk-file-selection-set-filename window "data/puds/default.pud")
+
+  (gtk-widget-show window)
+  (gtk-main))

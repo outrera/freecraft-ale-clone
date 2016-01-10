@@ -1,0 +1,105 @@
+;;
+;;	A clone of a famous game.
+;;
+;;	missiles.ccl	-	Define the used missiles.
+;;
+;;	(c) Copyright 1998,1999 by Lutz Sammer and Fabrice Rossi
+;;
+;;	$Id: missiles.ccl,v 1.5 1999/06/19 22:22:12 root Exp $
+;;
+
+;;=============================================================================
+;;	Define missiles
+;;
+;;	(missile-type slot name file width height hit-sound ...)
+;;
+;;	FIXME: class and speed must be added
+;;
+(missile-type MissileLightning
+    "Lightning"			"lightning.png"			32 32 
+    #f)
+(missile-type MissileGriffonHammer
+    "GriffonHammer"		"gryphon hammer.png"		32 32 
+    sound-fireball-hit)
+(missile-type MissileDragonBreath
+    "DragonBreath"		"dragon breath.png"		32 32 
+    sound-fireball-hit)
+
+(missile-type MissileFireball
+    "Fireball"			"fireball.png"			32 32 
+    sound-fireball-hit)
+(missile-type MissileFlameShield
+    "FlameShield"		"flame shield.png"		32 32 
+    #f)
+(missile-type MissileBlizzard
+    "Blizzard"			"blizzard.png"			32 32 
+    #f)
+(missile-type MissileDeathDecay
+    "DeathDecay"		"death and decay.png"		32 32 
+    #f)
+(missile-type MissileBigCannon
+    "BigCannon"			"big cannon.png"		16 16 
+    sound-explosion)
+(missile-type MissileExorcism
+    "Exorcism"			"exorcism.png"			32 32 
+    #f)
+(missile-type MissileHealEffect
+    "HealEffect"		"heal effect.png"		32 32 
+    #f)
+(missile-type MissileTouchOfDeath
+    "TouchOfDeath"		"touch of death.png"		32 32 
+    #f)
+(missile-type MissileRune
+    "Rune"			"rune.png"			32 32 
+    #f)
+(missile-type MissileWhirlwind
+    "Whirlwind"			"tornado.png"			56 56 
+    #f)
+(missile-type MissileCatapultRock
+    "CatapultRock"		"catapult rock.png"		32 32 
+    sound-explosion)
+(missile-type MissileBallistaBolt
+    "BallistaBolt"		"ballista bolt.png"		64 64 
+    sound-explosion)
+(missile-type MissileArrow
+    "Arrow"			"arrow.png"			40 40 
+    sound-bow-hit)
+(missile-type MissileAxe
+    "Axe"			"axe.png"			32 32 
+    sound-bow-hit)
+(missile-type MissileSubmarineMissile
+    "SubmarineMissile"		"submarine missile.png"		40 40 
+    sound-explosion)
+(missile-type MissileTurtleMissile
+    "TurtleMissile"		"turtle missile.png"		40 40 
+    sound-explosion)
+(missile-type MissileSmallFire
+    "SmallFire"			"small fire.png"		32 48 
+    #f)
+(missile-type MissileBigFire
+    "BigFire"			"big fire.png"			48 48 
+    #f)
+(missile-type MissileImpact
+    "Impact"			"ballista-catapult impact.png"	48 48 
+    #f)
+(missile-type MissileNormalSpell
+    "NormalSpell"		"normal spell.png"		32 32 
+    #f)
+(missile-type MissileExplosion
+    "Explosion"			"explosion.png"			64 64 
+    #f)
+(missile-type MissileSmallCannon
+    "SmallCannon"		"cannon.png"			32 32 
+    sound-explosion)
+(missile-type MissileCannonExplosion
+    "CannonExplosion"		"cannon explosion.png"		32 32 
+    #f)
+(missile-type MissileCannonTowerExplosion
+    "CannonTowerExplosion"	"cannon-tower explosion.png"	32 32 
+    #f)
+(missile-type MissileDaemonFire
+    "DaemonFire"		"daemon fire.png"		32 32 
+    #f)
+(missile-type MissileGreenCross
+    "GreenCross"		"green cross.png"		32 32 
+    #f)
