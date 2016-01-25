@@ -1,0 +1,954 @@
+Nathan Adams (nadams@ieee.org) 1
+====
+missiles/axe-01.png
+
+Carlo Almario (d-b@postmark.net) 18
+====
+buildings/barracks/barracks-summer-01.png (Carlo Almario & Chriss Hopp)
+buildings/barracks/barracks-swamp-01.png (Carlo Almario & diKKen & Chriss Hopp)
+buildings/church/church-summer-01.png (Carlo Almario & Renaud Blanchard)
+buildings/church/church-swamp-01.png (Carlo Almario & Renaud Blanchard & diKKen)
+buildings/gryphon aviary/gryphon aviary-summer-01.png (Carlo Almario & Jose Plans)
+buildings/gryphon aviary/gryphon aviary-swamp-01.png (Carlo Almario & diKKen & Jose Plans)
+buildings/lumber mill/lumber mill-summer-01.png (Carlo Almario & Renaud Blanchard)
+buildings/lumber mill/lumber mill-swamp-01.png (Carlo Almario & Renaud Blanchard & diKKen)
+buildings/mage tower/mage tower-summer-01.png (Carlo Almario & Chriss Hopp)
+buildings/mage tower/mage tower-swamp-01.png (Carlo Almario & diKKen & Chriss Hopp)
+buildings/oil patch/oil patch-summer-01.png
+buildings/runestone/runestone-summer-01.png
+missiles/ballista bolt-01.png
+missiles/ballista catapult impact-02.png
+spells/flame shield-01.png
+spells/rune-01.png
+spells/tornado-01.png
+ui/misc/bloodlust haste slow invisible shield-01.png
+units/critter/tux-01.png
+
+Pascal Arsene 3
+====
+buildings/altar of storms/altar of storms-summer-01.png
+buildings/farm/farm-summer-05.png
+buildings/ogre mound/ogre mound-summer-01.png
+
+Abraham Varela Avendaño
+====
+units/critter/sheep-02.png
+
+Patrick Beasley (yelsaeb@hotmail.com) 1
+====
+tileset/summer/terrain/terrain-summer-01.png (Patrick Beasley & David Odin & Dirk Richartz)
+
+Renaud Blanchard (kisukuma@chez.com) 24
+====
+buildings/barracks/barracks-summer-05.png
+buildings/blacksmith/blackmsith-summer-04.png
+buildings/castle/castle-summer-03.png
+buildings/church/church-summer-01.png (Carlo Almario & Renaud Blanchard)
+buildings/church/church-swamp-01.png (Carlo Almario & Renaud Blanchard & diKKen)
+buildings/farm/farm-summer-04.png
+buildings/foundry/foundry construction site-summer-01.png
+buildings/foundry/foundry-summer-01.png
+buildings/foundry/foundry-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/inventor/inventor-summer-01.png
+buildings/inventor/inventor-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/keep/keep-summer-03.png
+buildings/lumber mill/lumber mill-summer-01.png (Carlo Almario & Renaud Blanchard)
+buildings/lumber mill/lumber mill-swamp-01.png (Carlo Almario & Renaud Blanchard & diKKen)
+buildings/refinery/refinery construction site-summer-01.png
+buildings/refinery/refinery-summer-01.png
+buildings/refinery/refinery-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/oil platform/oil platform construction site-summer-03.png
+buildings/oil platform/oil platform-summer-03.png
+buildings/shipyard/shipyard construction site-summer-01.png
+buildings/shipyard/shipyard-summer-01.png
+buildings/shipyard/shipyard-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/stables/stables-summer-01.png
+buildings/stables/stables-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/town hall/town hall-summer-03.png
+
+Anton Bondar (redteam@online.sinor.ru) 3
+====
+misc/explosion-05.wav
+ui/cursors/don't click here-01.png
+ui/cursors/gauntlet-01.png
+
+Simon Britnell 3
+====
+units/archer/archer-01.png
+units/footman/footman-02.blend
+units/footman/footman-02.png
+
+Sherman Boyd (meekrob@mitosys.com) 1
+====
+ui/fonts/game-02.png
+
+Hendrik Brüns (neu-hendrik@gmx.de) 4
+====
+buildings/farm/farm-summer-02.png
+buildings/fortress/fortress-summer-01.png
+buildings/great hall/great hall-summer-01.png
+buildings/stronghold/stronghold-summer-01.png
+
+Josh Cogliati (jjc@iname.com) 4
+====
+buildings/foundry/foundry construction site-summer-02.png
+buildings/foundry/foundry-summer-02.png
+missiles/arrow-01.png
+units/zeppelin/zeppelin-01.png
+
+diKKen (dikken@inferno.nadir.org) 23
+====
+buildings/barracks/barracks-swamp-01.png (Carlo Almario & diKKen & Chriss Hopp)
+buildings/blacksmith/blacksmith-swamp-01.png (diKKen & Ingo Ruhnke)
+buildings/cannon tower/cannon tower-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/castle/castle-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/church/church-swamp-01.png (Carlo Almario & Renaud Blanchard & diKKen)
+buildings/farm/farm-swamp-01.png (diKKen & Jim Porter)
+buildings/foundry/foundry-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/gold mine/gold mine-swamp-01.png (diKKen & Ingo Ruhnke)
+buildings/gryphon aviary/gryphon aviary-swamp-01.png (Carlo Almario & diKKen & Jose Plans)
+buildings/guard tower/guard tower-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/inventor/inventor-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/keep/keep-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/lumber mill/lumber mill-swamp-01.png (Carlo Almario & Renaud Blanchard & diKKen)
+buildings/mage tower/mage tower-swamp-01.png (Carlo Almario & diKKen & Chriss Hopp)
+buildings/oil patch/oil patch-summer-02.png
+buildings/refinery/refinery-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/scout tower/scout tower-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/shipyard/shipyard-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/stables/stables-swamp-01.png (Renaud Blanchard & diKKen)
+buildings/town hall/town hall-swamp-01.png (diKKen & Adam Podeszfa)
+tileset/swamp/terrain/terrain-swamp-01.png
+tileset/swamp/terrain/terrain-wasteland-01.png
+tileset/winter/terrain/terrain-winter-01.png (diKKen & Paolo D'Incà)
+units/ballista/ballista-01.png
+
+Paolo D'Incà (paolodinca@hotmail.com) 54
+====
+buildings/alchemist/alchemist-summer-01.png
+buildings/barracks/barracks-summer-04.max
+buildings/barracks/barracks-summer-04.png
+buildings/cannon tower/cannon tower-summer-05.max
+buildings/cannon tower/cannon tower-summer-05.png
+buildings/destroyed site/big destroyed site-summer-01.png
+buildings/destroyed site/small destroyed site-summer-01.png
+buildings/fortress/fortress-summer-02.max
+buildings/fortress/fortress-summer-02.png
+buildings/great hall/great hall-summer-02.max
+buildings/great hall/great hall-summer-02.png
+buildings/guard tower/guard tower-summer-05.max
+buildings/guard tower/guard tower-summer-05.png
+buildings/guard tower/guard tower-summer-06.png
+buildings/land construction site/land construction site-summer-01.png
+buildings/lumber mill/lumber mill-summer-02.png
+buildings/mage tower/mage tower-summer-02.png
+buildings/oil platform/oil platform construction site-summer-04.png
+buildings/oil platform/oil platform-summer-04.png
+buildings/scout tower/scout tower-summer-04.png
+buildings/shipyard/shipyard construction site-summer-02.png
+buildings/shipyard/shipyard-summer-02.max
+buildings/shipyard/shipyard-summer-02.png
+buildings/stronghold/stronghold-summer-02.max
+buildings/stronghold/stronghold-summer-02.png
+buildings/wall/wall construction site-summer-01.png
+buildings/wall/wall-summer-01.png
+missiles/big fire-01.png
+missiles/explosion-01.png
+missiles/green cross-01.png
+missiles/gryphon hammer-01.png
+missiles/small fire-02.png
+spells/exorcism-01.png
+spells/heal effect-01.png
+spells/tornado-01.png
+tileset/winter/terrain/terrain-winter-01.png (diKKen & Paolo D'Incà)
+ui/cursors/claw-01.png
+ui/cursors/small green cross-01.png
+units/balloon/balloon-01.png
+units/corpse/corpse-02.png
+units/dragon/dragon-01.max
+units/dragon/dragon-01.png
+units/eye of vision/eye of vision-01.png
+units/gryphon rider/gryphon rider-01.png
+units/juggernaught/juggernaught-01.png
+units/mage/mage-01.png
+units/ogre/ogre-01.png
+units/oil tanker/oil tanker empty-02.png
+units/oil tanker/oil tanker empty-03.png
+units/oil tanker/oil tanker full-02.png
+units/oil tanker/oil tanker full-03.png
+units/submarine/submarine-02.png
+units/submarine/submarine-03.png
+
+Rick Elliot 12
+====
+ui/cursors/arrow E-01.png
+ui/cursors/arrow N-01.png
+ui/cursors/arrow NE-01.png
+ui/cursors/arrow NW-01.png
+ui/cursors/arrow S-01.png
+ui/cursors/arrow SE-01.png
+ui/cursors/arrow SW-01.png
+ui/cursors/arrow W-01.png
+ui/cursors/cross-01.png
+ui/cursors/green eagle-01.png
+ui/cursors/magnifying glass-01.png
+ui/cursors/red eagle-01.png
+ui/cursors/yellow eagle-01.png
+
+Lisa Evans (lisapevans@crosswinds.net) 8
+====
+units/faun/faun-01.png
+units/faun/faun with gold-01.png
+units/faun/faun with wood-01.png
+units/knight/knight-01.png
+units/peasant/peasant-01.blend
+units/peasant/peasant-01.png
+units/peasant/peasant with gold-01.png
+units/peasant/peasant with wood-01.png
+
+Gabriel 4
+====
+buildings/gold mine/gold mine-summer-02.png
+buildings/gold mine/gold mine-winter-02.png
+ui/backgrounds/freecraft-01.png
+ui/misc/titlescreen-01.png
+
+Lars Gebhardt (lars-gebhardt@web.de) 3
+====
+ui/1600x1200/filler-01.png
+ui/1600x1200/resource-01.png
+ui/1600x1200/statusline-01.png
+
+Michael Gibson 3
+====
+units/catapult/catapult-01.png
+units/destroyer/destroyer-03.png
+units/transport/transport-02.png
+
+Chriss Hopp (fydo@shaw.ca) 10
+====
+buildings/barracks/barracks-summer-01.max
+buildings/barracks/barracks-summer-01.png (Carlo Almario & Chriss Hopp)
+buildings/barracks/barracks-swamp-01.png (Carlo Almario & diKKen & Chriss Hopp)
+buildings/church/church-summer-03.png
+buildings/mage tower/mage tower-summer-01.png (Carlo Almario & Chriss Hopp)
+buildings/mage tower/mage tower-swamp-01.png (Carlo Almario & diKKen & Chriss Hopp)
+missiles/small fire-01.png
+spells/blizzard-01.png
+ui/backgrounds/menu background without title-02.png
+units/demolitian squad/demolitian squad-01.png
+
+John Kirby (kirblam@attbi.com) 4
+====
+buildings/temple of the damned/temple of the damned-summer-01.png
+units/axethrower/axethrower-01.png
+units/black knight/black knight-01.png
+units/skeleton/skeleton-01.png
+
+Wolfgang Köhler (wolfgang@bofh.hanau.net) 104
+====
+buildings/dragon roost/dragon roost-01.wav
+buildings/farm/farm-01.wav
+buildings/farm/farm-02.wav
+buildings/shipyard/shipyard-02.wav
+buildings/stables/stable-01.wav
+misc/building construction-01.wav
+misc/burning-01.wav
+misc/explosion-01.wav
+misc/explosion-02.wav
+misc/explosion-03.wav
+misc/missing-01.wav
+misc/repair-01.wav
+misc/tree chopping-05.wav
+misc/tree chopping-06.wav
+misc/tree chopping-07.wav
+misc/tree chopping-08.wav
+spells/blizzard-01.wav
+spells/fireball hit-01.wav
+spells/fireball throw-01.wav
+spells/healing-01.wav
+spells/holy vision-01.wav
+spells/invisibility-01.wav
+spells/lightning-01.wav
+spells/polymorph-01.wav
+tileset/summer/icons/icons.png (index 3 & 18-20 & 22 & 24-25 & 47 & 49 & 51 & 53-55 & 57 & 61 & 63 & 73 & 76 & 78 & 80 & 82 & 188)
+tileset/swamp/icons/icons.png (index 3 & 18-20 & 22 & 24-25 & 45 & 47 & 49 & 51 & 53-55 & 57 & 61 & 63 & 73 & 76 & 78 & 80 & 82 & 188)
+tileset/wasteland/icons/icons.png (index 3 & 18-20 & 22 & 24-25 & 45 & 47 & 49 & 51 & 53-55 & 57 & 61 & 63 & 73 & 76 & 78 & 80 & 82 & 188)
+tileset/winter/icons/icons.png (index 3 & 18-20 & 22 & 24-25 & 45 & 47 & 49 & 51 & 53-55 & 57 & 61 & 63 & 73 & 76 & 78 & 80 & 82 & 188)
+units/ballista/acknowledgement-01.wav
+units/catapult/acknowledgement-01.wav
+units/common/dead-01.wav
+units/common/help 1-01.wav
+units/common/help 2-01.wav
+units/common/ready-01.wav
+units/common/work complete-01.wav
+units/death knight/acknowledgement-01.wav
+units/death knight/acknowledgement-02.wav
+units/death knight/acknowledgement-03.wav
+units/death knight/annoyed-01.wav
+units/death knight/annoyed-02.wav
+units/death knight/annoyed-03.wav
+units/death knight/ready-01.wav
+units/death knight/selected-01.wav
+units/death knight/selected-02.wav
+units/dragon/acknowledgement-01.wav
+units/dragon/acknowledgement-02.wav
+units/dragon/ready-01.wav
+units/dragon/selected-01.wav
+units/footman/acknowledgement-01.wav
+units/footman/acknowledgement-02.wav
+units/footman/acknowledgement-03.wav
+units/footman/acknowledgement-04.wav
+units/footman/annoyed-01.wav
+units/footman/annoyed-02.wav
+units/footman/annoyed-03.wav
+units/footman/annoyed-04.wav
+units/footman/annoyed-05.wav
+units/footman/annoyed-06.wav
+units/footman/annoyed-07.wav
+units/footman/selected-01.wav
+units/footman/selected-02.wav
+units/footman/selected-03.wav
+units/footman/selected-04.wav
+units/footman/selected-05.wav
+units/footman/selected-06.wav
+units/ogre/acknowledgement-01.wav
+units/ogre/acknowledgement-02.wav
+units/ogre/acknowledgement-03.wav
+units/ogre/annoyed-01.wav
+units/ogre/annoyed-02.wav
+units/ogre/annoyed-03.wav
+units/ogre/annoyed-04.wav
+units/ogre/annoyed-05.wav
+units/ogre/ogre mage acknowledgement-01.wav
+units/ogre/ogre mage acknowledgement-02.wav
+units/ogre/ogre mage acknowledgement-03.wav
+units/ogre/ogre mage annoyed-01.wav
+units/ogre/ogre mage annoyed-02.wav
+units/ogre/ogre mage annoyed-03.wav
+units/ogre/ogre mage ready-01.wav
+units/ogre/ogre mage selected-01.wav
+units/ogre/ogre mage selected-02.wav
+units/ogre/ogre mage selected-03.wav
+units/ogre/ogre mage selected-04.wav
+units/ogre/ready-01.wav
+units/ogre/selected-01.wav
+units/ogre/selected-02.wav
+units/ogre/selected-03.wav
+units/ogre/selected-04.wav
+units/peasant/acknowledgement-01.wav
+units/peasant/acknowledgement-02.wav
+units/peasant/acknowledgement-03.wav
+units/peasant/acknowledgement-04.wav
+units/peasant/annoyed-01.wav
+units/peasant/annoyed-02.wav
+units/peasant/annoyed-03.wav
+units/peasant/annoyed-04.wav
+units/peasant/annoyed-05.wav
+units/peasant/annoyed-06.wav
+units/peasant/annoyed-07.wav
+units/peasant/ready-01.wav
+units/peasant/selected-01.wav
+units/peasant/selected-02.wav
+units/peasant/selected-03.wav
+units/peasant/selected-04.wav
+units/peasant/work complete-01.wav
+
+Ted Lyngmo 3
+====
+spells/exorcism-01.wav
+spells/eye of vision-01.wav
+spells/flame shield-01.wav
+
+Patrick McFarland (unknown@panax.com) 1
+====
+units/death knight/acknowledgement-07.wav
+
+Nehal Mistry (nehal@canada.com) 29
+====
+buildings/barracks/barracks-summer-03.png
+buildings/blacksmith/blacksmith-summer-03.png
+buildings/cannon tower/cannon tower-summer-03.png
+buildings/castle/castle-summer-02.png
+buildings/church/church-summer-02.png
+buildings/church/church-summer-04.png
+buildings/farm/farm-summer-03.png
+buildings/guard tower/guard tower-summer-03.png
+buildings/inventor/inventor-summer-02.png
+buildings/keep/keep-summer-02.png
+buildings/scout tower/scout tower-summer-03.png
+buildings/shipyard/shipyard-summer-03.png
+buildings/stables/stables-summer-02.png
+buildings/town hall/town hall-summer-02.png
+ui/640x480/filler right-03.png
+ui/640x480/filler right-04.png
+ui/640x480/resource-03.png
+ui/640x480/resource-04.png
+ui/640x480/statusline-03.png
+ui/640x480/statusline-04.png
+ui/fonts/game-03.png
+ui/panels/buttonpanel-03.png
+ui/panels/buttonpanel-04.png
+ui/panels/infopanel-03.png
+ui/panels/infopanel-04.png
+ui/panels/menubutton-03.png
+ui/panels/menubutton-04.png
+ui/panels/minimap-03.png
+ui/panels/minimap-04.png
+
+Lital Natan 19
+====
+buildings/barracks/barracks-summer-06.png
+buildings/barracks/barracks-summer-07.png
+buildings/barracks/barracks-summer-08.png
+buildings/blacksmith/blacksmith-summer-05.png
+buildings/blacksmith/blacksmith-summer-06.png
+buildings/cannon tower/cannon tower-summer-06.png
+buildings/castle/castle-summer-04.png
+buildings/church/church-summer-05.png
+buildings/farm/farm-summer-06.png
+buildings/farm/farm-summer-07.png
+buildings/gryphon aviary/gryphon aviary-summer-02.png
+buildings/great hall/great hall-summer-03.png
+buildings/great hall/great hall-summer-04.png
+buildings/guard tower/guard tower-summer-07.png
+buildings/inventor/inventor-summer-03.png
+buildings/keep/keep-summer-04.png
+buildings/lumber mill/lumber mill-summer-04.png
+buildings/lumber mill/lumber mill-summer-05.png
+buildings/mage tower/mage tower-summer-03.png
+buildings/ogre mound/ogre mound-summer-02.png
+buildings/scout tower/scout tower-summer-06.png
+buildings/stables/stables-summer-03.png
+buildings/temple of the damned/temple of the damned-summer-03.png
+buildings/town hall/town hall-summer-04.png
+
+Andreas Nilsson (nisses.mail@home.se) 29
+====
+tileset/summer/icons/icons.png (index 0-2 & 4-15 & 23 & 26-31 & 37-38 & 40 & 42 & 44-46 & 48 & 50 & 52 & 56 & 58 & 60 & 62 & 64 & 66 & 68 & 70 & 72 & 74-75 & 77 & 79 & 83-102 & 104-108 & 110-112 & 115-121 & 124-131 & 135-136 & 140-159 & 164-169 & 178-185)
+tileset/swamp/icons/icons.png (index 0-2 & 4-15 & 23 & 26-31 & 37-38 & 40 & 42 & 44 & 46 & 48 & 50 & 52 & 56 & 58 & 60 & 62 & 64 & 66 & 68 & 70 & 72 & 74-75 & 77 & 79 & 83-102 & 104-108 & 110-112 & 115-121 & 124-131 & 135-136 & 140-159 & 164-169 & 178-185)
+tileset/wasteland/icons/icons.png (index 0-2 & 4-15 & 23 & 26-31 & 37-38 & 40 & 42 & 44 & 46 & 48 & 50 & 52 & 56 & 58 & 60 & 62 & 64 & 66 & 68 & 70 & 72 & 74-75 & 77 & 79 & 83-102 & 104-108 & 110-112 & 115-121 & 124-131 & 135-136 & 140-159 & 164-169 & 178-185)
+tileset/winter/icons/icons.png (index 0-2 & 4-15 & 23 & 26-31 & 37-38 & 40 & 42 & 44 & 46 & 48 & 50 & 52 & 56 & 58 & 60 & 62 & 64 & 66 & 68 & 70 & 72 & 74-75 & 77 & 79 & 83-102 & 104-108 & 110-112 & 115-121 & 124-131 & 135-136 & 140-159 & 164-169 & 178-185)
+ui/1024x768/filler-01.png
+ui/1024x768/resource-01.png
+ui/1024x768/statusline-01.png
+ui/1280x960/filler-01.png
+ui/1280x960/resource-01.png
+ui/1280x960/statusline-01.png
+ui/640x480/filler-01.png
+ui/640x480/resource-01.png
+ui/640x480/statusline-01.png
+ui/800x600/filler-01.png
+ui/800x600/resource-01.png
+ui/800x600/statusline-01.png
+ui/backgrounds/credits background-01.png
+ui/cursors/hourglass-01.png
+ui/fonts/game-01.png
+ui/misc/buttons-01.png
+ui/panels/buttonpanel-01.png
+ui/panels/infopanel-01.png
+ui/panels/menubutton-01.png
+ui/panels/minimap-01.png
+ui/panels/panel 1-01.png
+ui/panels/panel 2-01.png
+ui/panels/panel 3-01.png
+ui/panels/panel 4-01.png
+ui/panels/panel 5-01.png
+units/goblin sappers/goblin sappers-01.png
+
+Sebastian Nozzi 4
+====
+tileset/summer/icons/icons.png (index 39 & 41 & 67 & 69 & 71)
+tileset/swamp/icons/icons.png (index 39 & 41 & 67 & 69 & 71)
+tileset/wasteland/icons/icons.png (index 39 & 41 & 67 & 69 & 71)
+tileset/winter/icons/icons.png (index 39 & 41 & 67 & 69 & 71)
+
+Nyralaphtoteph 1
+====
+buildings/lumber mill/lumber mill-summer-03.png
+
+David Odin (david@dindinx.org) 1
+====
+tileset/summer/terrain/terrain-summer-01.png (Patrick Beasley & David Odin & Dirk Richartz)
+
+Martin Owens (doctormo@postmaster.co.uk) 4
+====
+ui/backgrounds/menu background without title-01.png (Martin Owens & Bastian Salmela)
+ui/backgrounds/menu background with title-01.png (Martin Owens & Bastian Salmela)
+ui/fonts/large-01.png (Martin Owens & Jimmy Salmon)
+ui/misc/buttons-02.png
+
+José Plans (jose.plans@wanadoo.fr) 10
+====
+buildings/blacksmith/blacksmith-summer-02.png
+buildings/cannon tower/cannon tower-summer-02.png
+buildings/cannon tower/cannon tower-summer-04.png
+buildings/dark portal/dark portal-summer-01.png
+buildings/dragon roost/dragon roost-summer-01.png
+buildings/gryphon aviary/gryphon aviary-summer-01.png (Carlo Almario & Jose Plans)
+buildings/gryphon aviary/gryphon aviary-swamp-01.png (Carlo Almario & diKKen & Jose Plans)
+buildings/guard tower/guard tower-summer-02.png
+buildings/guard tower/guard tower-summer-04.png
+buildings/scout tower/scout tower-summer-02.png
+buildings/watch tower/watch tower-summer-01.png
+
+Adam Podeszfa (adamxx22@poczta.onet.pl) 22
+====
+buildings/cannon tower/cannon tower-summer-01.png
+buildings/cannon tower/cannon tower-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/castle/castle-summer-01.png
+buildings/castle/castle-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/guard tower/guard tower-summer-01.png
+buildings/guard tower/guard tower-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/keep/keep-summer-01.png
+buildings/keep/keep-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/oil platform/oil platform under construction site-summer-01.png
+buildings/oil platform/oil platform-summer-01.png
+buildings/scout tower/scout tower-summer-01.png
+buildings/scout tower/scout tower-swamp-01.png (diKKen & Adam Podeszfa)
+buildings/town hall/town hall-summer-01.png
+buildings/town hall/town hall-swamp-01.png (diKKen & Adam Podeszfa)
+missiles/submarine missile-01.png
+units/battleship/battleship-01.png
+units/corpse/corpse-01.png
+units/destroyer/destroyer-01.png
+units/footman/footman-01.png
+units/oil tanker/oil tanker empty-01.png
+units/oil tanker/oil tanker full-01.png
+units/submarine/submarine-01.png
+units/transport/transport-01.png
+
+Strahinja Popovic (stralep@ptt.yu) 2
+====
+buildings/circle of power/circle of power-summer-02.png
+missiles/cannon explosion-01.png
+
+Jim Porter (spamerific@neo.rr.com) 4
+====
+buildings/farm/farm-summer-01.png
+buildings/farm/farm-swamp-01.png (diKKen & Jim Porter)
+buildings/farm/farm-winter-01.png
+spells/lightning-01.png
+
+Dirk Richartz (guardian@warclan.com) 5
+====
+tileset/summer/terrain/terrain-summer-01.png (Patrick Beasley & David Odin & Dirk Richartz)
+ui/misc/food-01.png
+ui/misc/gold wood oil mana-01.png
+ui/misc/ore stone coal-01.png
+ui/misc/score-01.png
+
+Ingo Ruhnke (grumbel@gmx.de) 10
+====
+buildings/barracks/barracks-summer-02.png
+buildings/blacksmith/blacksmith-summer-01.png
+buildings/blacksmith/blacksmith-swamp-01.png (diKKen & Ingo Ruhnke)
+buildings/gold mine/gold mine-summer-01.png
+buildings/gold mine/gold mine-swamp-01.png (diKKen & Ingo Ruhnke)
+buildings/gold mine/gold mine-winter-01.png
+buildings/oil platform/oil platform under construction site-summer-02.png
+buildings/oil platform/oil platform-summer-02.png
+buildings/refinery/refinery construction site-summer-02.png
+buildings/refinery/refinery-summer-02.png
+
+Bastian Salmela (bastian.salmela@hel.fi) 2
+====
+ui/backgrounds/menu background without title-01.png (Martin Owens & Bastian Salmela)
+ui/backgrounds/menu background with title-01.png (Martin Owens & Bastian Salmela)
+
+Jimmy Salmon (jsalmon3@yahoo.com) 2
+====
+misc/transport docking-01.wav
+ui/fonts/large-01.png (Martin Owens & Jimmy Salmon)
+
+Lutz Sammer (johns98@web.de) 32
+====
+tileset/summer/icons/icons.png (index 21 & 32-36 & 109 & 113 & 122-123 & 160 & 163 & 170-177 & 186-187 & 189-199)
+tileset/swamp/icons/icons.png (index 21 & 32-36 & 109 & 113 & 122-123 & 160 & 163 & 170-177 & 186-187 & 189-199)
+tileset/wasteland/icons/icons.png (index 21 & 32-36 & 109 & 113 & 122-123 & 160 & 163 & 170-177 & 186-187 & 189-199)
+tileset/winter/icons/icons.png (index 21 & 32-36 & 109 & 113 & 122-123 & 160 & 163 & 170-177 & 186-187 & 189-199)
+ui/1024x768/filler-02.png
+ui/1024x768/resource-02.png
+ui/1024x768/statusline-02.png
+ui/1280x960/filler-02.png
+ui/1280x960/resource-02.png
+ui/1280x960/statusline-02.png
+ui/1600x1200/filler-02.png
+ui/1600x1200/resource-02.png
+ui/1600x1200/statusline-02.png
+ui/640x480/filler-02.png
+ui/640x480/resource-02.png
+ui/640x480/statusline-02.png
+ui/800x600/filler-02.png
+ui/800x600/resource-02.png
+ui/800x600/statusline-02.png
+ui/misc/health-01.png
+ui/misc/health 2-01.png
+ui/misc/mana-01.png
+ui/misc/mana 2-01.png
+ui/panels/buttonpanel-02.png
+ui/panels/infopanel-02.png
+ui/panels/menubutton-02.png
+ui/panels/minimap-02.png
+ui/panels/panel 1-01.png
+ui/panels/panel 2-02.png
+ui/panels/panel 3-03.png
+ui/panels/panel 4-04.png
+ui/panels/panel 5-05.png
+
+David Slimp (rock808@davidslimp.com) 269
+====
+buildings/alchemist/alchemist-01.wav
+buildings/altar of storms/altar of storms-01.wav
+buildings/blacksmith/blacksmith-01.wav
+buildings/church/church-01.wav
+buildings/foundry/foundry-01.wav
+buildings/gold mine/gold mine-01.wav
+buildings/gryphon aviary/gryphon aviary-01.wav
+buildings/inventor/inventor-01.wav
+buildings/mage tower/mage tower-01.wav
+buildings/ogre mound/ogre mound-01.wav
+buildings/oil platform/oil platform-01.wav
+buildings/refinery/refinery-01.wav
+buildings/runestone/runestone-summer-02.png
+buildings/shipyard/shipyard-01.wav
+buildings/temple of the damned/temple of the damned-01.wav
+misc/capture-01.wav
+misc/capture-02.wav
+misc/explosion-04.wav
+misc/rescue-01.wav
+misc/rescue-02.wav
+misc/tree chopping-01.wav
+misc/tree chopping-02.wav
+misc/tree chopping-03.wav
+misc/tree chopping-04.wav
+missiles/axe throw-01.wav
+missiles/bow hit-01.wav
+missiles/bow throw-01.wav
+missiles/catapult ballista attack-01.wav
+missiles/fist-01.wav
+missiles/punch-01.wav
+missiles/sword attack-01.wav
+missiles/sword attack-02.wav
+missiles/sword attack-03.wav
+spells/basic spell sound-01.wav
+spells/bloodlust-01.wav
+spells/death and decay-01.wav
+spells/death coil-01.wav
+spells/haste-01.wav
+spells/slow-01.wav
+spells/touch of darkness-01.wav
+spells/unholy armor-01.wav
+spells/whirlwind-01.wav
+ui/misc/cd icon-01.png
+ui/misc/click-01.wav
+ui/misc/highclick-01.wav
+ui/misc/placement error-01.wav
+ui/misc/placement success-01.wav
+units/archer/acknowledgement-01.wav
+units/archer/acknowledgement-02.wav
+units/archer/acknowledgement-03.wav
+units/archer/acknowledgement-04.wav
+units/archer/annoyed-01.wav
+units/archer/annoyed-02.wav
+units/archer/annoyed-03.wav
+units/archer/ready-01.wav
+units/archer/selected-01.wav
+units/archer/selected-02.wav
+units/archer/selected-03.wav
+units/archer/selected-04.wav
+units/axethrower/acknowledgement-01.wav
+units/axethrower/acknowledgement-02.wav
+units/axethrower/acknowledgement-03.wav
+units/axethrower/annoyed-01.wav
+units/axethrower/annoyed-02.wav
+units/axethrower/annoyed-03.wav
+units/axethrower/ready-01.wav
+units/axethrower/selected-01.wav
+units/axethrower/selected-02.wav
+units/axethrower/selected-03.wav
+units/balloon/acknowledgement-01.wav
+units/balloon/annoyed-01.wav
+units/balloon/annoyed-02.wav
+units/balloon/annoyed-03.wav
+units/balloon/annoyed-04.wav
+units/balloon/ready-01.wav
+units/common/dead-02.wav
+units/common/dead-03.wav
+units/common/help 1-02.wav
+units/common/help 1-03.wav
+units/common/help 2-02.wav
+units/common/help 2-03.wav
+units/common/ready-02.wav
+units/common/ready-03.wav
+units/common/work complete-02.wav
+units/common/work complete-03.wav
+units/critter/pig-annoyed-01.wav
+units/critter/pig-selected-01.wav
+units/critter/seal-annoyed-01.wav
+units/critter/seal-selected-01.wav
+units/critter/sheep-annoyed-01.wav
+units/critter/sheep-selected-01.wav
+units/critter/warthog-annoyed-01.wav
+units/critter/warthog-selected-01.wav
+units/death knight/acknowledgement-04.wav
+units/death knight/acknowledgement-05.wav
+units/death knight/acknowledgement-06.wav
+units/death knight/annoyed-04.wav
+units/death knight/annoyed-05.wav
+units/death knight/annoyed-06.wav
+units/death knight/ready-02.wav
+units/death knight/selected-03.wav
+units/death knight/selected-04.wav
+units/demolitian squad/acknowledgement-01.wav
+units/demolitian squad/acknowledgement-02.wav
+units/demolitian squad/acknowledgement-03.wav
+units/demolitian squad/acknowledgement-04.wav
+units/demolitian squad/acknowledgement-05.wav
+units/demolitian squad/annoyed-01.wav
+units/demolitian squad/annoyed-02.wav
+units/demolitian squad/annoyed-03.wav
+units/demolitian squad/ready-01.wav
+units/demolitian squad/selected-01.wav
+units/demolitian squad/selected-02.wav
+units/dragon/acknowledgement-03.wav
+units/dragon/acknowledgement-04.wav
+units/dragon/ready-02.wav
+units/dragon/selected-02.wav
+units/footman/acknowledgement-05.wav
+units/footman/acknowledgement-06.wav
+units/footman/acknowledgement-07.wav
+units/footman/acknowledgement-08.wav
+units/footman/annoyed-08.wav
+units/footman/annoyed-09.wav
+units/footman/annoyed-10.wav
+units/footman/annoyed-11.wav
+units/footman/annoyed-12.wav
+units/footman/annoyed-13.wav
+units/footman/annoyed-14.wav
+units/footman/selected-07.wav
+units/footman/selected-08.wav
+units/footman/selected-09.wav
+units/footman/selected-10.wav
+units/footman/selected-11.wav
+units/footman/selected-12.wav
+units/goblin sappers/acknowledgement-01.wav
+units/goblin sappers/acknowledgement-02.wav
+units/goblin sappers/acknowledgement-03.wav
+units/goblin sappers/acknowledgement-04.wav
+units/goblin sappers/annoyed-01.wav
+units/goblin sappers/annoyed-02.wav
+units/goblin sappers/annoyed-03.wav
+units/goblin sappers/ready-01.wav
+units/goblin sappers/selected-01.wav
+units/goblin sappers/selected-02.wav
+units/goblin sappers/selected-03.wav
+units/goblin sappers/selected-04.wav
+units/grunt/acknowledgement-01.wav
+units/grunt/acknowledgement-02.wav
+units/grunt/acknowledgement-03.wav
+units/grunt/acknowledgement-04.wav
+units/grunt/annoyed-01.wav
+units/grunt/annoyed-02.wav
+units/grunt/annoyed-03.wav
+units/grunt/annoyed-04.wav
+units/grunt/annoyed-05.wav
+units/grunt/annoyed-06.wav
+units/grunt/annoyed-07.wav
+units/grunt/selected-01.wav
+units/grunt/selected-02.wav
+units/grunt/selected-03.wav
+units/grunt/selected-04.wav
+units/grunt/selected-05.wav
+units/grunt/selected-06.wav
+units/gryphon rider/acknowledgement-01.wav
+units/gryphon rider/acknowledgement-02.wav
+units/gryphon rider/selected-01.wav
+units/knight/acknowledgement-01.wav
+units/knight/acknowledgement-02.wav
+units/knight/acknowledgement-03.wav
+units/knight/acknowledgement-04.wav
+units/knight/annoyed-01.wav
+units/knight/annoyed-02.wav
+units/knight/annoyed-03.wav
+units/knight/ready-01.wav
+units/knight/selected-01.wav
+units/knight/selected-02.wav
+units/knight/selected-03.wav
+units/knight/selected-04.wav
+units/mage/acknowledgement-01.wav
+units/mage/acknowledgement-02.wav
+units/mage/acknowledgement-03.wav
+units/mage/annoyed-01.wav
+units/mage/annoyed-02.wav
+units/mage/annoyed-03.wav
+units/mage/ready-01.wav
+units/mage/selected-01.wav
+units/mage/selected-02.wav
+units/mage/selected-03.wav
+units/ogre/acknowledgement-04.wav
+units/ogre/acknowledgement-05.wav
+units/ogre/acknowledgement-06.wav
+units/ogre/annoyed-06.wav
+units/ogre/annoyed-07.wav
+units/ogre/annoyed-08.wav
+units/ogre/annoyed-09.wav
+units/ogre/annoyed-10.wav
+units/ogre/ogre mage acknowledgement-04.wav
+units/ogre/ogre mage acknowledgement-05.wav
+units/ogre/ogre mage acknowledgement-06.wav
+units/ogre/ogre mage annoyed-04.wav
+units/ogre/ogre mage annoyed-05.wav
+units/ogre/ogre mage annoyed-06.wav
+units/ogre/ogre mage ready-02.wav
+units/ogre/ogre mage selected-05.wav
+units/ogre/ogre mage selected-06.wav
+units/ogre/ogre mage selected-07.wav
+units/ogre/ogre mage selected-08.wav
+units/ogre/ready-02.wav
+units/ogre/selected-05.wav
+units/ogre/selected-06.wav
+units/ogre/selected-07.wav
+units/ogre/selected-08.wav
+units/oil tanker/acknowledgement-01.wav
+units/paladin/acknowledgement-01.wav
+units/paladin/acknowledgement-02.wav
+units/paladin/acknowledgement-03.wav
+units/paladin/acknowledgement-04.wav
+units/paladin/annoyed-01.wav
+units/paladin/annoyed-02.wav
+units/paladin/annoyed-03.wav
+units/paladin/ready-01.wav
+units/paladin/selected-01.wav
+units/paladin/selected-02.wav
+units/paladin/selected-03.wav
+units/paladin/selected-04.wav
+units/peasant/acknowledgement-05.wav
+units/peasant/acknowledgement-06.wav
+units/peasant/acknowledgement-07.wav
+units/peasant/acknowledgement-08.wav
+units/peasant/annoyed-08.wav
+units/peasant/annoyed-09.wav
+units/peasant/annoyed-10.wav
+units/peasant/annoyed-11.wav
+units/peasant/annoyed-12.wav
+units/peasant/annoyed-13.wav
+units/peasant/annoyed-14.wav
+units/peasant/attack-01.wav
+units/peasant/ready-02.wav
+units/peasant/selected-05.wav
+units/peasant/selected-06.wav
+units/peasant/selected-07.wav
+units/peasant/selected-08.wav
+units/peasant/work complete-02.wav
+units/peon/attack-01.wav
+units/peon/ready-01.wav
+units/ships/acknowledgement-01.wav
+units/ships/acknowledgement-02.wav
+units/ships/acknowledgement-03.wav
+units/ships/acknowledgement-04.wav
+units/ships/acknowledgement-05.wav
+units/ships/acknowledgement-06.wav
+units/ships/annoyed-01.wav
+units/ships/annoyed-02.wav
+units/ships/annoyed-03.wav
+units/ships/annoyed-04.wav
+units/ships/annoyed-05.wav
+units/ships/annoyed-06.wav
+units/ships/ready-01.wav
+units/ships/ready-02.wav
+units/ships/selected-01.wav
+units/ships/selected-02.wav
+units/ships/selected-03.wav
+units/ships/selected-04.wav
+units/ships/selected-05.wav
+units/ships/selected-06.wav
+units/ships/sinking.wav
+units/submarine/annoyed-01.wav
+units/submarine/annoyed-02.wav
+units/submarine/annoyed-03.wav
+units/submarine/annoyed-04.wav
+units/zeppelin/acknowledgment-01.wav
+units/zeppelin/annoyed-01.wav
+units/zeppelin/annoyed-02.wav
+units/zeppelin/ready-01.wav
+
+Jay Sprenkle (jsprenkl@zenobia.ettu.net) 3
+====
+units/ballista/ballista-02.max
+units/ballista/ballista-02.png
+units/death knight/death knight-01.png
+
+Sebastian Steinhauer (steini@steini-welt.de) 9
+====
+units/death knight/acknowledgement-08.wav
+units/death knight/acknowledgement-09.wav
+units/death knight/acknowledgement-10.wav
+units/death knight/annoyed-07.wav
+units/death knight/annoyed-08.wav
+units/death knight/annoyed-09.wav
+units/death knight/ready-03.wav
+units/death knight/selected-05.wav
+units/death knight/selected-06.wav
+
+David L Stone (superdav42@juno.com) 1
+====
+units/destroyer/destroyer-02.png
+
+Aleksander Szymczyszyn (a.szymczyszyn@id-grp.com) 1
+====
+ui/misc/buttons-03.png
+
+Justin Warwick (gwalchmye@users.sourceforge.net) 5
+====
+buildings/circle of power/circle of power-summer-01.png
+tileset/summer/icons/icons.png (index 81)
+tileset/swamp/icons/icons.png (index 81)
+tileset/wasteland/icons/icons.png (index 81)
+tileset/winter/icons/icons.png (index 81)
+
+Wojciech Zylinski (gulldarek@xgamer.pl) 1
+===
+units/zeppelin/ready-02.wav
+
+Unknown 30
+====
+buildings/oil patch/oil patch-summer-03.png
+misc/o startpoint-01.png
+misc/unit shadow-01.png
+misc/x startpoint-01.png
+missiles/ballista catapult impact-01.png
+missiles/big cannon-01.png
+missiles/cannon-01.png
+missiles/cannon tower explosion-01.png
+missiles/catapult rock-01.png
+missiles/daemon fire-01.png
+missiles/dragon breath-01.png
+missiles/submarine missile-02.png
+missiles/turtle missile-01.png
+spells/death and decay-01.png
+spells/fireball-01.png
+spells/normal spell-01.png
+spells/touch of darkness-01.png
+tileset/summer/icons/icons.png (index 16-17 & 43 & 59 & 64-65 & 103 & 114 & 132-134 & 137-139 & 161-162)
+tileset/summer/palette-summer-01.rgb
+tileset/swamp/icons/icons.png (index 16-17 & 43 & 59 & 64-65 & 103 & 114 & 132-134 & 137-139 & 161-162)
+tileset/swamp/palette-swamp-01.rgb
+tileset/wasteland/icons/icons.png (index 16-17 & 43 & 59 & 64-65 & 103 & 114 & 132-134 & 137-139 & 161-162)
+tileset/wasteland/palette-wasteland-01.rgb
+tileset/winter/icons/icons.png (index 16-17 & 43 & 59 & 64-65 & 103 & 114 & 132-134 & 137-139 & 161-162)
+tileset/winter/palette-winter-01.rgb
+ui/backgrounds/credits background-02.png
+ui/cursors/green crosshairs-01.png
+ui/cursors/red crosshairs-01.png
+ui/cursors/yellow crosshairs-01.png
+ui/fonts/small-01.png
+units/daemon/daemon-01.png
+
+The following files and directories were not considered for this file:
+docs/
+editions/
+music/
+units/heroes
+buildfcmp.sh
+ChangeLog.html
