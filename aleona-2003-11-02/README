@@ -1,0 +1,28 @@
+Aleona's Tales
+==============
+
+Aleona's Tales is a collection of graphics, sounds and music that are
+useable with the Stratagus engine.
+
+
+Installation
+============
+
+To compile Aleona's Tales, simply run:
+
+  ./buildfcmp.sh STRATAGUSDIR
+
+where STRATAGUSDIR is the directory where the 
+stratagus src directory is located, eg '~/stratagus',
+default is try to autodetect.
+
+This will create the data directory: './data.aleona'
+
+You can then run it by specifying the '-d' option to the stratagus binary, 
+eg: '~/stratagus/stratagus -d ~/aleona/data.aleona'
+
+NOTE: the UI is only updated for 640x480 resolution, 
+so the UI at all the other resolutions looks messy.
+
+Copyright 2003 by the Aleona's Tales Team, licensed under the GNU GPL,
+see the file COPYING for details.

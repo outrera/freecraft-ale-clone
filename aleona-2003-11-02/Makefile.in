@@ -1,0 +1,5 @@
+all:
+	@echo "Building Aleona's Tales..."
+	./buildfcmp.sh @STRATAGUS_DIR@
+
+# EOF #
